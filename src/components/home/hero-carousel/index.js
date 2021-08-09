@@ -9,7 +9,7 @@ const HeroCarousel = ({heroCarousel}) => {
     }
 
     const autoPlay = true;
-    const slideDuration = 2; // in seconds
+    const slideDuration = 4; // in seconds
     const activeIndexRef = useRef( { activeIndex: 0 } );
     const slideRef = useRef( 0 );
     const [ slide, setSlide ] = useState( 0 );
@@ -50,19 +50,19 @@ const HeroCarousel = ({heroCarousel}) => {
 
     useEffect(() => {
         if ( autoPlay ) {
-            const interval = setInterval(() => nextSlide(), slideDuration * 1000 );
+            const interval = setInterval(() => nextSlide(), slideDuration * 2000 );
             return () => clearInterval( interval );
         }
     }, [])
 
     return (
-        <div className="banner flex flex-col sm:flex-row justify-between overflow-hidden">
-            <div className="banner-img sm:w-8/12">
+        <div className="banner flex flex-col sm:flex-row justify-between overflow-hidden  ">
+            <div className="banner-img sm:w-8/12 h-40 lg:h-96 relative">
                 {
                     heroCarousel.map( ( item, index ) => {
-                        const opacity = ( activeIndex === index || 1 === heroCarousel.length ) ? 'opacity-100' : 'opacity-0';
+                        const opacity = ( activeIndex === index || 1 === heroCarousel.length ) ? 'opacity-100 transition duration-500 ease-in-out' : 'opacity-0 transition duration-500 ease-in-out';
                         return (
-                            <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0`}>
+                            <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0 transition duration-500 ease-in-out`}>
                                 <img
                                     src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"
                                 />

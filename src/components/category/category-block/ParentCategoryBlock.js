@@ -13,7 +13,7 @@ const ParentCategoryBlock = ( props ) => {
 					<Image
 						className="object-cover h-40 md:h-64"
 						layout="fill"
-						containerClassNames="w-96 h-56"
+						containerClassNames="h-56"
 						sourceUrl={ category?.image?.sourceUrl ?? '' }
 						defaultImgUrl={DEFAULT_CATEGORY_IMG_URL}
 						altText={category?.image?.altText ?? category.slug}
