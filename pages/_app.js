@@ -1,5 +1,5 @@
 
-
+import 'tailwindcss/tailwind.css'
 import Router from 'next/router';
 import NProgress from 'nprogress';
 
