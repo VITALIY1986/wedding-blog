@@ -17,7 +17,7 @@ const Layout = (props) => {
       <ApolloProvider client={client}>
         <div>
           <Head>
-            <title>Woocommerce React Theme</title>
+            <title>4Prof next.js</title>
           </Head>
           <Header />
           {props.children}
