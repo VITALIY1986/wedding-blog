@@ -49,11 +49,7 @@ const Nav = () => {
 							Beyond Dental
 						</a>
 					</Link>
-					<Link href="/">
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-							MCCM
-						</a>
-					</Link>
+				
 					</div>
 
 					<div className="text-sm font-medium">
