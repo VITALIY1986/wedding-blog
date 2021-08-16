@@ -35,6 +35,14 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
     }
   }
+  posts(first: 10) {
+    nodes {
+      id
+      slug
+      title
+      excerpt
+    }
+  }
   products(first: 50) {
     nodes {
       id

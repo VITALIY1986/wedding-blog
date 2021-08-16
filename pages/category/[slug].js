@@ -33,7 +33,7 @@ export default function CategorySingle( props ) {
 
 export async function getStaticProps(context) {
 
-    const {params: { slug }} = context
+    const {params: { slug}} = context
 
     const {data} = await client.query(({
         query: PRODUCT_BY_CATEGORY_SLUG,

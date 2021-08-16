@@ -64,3 +64,4 @@ export const PRODUCT_SLUGS = gql` query Products {
   }
 }
 `;
+
