@@ -17,7 +17,9 @@ const Post = ( props ) => {
 					<h3 className="product-title mt-3 font-medium text-gray-800">
 						{ post.title ? post.title : '' }
 					</h3>
-                    <span>{post.excerpt}</span>
+                    <span dangerouslySetInnerHTML={ {
+									__html: post.excerpt,
+								} }></span>
 					
 				
 					
