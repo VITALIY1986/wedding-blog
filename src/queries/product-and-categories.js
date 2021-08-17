@@ -35,12 +35,15 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
     }
   }
-  posts(first: 10) {
-    nodes {
-      id
-      slug
-      title
-      excerpt
+  category(id: "dGVybTox") {
+    name
+    posts {
+      nodes {
+        slug
+        title
+        id
+        excerpt
+      }
     }
   }
   products(first: 50) {

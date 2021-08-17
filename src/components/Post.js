@@ -8,29 +8,30 @@ const Post = ( props ) => {
 	const { post } = props;
 
 	return (
-		<Link href={ `/post/${ post?.id }`} >
+	
+	<div className="product mb-5">
+
+
+	<Link href={ `/post/${ post?.id }`} >
 		<a>
-			<div className="product mb-5">
-
-
-				
-				<div className="product-info">
-					<h3 className="product-title mt-3 font-medium text-gray-800">
-						{ post.title ? post.title : '' }
-					</h3>
-                    <span dangerouslySetInnerHTML={ {
+			<Image
+				className="object-cover bg-gray-100"
+				width="500"
+				height="500"
+				loading="lazy"
+			
+			/>
+		</a>
+	</Link>
+	<div className="product-info">
+		<h3 className="product-title mt-3 font-medium text-gray-800">
+		{ post.title ? post.title : '' }
+		</h3>
+		<span dangerouslySetInnerHTML={ {
 									__html: post.excerpt,
 								} }></span>
-					
-				
-					
-				</div>
-
-			</div>
-		
-			</a>
-</Link>
-	
+</div>
+</div>
 	);
 };
 

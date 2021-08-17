@@ -23,7 +23,7 @@ export default function CategorySingle( props ) {
                 { categoryName ? <h3 className="text-2xl mb-5 uppercase">{ categoryName }</h3> : '' }
                 <div className="product-categories grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                     { undefined !== products && products?.length ? (
-                        products.map( product => <Product key={ product?.id } product={ product } /> )
+                        products.map( product =>  <Product key={ product?.id } product={ product } /> )
                     ) : ''}
                 </div>
             </div>
