@@ -64,4 +64,24 @@ export const PRODUCT_SLUGS = gql` query Products {
   }
 }
 `;
+export const POST_BY_SLUG_QUERY = gql` query Post($slug: ID!) {
+	post(id: $slug, idType: ID) {
+        id
+        title
+        slug 
+		content
+  }
+  
+}
+`;
 
+export const POSTS_SLUGS = gql` query Posts {
+	posts(first: 10) {
+		nodes {
+		  id
+		  slug
+		  
+		}
+	  }
+}
+`;  

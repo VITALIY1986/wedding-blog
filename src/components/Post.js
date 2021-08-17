@@ -8,7 +8,8 @@ const Post = ( props ) => {
 	const { post } = props;
 
 	return (
-		
+		<Link href={ `/post/${ post?.id }`} >
+		<a>
 			<div className="product mb-5">
 
 
@@ -27,7 +28,8 @@ const Post = ( props ) => {
 
 			</div>
 		
-	
+			</a>
+</Link>
 	
 	);
 };
