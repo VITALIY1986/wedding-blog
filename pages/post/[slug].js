@@ -57,8 +57,8 @@ export async function getStaticPaths () {
     const pathsData = []
 
     data?.posts?.nodes && data?.posts?.nodes.map((post) => {
-        if (!isEmpty(post?.slug)) {
-            pathsData.push({ params: { slug: post?.slug } })
+        if (!isEmpty(post?.id)) {
+            pathsData.push({ params: { slug: post?.id } })
         }
     })
 
