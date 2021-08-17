@@ -65,7 +65,7 @@ export const PRODUCT_SLUGS = gql` query Products {
 }
 `;
 export const POST_BY_SLUG_QUERY = gql` query Post($slug: ID!) {
-	post(id: $slug, idType: ID) {
+	post(id: $slug) {
         id
         title
         slug 
