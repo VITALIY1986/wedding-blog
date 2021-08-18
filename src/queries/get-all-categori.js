@@ -4,16 +4,22 @@ import { gql } from "@apollo/client";
  * GraphQL categories query.
  */
 const GET_CATEGORI_QUERY = gql`query {
-
-	productCategory(id: "dGVybTo1NA==") {
-		children {
-		  nodes {
-			name
-			id
-			slug
-		  }
-		}
-	  }
+	productCategoryArkanaHome:  productCategory(id: "dGVybTo1NA==") {
+    children {
+      nodes {
+        id
+        name
+        slug
+        children{
+          nodes {
+            name
+            id
+            slug
+          }
+        }
+      }
+    }
+  }
 	  heroCarousel: productCategories(where: {slug: "offers"}) {
 		nodes {
 		  id

@@ -14,11 +14,11 @@ export default function Home (props) {
 			<Layout>
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
-				{/*Categories
+				{/*Categories*/ }
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="main-title text-xl mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
-				</div>*/ }
+				</div>
 					{/*Post*/ }
 					<div className="products container mx-auto my-32 px-4 ">
 					<h2 className="products-main-title main-title mb-5 text-xl uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
