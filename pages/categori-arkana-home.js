@@ -5,7 +5,7 @@ import GET_ALL_CATEGORI_QUERY from "../src/queries/get-all-categori";
 import HeroCarousel from "../src/components/home/hero-carousel";
 export default function Categories ( props ) {
 
-	const { productCategorArkana,  heroCarousel } = props;
+	const { productCategorArkanaHome,  heroCarousel } = props;
 
 	return (
 		<Layout>
@@ -13,7 +13,7 @@ export default function Categories ( props ) {
 			{/*Categories*/}
 			<div className="categories product-categories-container container mx-auto my-32 px-4 xl:px-0">
 				<h2 className="text-2xl mb-5 uppercase">ARKANA</h2>
-				<ParentCategoriesBlock productCategorArkana={ productCategorArkana }/>
+				<ParentCategoriesBlock productCategorArkanaHome={ productCategorArkanaHome }/>
        
 			</div>
 		</Layout>
@@ -28,7 +28,7 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			productCategorArkana: data?.productCategoryArkanaHome?.children?.nodes || [],
+			productCategorArkanaHome: data?.productCategoryArkanaHome?.children?.nodes || [],
             heroCarousel: data?.heroCarousel?.nodes[0]?.children?.nodes ? data.heroCarousel.nodes[0].children.nodes : []
            
 		},

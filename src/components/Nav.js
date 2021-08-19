@@ -31,22 +31,22 @@ const Nav = () => {
 					<div className="text-sm font-medium uppercase lg:flex-grow">
 					<Link href="/categories">
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-							Categories
+							
 						</a>
 					</Link>
-					<Link href="/categori">
+					<Link href="/categori-arkana-home">
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-						ARKANA
+						ARKANA HOME
+						</a>
+					</Link>
+					<Link href="/categori-arkana-prof">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						ARKANA PROF
 						</a>
 					</Link>
 					<Link href="/">
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-							NOREL
-						</a>
-					</Link>
-					<Link href="/">
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-							Beyond Dental
+							
 						</a>
 					</Link>
 				
