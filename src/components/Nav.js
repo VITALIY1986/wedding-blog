@@ -5,7 +5,8 @@ import { useState } from 'react';
 const Nav = () => {
 
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
-	const [ isMenuChidrenVisible, setMenuChidrenVisible ] = useState(false);
+	const [ isMenuChidrenVisibleArkana, setMenuChidrenVisibleArkana ] = useState(false);
+	const [ isMenuChidrenVisibleNorel, setMenuChidrenVisibleNorel ] = useState(false);
 	return (
 		<nav className=" p-4">
 			<div className="flex items-center justify-between flex-wrap container mx-auto">
@@ -29,12 +30,12 @@ const Nav = () => {
 				{/*MMenu in mobile*/}
 				<div className={`${ isMenuVisible ? 'max-h-full h-full' : 'h-0' } w-full overflow-hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}>
 					<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex">
-					<Link href="/">
-						<li onClick={() => setMenuChidrenVisible(! isMenuChidrenVisible)} >
+					
+						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
 						ARKANA	
 						</a>
-						<ul className={`${ isMenuChidrenVisible ? 'block' : 'hidden' } `}>
+						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
 							<li>
 							    <Link href="/categori-arkana-home">
 						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
@@ -52,13 +53,13 @@ const Nav = () => {
 							
 						</ul>
 						</li>
-					</Link>
-					<Link href="/">
-						<li onClick={() => setMenuChidrenVisible(! isMenuChidrenVisible)}>
+				
+				
+						<li onClick={() => setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
 						NOREL	
 						</a>
-						<ul className={`${ isMenuChidrenVisible ? 'block' : 'hidden' } `}>
+						<ul className={`${ isMenuChidrenVisibleNorel ? 'block lg:fixed' : 'hidden' } `}>
 							<li>
 							    <Link href="/categori-arkana-home">
 						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
@@ -76,7 +77,7 @@ const Nav = () => {
 							
 						</ul>
 						</li>
-					</Link>
+					
 					
 					</ul>
 
