@@ -43,6 +43,11 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
         title
         id
         excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
       }
     }
   }

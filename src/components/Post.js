@@ -19,7 +19,7 @@ const Post = ( props ) => {
 				width="500"
 				height="500"
 				loading="lazy"
-			
+				sourceUrl={post?.featuredImage?.node.sourceUrl }
 			/>
 		</a>
 	</Link>
@@ -27,9 +27,9 @@ const Post = ( props ) => {
 		<h3 className="product-title mt-3 font-medium text-gray-800">
 		{ post.title ? post.title : '' }
 		</h3>
-		<span dangerouslySetInnerHTML={ {
+{/*		<span className="overflow" dangerouslySetInnerHTML={ {
 									__html: post.excerpt,
-								} }></span>
+								} }></span>*/}
 </div>
 </div>
 	);

@@ -56,8 +56,8 @@ const HeroCarousel = ({heroCarousel}) => {
     }, [])
 
     return (
-        <div className="banner flex flex-col sm:flex-row justify-between overflow-hidden  ">
-            <div className="banner-img sm:w-8/12 h-40 lg:h-96 relative">
+        <div className="banner   relative container m-auto">
+            <div className="banner-img  h-40 lg:h-96 relative">
                 {
                     heroCarousel.map( ( item, index ) => {
                         const opacity = ( activeIndex === index || 1 === heroCarousel.length ) ? 'opacity-100 transition duration-500 ease-in-out' : 'opacity-0 transition duration-500 ease-in-out';
@@ -79,8 +79,8 @@ const HeroCarousel = ({heroCarousel}) => {
                     </button>
                 </div>
             </div>
-            <div className="banner-content pt-10 sm:pt-0 px-10 sm:w-4/12">
-                <h2 className="banner-content__title text-base md:text-4xl uppercase">{heroCarousel[activeIndex]?.name}</h2>
+            <div className="banner-content pt-10 sm:pt-0 px-10 sm:w-4/12 absolute z-50 bottom-0">
+                <h2 className="banner-content__title text-base md:text-5xl uppercase text-white">{heroCarousel[activeIndex]?.name}</h2>
                 <p className="banner-content__description text-base md:text-2xl text-gray-700">{heroCarousel[activeIndex]?.description}</p>
                 <Link href={`/category/${heroCarousel[activeIndex]?.slug}/`}>
                     <a className="banner-content__link text-gray-700">+ Explore</a>
