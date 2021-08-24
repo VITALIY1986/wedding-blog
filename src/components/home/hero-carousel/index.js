@@ -56,13 +56,14 @@ const HeroCarousel = ({heroCarousel}) => {
     }, [])
 
     return (
-        <div className="banner   relative container m-auto">
-            <div className="banner-img  h-40 lg:h-96 relative">
+        <>
+        <div className="banner   relative container m-auto slidervh">
+          
                 {
                     heroCarousel.map( ( item, index ) => {
                         const opacity = ( activeIndex === index || 1 === heroCarousel.length ) ? 'opacity-100 transition duration-500 ease-in-out' : 'opacity-0 transition duration-500 ease-in-out';
                         return (
-                            <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0 transition duration-500 ease-in-out`}>
+                            <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0 bottom-0 transition duration-500 ease-in-out`}>
                                 <img
                                     src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"
                                 />
@@ -86,7 +87,7 @@ const HeroCarousel = ({heroCarousel}) => {
                     <a className="banner-content__link text-gray-700">+ Explore</a>
                 </Link>
             </div>
-        </div>
+      </>
     )
 }
 

@@ -8,17 +8,17 @@ import HeroCarousel from "../src/components/home/hero-carousel";
 
 export default function Home (props) {
 
-	const { products, productCategories, heroCarousel, posts, postsCategory} = props || {};
+	const { products,  heroCarousel, posts, postsCategory} = props || {};
 
 	return (
 			<Layout>
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
-				{/*Categories*/ }
+				{/*Categories
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="main-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
-				</div>
+				</div>*/ }
 					{/*Post*/ }
 					<div className="products container mx-auto my-32 px-4 ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>

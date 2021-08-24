@@ -51,7 +51,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
     }
   }
-  products(first: 10) {
+  products(first: 4) {
     nodes {
       id
       productId: databaseId

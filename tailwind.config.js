@@ -1,5 +1,6 @@
+
 module.exports = {
-  // @see https://tailwindcss.com/docs/upcoming-changes
+// @see   https://tailwindcss.com/docs/upcoming-changes
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
@@ -12,6 +13,9 @@ module.exports = {
       height: {
         'almost-screen': 'calc(-16rem + 100vh)',
         '308px': '19.25rem',
+        slidervh:{
+          DEFAULT: '70vh',
+        },
       },
       colors: {
         transparent: 'transparent',
@@ -38,6 +42,7 @@ module.exports = {
         '308px': '19.25rem',
         '600px': '37.5rem',
       },
+     
     },
   },
   variants: {},
