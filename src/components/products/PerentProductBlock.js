@@ -21,7 +21,7 @@ const Product = ( props ) => {
 							width="500"
 							height="500"
 							loading="lazy"
-							sourceUrl={ DEFAULT_PRODUCT_IMG_URL}
+							sourceUrl={ product?.image?.sourceUrl ?? '' }
                             defaultImgUrl={DEFAULT_PRODUCT_IMG_URL}
 							altText={product?.image?.altText ?? product?.slug}
 						/>
