@@ -65,7 +65,8 @@ const HeroCarousel = ({heroCarousel}) => {
                         return (
                             <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0 bottom-0 transition duration-500 ease-in-out  w-full slidervh overflow-hidden`}>
                                 <img className={`h-full w-full object-cover`}
-                                    src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"   
+                                    src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"    width="1000"
+                                    height="500"
                                 />
                             </div>
                         )

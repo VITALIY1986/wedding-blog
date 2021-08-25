@@ -55,6 +55,8 @@ const GalleryCarousel = ({gallery}) => {
                             <div key={item?.id} className={`${opacity} banner-img-container absolute top-0 left-0`}>
                                 <img
                                     src={item?.mediaItemUrl} loading="lazy" alt={ item?.altText ? item?.altText : item?.title }
+                                   
+                                  
                                 />
                             </div>
                         )
