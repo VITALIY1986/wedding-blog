@@ -63,8 +63,8 @@ const HeroCarousel = ({heroCarousel}) => {
                     heroCarousel.map( ( item, index ) => {
                         const opacity = ( activeIndex === index || 1 === heroCarousel.length ) ? 'opacity-100 transition duration-500 ease-in-out' : 'opacity-0 transition duration-500 ease-in-out';
                         return (
-                            <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0 bottom-0 transition duration-500 ease-in-out`}>
-                                <img className={` h-full w-auto object-cover`}
+                            <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0 bottom-0 transition duration-500 ease-in-out  w-full slidervh overflow-hidden`}>
+                                <img className={`h-full w-full object-cover`}
                                     src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"   
                                 />
                             </div>
