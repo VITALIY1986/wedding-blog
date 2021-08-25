@@ -1,7 +1,11 @@
+
+
+const  withPWA  =  require ( 'next-pwa' )
 const path = require("path");
 const allowedImageWordPressDomain = new URL(process.env.NEXT_PUBLIC_WORDPRESS_URL).hostname
 
-module.exports = {
+module.exports =  withPWA ( {
+
     trailingSlash: true,
     webpackDevMiddleware: (config) => {
         config.watchOptions = {
@@ -20,7 +24,6 @@ module.exports = {
      * @see https://nextjs.org/docs/basic-features/image-optimization#domains
      */
     images: {
-      
         domains: [ allowedImageWordPressDomain, 'www.4prof.com.ua' ],
     },
-};
+});
