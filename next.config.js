@@ -1,15 +1,11 @@
 
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
+
 
 const path = require("path");
 const allowedImageWordPressDomain = new URL(process.env.NEXT_PUBLIC_WORDPRESS_URL).hostname
 
-module.exports =  withPWA(  {
-    pwa: {
-        dest: 'public',
-        runtimeCaching,
-      },
+module.exports =   {
+
     trailingSlash: true,
     webpackDevMiddleware: (config) => {
         config.watchOptions = {
@@ -30,4 +26,4 @@ module.exports =  withPWA(  {
     images: {
         domains: [ allowedImageWordPressDomain, 'www.4prof.com.ua' ],
     },
-});
+};
