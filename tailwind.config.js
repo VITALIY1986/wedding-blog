@@ -13,9 +13,8 @@ module.exports = {
       height: {
         'almost-screen': 'calc(-16rem + 100vh)',
         '308px': '19.25rem',
-        slidervh:{
-          DEFAULT: '70vh',
-        },
+        'sliderlg': '70vh',
+        'slidersm': '30vh',
       },
       colors: {
         transparent: 'transparent',

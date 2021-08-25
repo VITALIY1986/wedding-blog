@@ -64,8 +64,8 @@ const HeroCarousel = ({heroCarousel}) => {
                         const opacity = ( activeIndex === index || 1 === heroCarousel.length ) ? 'opacity-100 transition duration-500 ease-in-out' : 'opacity-0 transition duration-500 ease-in-out';
                         return (
                             <div key={item?.id}className={`${opacity} banner-img-container absolute top-0 left-0 bottom-0 transition duration-500 ease-in-out`}>
-                                <img
-                                    src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"
+                                <img className={` h-full w-auto object-cover`}
+                                    src={item?.image?.sourceUrl} srcSet={item?.image?.srcSet} loading="lazy"   
                                 />
                             </div>
                         )
@@ -79,14 +79,14 @@ const HeroCarousel = ({heroCarousel}) => {
                         <svg width="25px" className="inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </button>
                 </div>
-            </div>
-            <div className="banner-content pt-10 sm:pt-0 px-10 sm:w-4/12 absolute z-50 bottom-0">
+            
+            <div className="banner-content pt-10 sm:pt-0 px-10 sm:w-4/12 absolute z-50 bottom-10">
                 <h2 className="banner-content__title text-base md:text-5xl uppercase text-white">{heroCarousel[activeIndex]?.name}</h2>
                 <p className="banner-content__description text-base md:text-2xl text-gray-700">{heroCarousel[activeIndex]?.description}</p>
                 <Link href={`/category/${heroCarousel[activeIndex]?.slug}/`}>
                     <a className="banner-content__link text-gray-700">+ Explore</a>
                 </Link>
-            </div>
+            </div></div>
       </>
     )
 }

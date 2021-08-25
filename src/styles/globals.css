@@ -27,6 +27,6 @@ span.main-title-inner{
     bottom: 0;
   }
   .slidervh{
-     @apply  h-almost-screen;
+     @apply  h-slidersm lg:h-sliderlg;
   }
  
