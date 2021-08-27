@@ -10,7 +10,7 @@ span.main-title-inner{
 .main-title-inner::before {
     content: '';
     display: block;
-    background: #45b5aa;
+    background: purple;
     width: 95px;
     height: 2px;
     position: absolute;
@@ -19,7 +19,7 @@ span.main-title-inner{
   .main-title-inner::after {
     content: '';
     display: block;
-    background: #45b5aa;
+    background: purple;
     width: 95px;
     height: 2px;
     position: absolute;

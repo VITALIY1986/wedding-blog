@@ -16,6 +16,9 @@ module.exports = {
         'sliderlg': '70vh',
         'slidersm': '30vh',
       },
+      purplebt:{
+        DEFAULT: '#783ea8',
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',

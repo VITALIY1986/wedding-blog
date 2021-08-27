@@ -78,7 +78,7 @@ const AddToCart = (props) => {
 					disabled={addToCartLoading}
                     onClick={handleAddToCartClick}
                     className={cx(
-                        'px-3 py-1 rounded-sm mr-3 text-sm border-solid border border-current',
+                        'px-5 py-3 rounded-sm mr-3 text-sm border-solid border border-current',
                         {'hover:bg-purple-600 hover:text-white hover:border-purple-600': !addToCartLoading},
                         {'opacity-50 cursor-not-allowed': addToCartLoading}
                     )}

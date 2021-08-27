@@ -9,7 +9,7 @@ const Post = ( props ) => {
 
 	return (
 	
-	<div className="product mb-5">
+	<div className="product mb-5 text-center">
 
 
 	<Link href={ `/post/${ post?.id }`} >

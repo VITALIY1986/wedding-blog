@@ -10,7 +10,7 @@ const Product = ( props ) => {
 	return (
 		// @TODO Need to handle Group products differently.
 		undefined !== product && 'GroupProduct' !== product.__typename ? (
-			<div className="product mb-5">
+			<div className="product mb-5  hover:shadow">
 
 
 				<Link href={ `/product/${ product?.slug }`} >
@@ -26,8 +26,8 @@ const Product = ( props ) => {
 						/>
 					</a>
 				</Link>
-				<div className="product-info">
-					<h3 className="product-title mt-3 font-medium text-gray-800 overflow-hidden">
+				<div className="product-info text-center p-2 md:p-5">
+					<h3 className="product-title mt-3 font-medium text-gray-800 overflow-hidden ">
 						{ product.name ? product.name : '' }
 					</h3>
 					<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
