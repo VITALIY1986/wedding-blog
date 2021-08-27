@@ -19,12 +19,73 @@ const Nav = () => {
 					</Link>
 					</span>
 				</div>
-
+				<>
+		
+	
+			</>
 				{/*Menu button*/}
 				<div className="block lg:hidden">
-					<button onClick={() => setMenuVisibility(! isMenuVisible)} className="flex items-center px-3 py-2 border rounded text-black border-black hover:text-black hover:border-black">
-					<svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-					</button>
+				<input id="hamburger" class="hamburger" type="checkbox"/>
+		<label class="hamburger" for="hamburger">
+		  <i></i>
+		  <text>
+			<close>close</close>
+			<open>menu</open>
+		  </text>
+		</label>
+		<section class="drawer-list">
+		<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex">
+					
+					<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
+					<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
+					ARKANA	
+					</a>
+					<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+						<li>
+							<Link href="/categori-arkana-home">
+								<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black">
+								 HOME
+								</a>
+							</Link>
+						</li>
+						<li> 
+							<Link href="/categori-arkana-prof">
+								<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
+								Prof
+								</a>
+							</Link>
+						</li>
+						
+					</ul>
+					</li>
+			
+			
+					<li onClick={() => setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
+					<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
+					NOREL	
+					</a>
+					<ul className={`${ isMenuChidrenVisibleNorel ? 'block lg:fixed' : 'hidden' } `}>
+						<li>
+							<Link href="/categori-arkana-home">
+								<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black">
+								 HOME
+								</a>
+							</Link>
+						</li>
+						<li> 
+							<Link href="/categori-arkana-prof">
+								<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
+								Prof
+								</a>
+							</Link>
+						</li>
+						
+					</ul>
+					</li>
+				
+				
+				</ul>
+			</section>
 				</div>
 
 				{/*MMenu in mobile*/}
