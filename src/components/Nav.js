@@ -25,15 +25,15 @@ const Nav = () => {
 			</>
 				{/*Menu button*/}
 				<div className="block lg:hidden">
-				<input id="hamburger" class="hamburger" type="checkbox"/>
-		<label class="hamburger" for="hamburger">
+				<input id="hamburger" className="hamburger" type="checkbox"/>
+		<label className="hamburger" for="hamburger">
 		  <i></i>
 		  <text>
 			<close>close</close>
 			<open>menu</open>
 		  </text>
 		</label>
-		<section class="drawer-list">
+		<section className="drawer-list">
 		<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex">
 					
 					<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >

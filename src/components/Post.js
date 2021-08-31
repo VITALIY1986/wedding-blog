@@ -8,11 +8,15 @@ const Post = ( props ) => {
 	const { post } = props;
 
 	return (
-	
-	<div className="product mb-5 text-center">
+		
 
 
-	<Link href={ `/post/${ post?.id }`} >
+					
+				  <div className="inline-block px-3">
+					<div
+					  className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+					>
+<Link href={ `/post/${ post?.id }`} >
 		<a>
 			<Image
 				className="object-cover bg-gray-100"
@@ -27,12 +31,39 @@ const Post = ( props ) => {
 		<h3 className="product-title mt-3 font-medium text-gray-800">
 		{ post.title ? post.title : '' }
 		</h3>
-{/*		<span className="overflow" dangerouslySetInnerHTML={ {
+		</div>
+
+
+					</div>
+				  
+				  </div>
+				 
+		
+			);
+		};
+		
+{/*		<div classNameName="product mb-5 text-center">
+
+
+	<Link href={ `/post/${ post?.id }`} >
+		<a>
+			<Image
+				classNameName="object-cover bg-gray-100"
+				width="500"
+				height="500"
+				loading="lazy"
+				sourceUrl={post?.featuredImage?.node.sourceUrl }
+			/>
+		</a>
+	</Link>
+	<div classNameName="product-info">
+		<h3 classNameName="product-title mt-3 font-medium text-gray-800">
+		{ post.title ? post.title : '' }
+		</h3>
+	<span classNameName="overflow" dangerouslySetInnerHTML={ {
 									__html: post.excerpt,
-								} }></span>*/}
+								} }></span>
 </div>
-</div>
-	);
-};
+</div>*/}
 
 export default Post;
