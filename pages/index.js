@@ -20,24 +20,9 @@ export default function Home (props) {
 					<h2 className="main-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 				</div>*/ }
-				<div className="products container mx-auto my-32 px-4 ">
-				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
-				<div className="flex flex-col bg-white m-auto p-auto">
-		
-			  <div
-				className="flex overflow-x-scroll pb-10 hide-scroll-bar"
-			  >
-				<div
-				  className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "
-				>
-				{ posts.length ? (
-							posts.map( post => <Post key={ post.id } post={ post }/> )
-						) : '' }
-								</div>
-			  </div>
-		</div>
-			</div>
-					{/*Post
+			
+			
+					{/*Post*/ }
 					<div className="products container mx-auto my-32 px-4 ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
 					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
@@ -45,7 +30,7 @@ export default function Home (props) {
 							posts.map( post => <Post key={ post.id } post={ post }/> )
 						) : '' }
 					</div>
-				</div>*/ }
+				</div>
 					{/*Star*/ }
 			
 				
