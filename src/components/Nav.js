@@ -6,7 +6,13 @@ const Nav = () => {
 
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
 	const [ isMenuChidrenVisibleArkana, setMenuChidrenVisibleArkana ] = useState(false);
-	const [ isMenuChidrenVisibleNorel, setMenuChidrenVisibleNorel ] = useState(false);
+	const [ isMenuChidrenVisibleNorel, setMenuChidrenVisibleNorel ] = useState(false); 
+const	visible = () =>{
+	
+        setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)
+		setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)
+		
+	}
 	return (
 		<nav className=" p-4">
 			<div className="flex items-center justify-between flex-wrap container mx-auto">
@@ -36,7 +42,7 @@ const Nav = () => {
 		<section className="drawer-list">
 		<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex">
 					
-					<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
+					<li onClick={() => visible()} >
 					<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
 					ARKANA	
 					</a>
@@ -60,7 +66,7 @@ const Nav = () => {
 					</li>
 			
 			
-					<li onClick={() => setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
+					<li onClick={() => visible()}>
 					<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
 					NOREL	
 					</a>
