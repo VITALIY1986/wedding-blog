@@ -10,7 +10,7 @@ import Accordion from "../src/components/Accordion";
 
 export default function Home (props) {
 	
-	const { products,  heroCarousel, posts, postsCategory} = props || {};
+	const { products,  heroCarousel, posts, postsCategory,questionsAnswers} = props || {};
 
 	return (
 			<Layout>
@@ -21,7 +21,7 @@ export default function Home (props) {
 					<h2 className="main-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 				</div>*/ }
-				<Accordion /*questionsAnswers={questionsAnswers}*//>
+			
 				<div className="products container mx-auto my-32 px-4 ">
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
 				<div className="flex flex-col bg-white m-auto p-auto">
@@ -83,7 +83,7 @@ export async function getStaticProps () {
 
 	return {
 		props: {
-		/*	questionsAnswers:data?.category?.posts?.nodes ? data.category.posts.nodes : [],*/
+		questionsAnswers:data?.category?.posts?.nodes ? data.category.posts.nodes : [],
 			postsCategory: data?.category ? data.category : [],
 			posts: data?.category?.posts?.nodes ? data.category.posts.nodes : [],
 			productCategories: data?.productCategories?.nodes ? data.productCategories.nodes : [],
