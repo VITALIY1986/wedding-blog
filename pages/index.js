@@ -21,7 +21,7 @@ export default function Home (props) {
 					<h2 className="main-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 				</div>*/ }
-			
+			<div className="px-4">
 				<div className="products container mx-auto my-32  ">
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
 				<div className="flex flex-col bg-white m-auto p-auto">
@@ -70,7 +70,7 @@ export default function Home (props) {
 						) : '' }
 					</div>
 				</div>
-
+				</div>
 			</Layout>
 	)
 };

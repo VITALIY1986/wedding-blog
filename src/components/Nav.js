@@ -51,7 +51,7 @@ const Nav = () => {
 						</li>
 						<li> 
 							<Link href="/categori-arkana-prof">
-								<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
+								<a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black ">
 								Prof
 								</a>
 							</Link>
@@ -62,7 +62,7 @@ const Nav = () => {
 			
 			
 					<li onClick={() => 	setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
-					<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
+					<a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black ">
 					NOREL	
 					</a>
 					<ul className={`${ isMenuChidrenVisibleNorel ? 'block lg:fixed' : 'hidden' } `}>

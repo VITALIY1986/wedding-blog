@@ -11,7 +11,7 @@ export default function Categories ( props ) {
 		<Layout>
             	<HeroCarousel heroCarousel={heroCarousel}/>
 			{/*Categories*/}
-			<div className="categories product-categories-container container mx-auto my-32 px-4 xl:px-0">
+			<div className="categories product-categories-container container mx-auto my-32  xl:px-0">
 				<h2 className="text-2xl mb-5 uppercase">ARKANA</h2>
 				<ParentCategoriesBlock productCategorArkanaHome={ productCategorArkanaHome }/>
 		
