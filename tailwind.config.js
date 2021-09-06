@@ -24,7 +24,7 @@ module.exports = {
         current: 'currentColor',
         blue: {
          
-          DEFAULT: '#2b2b3e',
+          DEFAULT: '#7372aa',
           
         },
         pink: {

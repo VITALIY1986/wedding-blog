@@ -87,7 +87,7 @@ $text: #2e2e2e;
 }
 
 .drawer-list {
-  z-index: 10;
+  z-index: 100;
   position: fixed;
   right: 0;
   top: 0;
@@ -101,7 +101,7 @@ $text: #2e2e2e;
   padding-top: 125px;
   transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease;
   border-bottom-left-radius: 100vw;
-  @include alpha-attribute('background-color', rgba($contrast, 1), white);
+ /* @include alpha-attribute('background-color', rgba($contrast, 1), white);*/
   @media (min-width: 768px) {
     width: 40vw;
   }
@@ -128,7 +128,7 @@ $text: #2e2e2e;
     }
     a {
       text-decoration: none;
-      color: $text;
+   
       text-align: center;
       display: block;
       padding: 1rem;
