@@ -10,25 +10,30 @@ const Nav = () => {
 	const [activeIndex, setActiveIndex] = useState(1);
 	const questionsAnswers = [
 	  {
+		id: 1,
 		title: "Home",
 		answer:
 		  "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
 	  },
 	  {
+		id: 2,
 		  title: "Home",
 		answer:
 		  "No more than 2GB. All files in your account must fit your allotted storage space.",
 	  },
 	  {
+		id: 3,
 		  title: "Home",
 		  answer: `Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.`,
 	  },
 	  {
-		  title: "Home",
+		id: 4,  
+		title: "Home",
 		answer: `Yes! Send us a message and we’ll process your request no questions asked.`,
 	  },
 	  {
-		  title: "Home",
+		id: 5, 
+		title: "Home",
 		answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
 	  },
 	
@@ -39,12 +44,13 @@ const Nav = () => {
 		const ariaExpanded = index === activeIndex ? "false" : "true";
 		return (
 			
-					
-					<li  aria-expanded={ariaExpanded}
+			
+					<li  key={item.id}
+					aria-expanded={ariaExpanded}
         aria-controls={`faq${index + 1}_desc`}
         data-qa="faq__question-button"
         className={`faq__question-button ${fontWeightBold}`}
-		key={item.title}
+	
 		onClick={() => {
 			setActiveIndex(index);
 		  }}>
@@ -57,28 +63,22 @@ const Nav = () => {
 						<li className="block">
 							<Link href="/categori-arkana-home">
 								<a className="">
-								 HOME  {item.title}
+								 HOME 
 								</a>
 							</Link>
 							<Link href="/categori-arkana-prof">
 								<a className="">
-								Prof  {item.title}
+								Prof 
 								</a>
 							</Link>
 						</li>
-						<li className="block"> 
-							<Link href="/categori-arkana-prof">
-								<a className="">
-								Prof  {item.title}
-								</a>
-							</Link>
-						</li>
+						
 						
 					</ul>
 					</li>
 			
 			
-					
+				
 				
 			
 		
@@ -103,12 +103,12 @@ const Nav = () => {
 				{/*Menu button*/}
 				<div className="block lg:hidden">
 				<input id="hamburger" className="hamburger" type="checkbox"/>
-				<label className="hamburger" for="hamburger">
+				<label className=" hamburger" for="hamburger">
 		  <i></i>
-		  <text>
-			<close>close</close>
-			<open>menu</open>
-		  </text>
+		  <span>
+			<span className="close">close</span>
+			<span className="open">menu</span>
+		  </span>
 		</label>
 		<section className="drawer-list bg-blue ">
 		<ul className="">

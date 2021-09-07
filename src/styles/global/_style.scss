@@ -105,15 +105,15 @@ $text: #2e2e2e;
   @media (min-width: 768px) {
     width: 40vw;
   }
-  ul {
-     /*height: 100%;
+   /*ul {
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     overflow: auto;
     overflow-x: hidden;
-    pointer-events: auto;*/
-  }
+    pointer-events: auto;
+  }*/
   li {
     display: block;
    list-style: none;
@@ -129,7 +129,7 @@ $text: #2e2e2e;
     }
     a {
       text-decoration: none;
-   
+   color: white;
       text-align: center;
       display: block;
       padding: 1rem;
@@ -140,7 +140,8 @@ $text: #2e2e2e;
       }
       &:hover {
         cursor: pointer;
-        @include alpha-attribute('background-color', rgba($main, 0.5), white);
+        box-shadow: 47px 31px 24px 17px #3f4052
+       /* @include alpha-attribute('background-color', rgba($main, 0.5), white);*/
       }
     }
   }
@@ -171,11 +172,11 @@ input.hamburger {
           transform: translate(-50%, -50%) rotate(-315deg);
         }
       }
-      close {
+      .close {
         color: $text;
         width: 100%;
       }
-      open {
+      .open {
         color: rgba(0, 0, 0, 0);
         width: 0;
       }
@@ -192,24 +193,24 @@ label.hamburger {
   &:hover {
     cursor: pointer;
   }
-  text {
-    close,
-    open {
+  span {
+    .close,
+    .open {
       text-transform: uppercase;
       font-size: .8em;
-      align-text: center;
+    
       position: absolute;
       transform: translateY(50px);
       text-align: center;
       overflow: hidden;
       transition: width .25s .35s, color .45s .35s;
     }
-    close {
+    .close {
       color: rgba(0, 0, 0, 0);
       right: 0;
       width: 0;
     }
-    open {
+    .open {
       color: $text;
       width: 100%;
     }
@@ -267,7 +268,7 @@ label.hamburger {
 */
 //Primary Text colors
 $very-dark-desaturated-blue: hsl(238, 29%, 16%);
-$soft-red: hsl(14, 88%, 65%);
+$soft-red: hsl(0, 0%, 100%);
 
 // Background gradient:
 $soft-violet: hsl(273, 75%, 66%);
@@ -280,7 +281,8 @@ $dark-grayish-blue: hsl(240, 6%, 50%);
 //Dividers
 $light-grayish-blue: hsl(240, 5%, 91%);
 .faq__desc.show-description {
-  height: 6rem;
+  background: #3f4052;
+  height: 5.5rem;
   margin-bottom: 0px;
 }
 
@@ -343,8 +345,8 @@ $light-grayish-blue: hsl(240, 5%, 91%);
     padding: 0px;
     cursor: pointer;
 
-    padding-top: 18px;
-    padding-bottom: 18px;
+    /*padding-top: 18px;
+    padding-bottom: 18px;*/
 
     &::after {
       /*content: url(../images/icon-arrow-down.svg);*/
