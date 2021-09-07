@@ -7,7 +7,83 @@ const Nav = () => {
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
 	const [ isMenuChidrenVisibleArkana, setMenuChidrenVisibleArkana ] = useState(false);
 	const [ isMenuChidrenVisibleNorel, setMenuChidrenVisibleNorel ] = useState(false); 
-
+	const [activeIndex, setActiveIndex] = useState(1);
+	const questionsAnswers = [
+	  {
+		title: "Home",
+		answer:
+		  "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
+	  },
+	  {
+		  title: "Home",
+		answer:
+		  "No more than 2GB. All files in your account must fit your allotted storage space.",
+	  },
+	  {
+		  title: "Home",
+		  answer: `Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.`,
+	  },
+	  {
+		  title: "Home",
+		answer: `Yes! Send us a message and we’ll process your request no questions asked.`,
+	  },
+	  {
+		  title: "Home",
+		answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
+	  },
+	
+	];
+	const renderedQuestionsAnswers = questionsAnswers.map((item, index) => {
+		const showDescription = index === activeIndex ? "show-description" : "";
+		const fontWeightBold = index === activeIndex ? "font-weight-bold" : "";
+		const ariaExpanded = index === activeIndex ? "false" : "true";
+		return (
+			
+					
+					<li  aria-expanded={ariaExpanded}
+        aria-controls={`faq${index + 1}_desc`}
+        data-qa="faq__question-button"
+        className={`faq__question-button ${fontWeightBold}`}
+		key={item.title}
+		onClick={() => {
+			setActiveIndex(index);
+		  }}>
+					<a className="">
+					ARKANA	
+					</a>
+					<ul id={`faq${index + 1}_desc`}
+        data-qa="faq__desc"
+        className={`faq__desc ${showDescription}`}>
+						<li className="block">
+							<Link href="/categori-arkana-home">
+								<a className="">
+								 HOME  {item.title}
+								</a>
+							</Link>
+							<Link href="/categori-arkana-prof">
+								<a className="">
+								Prof  {item.title}
+								</a>
+							</Link>
+						</li>
+						<li className="block"> 
+							<Link href="/categori-arkana-prof">
+								<a className="">
+								Prof  {item.title}
+								</a>
+							</Link>
+						</li>
+						
+					</ul>
+					</li>
+			
+			
+					
+				
+			
+		
+		);
+	  });
 	return (
 		<nav className=" p-4">
 			<div className="flex items-center justify-between flex-wrap container mx-auto">
@@ -35,57 +111,9 @@ const Nav = () => {
 		  </text>
 		</label>
 		<section className="drawer-list bg-blue ">
-		<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex">
-					
-					<li onClick={() =>  setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
-					<a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black ">
-					ARKANA	
-					</a>
-					<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
-						<li>
-							<Link href="/categori-arkana-home">
-								<a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black">
-								 HOME
-								</a>
-							</Link>
-						</li>
-						<li> 
-							<Link href="/categori-arkana-prof">
-								<a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black ">
-								Prof
-								</a>
-							</Link>
-						</li>
-						
-					</ul>
-					</li>
-			
-			
-					<li onClick={() => 	setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
-					<a className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black ">
-					NOREL	
-					</a>
-					<ul className={`${ isMenuChidrenVisibleNorel ? 'block lg:fixed' : 'hidden' } `}>
-						<li>
-							<Link href="/categori-arkana-home">
-								<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black">
-								 HOME
-								</a>
-							</Link>
-						</li>
-						<li> 
-							<Link href="/categori-arkana-prof">
-								<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black ">
-								Prof
-								</a>
-							</Link>
-						</li>
-						
-					</ul>
-					</li>
-				
-				
-				</ul>
+		<ul className="">
+		{renderedQuestionsAnswers}
+		</ul>
 			</section>
 				</div>
 
