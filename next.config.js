@@ -18,7 +18,7 @@ module.exports =   {
     sassOptions: {
         includePaths: [path.join(__dirname, "styles")],
     },
-    webpack5: false,
+    webpack5: true,
     /**
      * We specify which domains are allowed to be optimized.
      * This is needed to ensure that external urls can't be abused.
