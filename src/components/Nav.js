@@ -8,33 +8,28 @@ const Nav = () => {
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
 	const [ isMenuChidrenVisibleArkana, setMenuChidrenVisibleArkana ] = useState(false);
 	const [ isMenuChidrenVisibleNorel, setMenuChidrenVisibleNorel ] = useState(false); 
-	const [activeIndex, setActiveIndex] = useState(1);
+	const [activeIndex, setActiveIndex] = useState(2);
 	const questionsAnswers = [
-	  {
-		id: 1,
-		title: "Home",
-		answer:
-		  "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
-	  },
+	
 	  {
 		id: 2,
-		  title: "Home",
+		  title: "СHANTARELLE",
 		answer:
 		  "No more than 2GB. All files in your account must fit your allotted storage space.",
 	  },
 	  {
 		id: 3,
-		  title: "Home",
+		  title: "ARKANA",
 		  answer: `Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.`,
 	  },
 	  {
 		id: 4,  
-		title: "Home",
+		title: "Norel",
 		answer: `Yes! Send us a message and we’ll process your request no questions asked.`,
 	  },
 	  {
 		id: 5, 
-		title: "Home",
+		title: "Beyond Dental ",
 		answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
 	  },
 	
@@ -56,7 +51,7 @@ const Nav = () => {
 			setActiveIndex(index);
 		  }}>
 					<a className="">
-					ARKANA	
+					{item.title	}
 					</a>
 					<ul id={`faq${index + 1}_desc`}
         data-qa="faq__desc"
@@ -91,7 +86,9 @@ const Nav = () => {
 
 				<div className="flex items-center flex-shrink-0 text-black mr-20 w-24">
 					{/*<svg className="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>*/}
+					<Link href="/">
 					<Image  src={profilePic}  />
+					</Link>
 					<span className="font-semibold text-xl tracking-tight">
 					<Link href="/">
 					<a className=""></a>
@@ -122,7 +119,28 @@ const Nav = () => {
 				{/*MMenu in mobile*/}
 				<div className={`${ isMenuVisible ? 'max-h-full h-full' : 'h-0' } w-full overflow-hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}>
 					<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex">
-					
+					<li onClick={() => setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						СHANTARELLE
+						</a>
+						<ul className={`${ isMenuChidrenVisibleNorel ? 'block lg:fixed' : 'hidden' } `}>
+							<li>
+							    <Link href="/categori-chantarelle-home">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						             HOME
+						            </a>
+					            </Link>
+							</li>
+							<li> 
+								<Link href="/categori-chantarelle-prof">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            Prof
+						            </a>
+					            </Link>
+							</li>
+							
+						</ul>
+						</li>
 						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
 						ARKANA	
@@ -147,32 +165,11 @@ const Nav = () => {
 						</li>
 				
 				
-						<li onClick={() => setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-						NOREL	
-						</a>
-						<ul className={`${ isMenuChidrenVisibleNorel ? 'block lg:fixed' : 'hidden' } `}>
-							<li>
-							    <Link href="/categori-arkana-home">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-						             HOME
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/categori-arkana-prof">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-						            Prof
-						            </a>
-					            </Link>
-							</li>
-							
-						</ul>
-						</li>
+					
 					
 					
 					</ul>
-
+					
 					<div className="text-sm font-medium">
 						<a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
 						<svg xmlns="http://www.w3.org/2000/svg" className="hidden lg:block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="auto" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
