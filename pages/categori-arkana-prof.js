@@ -12,7 +12,7 @@ export default function Categories ( props ) {
             	<HeroCarousel heroCarousel={heroCarousel}/>
 			{/*Categories*/}
 			<div className="categories product-categories-container container mx-auto my-32  xl:px-0">
-				<h2 className="text-2xl mb-5 uppercase">ARKANA</h2>
+				<h2 className="text-2xl mb-5 uppercase">ARKANA PROF</h2>
 				<ParentCategoriesBlock productCategorArkanaProf={ productCategorArkanaProf }/>
        
 			</div>

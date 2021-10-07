@@ -36,6 +36,22 @@ const GET_CATEGORI_QUERY = gql`query {
       }
     }
   }
+  productNorelHome:  productCategory(id: "dGVybTozMzg=") {
+    children {
+      nodes {
+        id
+        name
+        slug
+        children{
+          nodes {
+            name
+            id
+            slug
+          }
+        }
+      }
+    }
+  }
 	  heroCarousel: productCategories(where: {slug: "offers"}) {
 		nodes {
 		  id

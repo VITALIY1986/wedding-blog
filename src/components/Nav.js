@@ -22,6 +22,12 @@ const Nav = () => {
 		  title: "ARKANA",
 		  linkhome:"/categori-arkana-home",
 		  linkprof:"/categori-arkana-prof"
+	  },
+	  {
+		id: 3,
+		  title: "NOREL",
+		  linkhome:"/categori-norel-home",
+		  linkprof:"/categori-norel-prof"
 	  }
 	 
 	
@@ -43,7 +49,7 @@ const Nav = () => {
 			setActiveIndex(index);
 		  }}>
 					<a className="">
-					{item.linkhome	}
+					{item.title	}
 					</a>
 					<ul id={`faq${index + 1}_desc`}
         data-qa="faq__desc"
@@ -147,6 +153,28 @@ const Nav = () => {
 							</li>
 							<li> 
 								<Link href="/categori-arkana-prof">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            Prof
+						            </a>
+					            </Link>
+							</li>
+							
+						</ul>
+						</li>
+						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						NOREL	
+						</a>
+						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+							<li>
+							    <Link href="/categori-norel-home">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						             HOME
+						            </a>
+					            </Link>
+							</li>
+							<li> 
+								<Link href="/categori-norel-prof">
 						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
 						            Prof
 						            </a>
