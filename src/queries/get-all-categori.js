@@ -52,6 +52,38 @@ const GET_CATEGORI_QUERY = gql`query {
       }
     }
   }
+  productMCCM:  productCategory(id: "dGVybToxMjg=") {
+    children {
+      nodes {
+        id
+        name
+        slug
+        children {
+          nodes {
+            name
+            id
+            slug
+          }
+        }
+      }
+    }
+  }
+  productDermaoxy:  productCategory(id: "dGVybTozMjI=") {
+    children {
+      nodes {
+        id
+        name
+        slug
+        children {
+          nodes {
+            name
+            id
+            slug
+          }
+        }
+      }
+    }
+  }
 	  heroCarousel: productCategories(where: {slug: "offers"}) {
 		nodes {
 		  id

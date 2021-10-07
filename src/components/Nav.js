@@ -28,6 +28,18 @@ const Nav = () => {
 		  title: "NOREL",
 		  linkhome:"/categori-norel-home",
 		  linkprof:"/categori-norel-prof"
+	  },
+	  {
+		id: 3,
+		  title: "MCCM",
+		  linkhome:"/categori-mccm-home",
+		  linkprof:"/categori-mccm-prof"
+	  },
+	  {
+		id: 3,
+		  title: "DermaOxy",
+		  linkhome:"/categori-dermaoxy-home",
+		  linkprof:"/categori-dermaoxy-prof"
 	  }
 	 
 	
@@ -180,13 +192,63 @@ const Nav = () => {
 						            </a>
 					            </Link>
 							</li>
-							
-						</ul>
+</ul>
 						</li>
 				
 				
 					
-					
+						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						MCCM	
+						</a>
+						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+							<li>
+							    <Link href="/categori-mccm-home">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						             HOME
+						            </a>
+					            </Link>
+							</li>
+							<li> 
+								<Link href="/categori-mccm-prof">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            Prof
+						            </a>
+					            </Link>
+							</li>
+
+
+
+							
+							
+						</ul>
+						</li>
+						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						dermaoxy	
+						</a>
+						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+							<li>
+							    <Link href="/categori-dermaoxy-home">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						             HOME
+						            </a>
+					            </Link>
+							</li>
+							<li> 
+								<Link href="/categori-dermaoxy-prof">
+						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            Prof
+						            </a>
+					            </Link>
+							</li>
+
+
+
+							
+							
+						</ul>
+						</li>
 					
 					</ul>
 					
