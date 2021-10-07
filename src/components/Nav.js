@@ -14,24 +14,16 @@ const Nav = () => {
 	  {
 		id: 2,
 		  title: "СHANTARELLE",
-		answer:
-		  "No more than 2GB. All files in your account must fit your allotted storage space.",
+		linkhome:"/categori-chantarelle-home",
+		linkprof:"categori-chantarelle-prof"
 	  },
 	  {
 		id: 3,
 		  title: "ARKANA",
-		  answer: `Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.`,
-	  },
-	  {
-		id: 4,  
-		title: "Norel",
-		answer: `Yes! Send us a message and we’ll process your request no questions asked.`,
-	  },
-	  {
-		id: 5, 
-		title: "Beyond Dental ",
-		answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
-	  },
+		  linkhome:"/categori-arkana-home",
+		  linkprof:"/categori-arkana-prof"
+	  }
+	 
 	
 	];
 	const renderedQuestionsAnswers = questionsAnswers.map((item, index) => {
@@ -51,18 +43,18 @@ const Nav = () => {
 			setActiveIndex(index);
 		  }}>
 					<a className="">
-					{item.title	}
+					{item.linkhome	}
 					</a>
 					<ul id={`faq${index + 1}_desc`}
         data-qa="faq__desc"
         className={`faq__desc ${showDescription}`}>
 						<li className="block">
-							<Link href="/categori-arkana-home">
+							<Link href={item.linkhome	}>
 								<a className="">
 								 HOME 
 								</a>
 							</Link>
-							<Link href="/categori-arkana-prof">
+							<Link href={item.linkprof	}>
 								<a className="">
 								Prof 
 								</a>
