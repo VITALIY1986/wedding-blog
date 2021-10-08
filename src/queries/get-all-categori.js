@@ -4,7 +4,7 @@ import { gql } from "@apollo/client";
  * GraphQL categories query.
  */
 const GET_CATEGORI_QUERY = gql`query {
-	productCategoryArkanaHome:  productCategory(id: "dGVybTo1NA==") {
+	productCategoryArkanaHome:  productCategory(id: "dGVybTo4MTg=") {
     children {
       nodes {
         id
@@ -20,7 +20,7 @@ const GET_CATEGORI_QUERY = gql`query {
       }
     }
   }
-  productChantarelleHome:  productCategory(id: "dGVybToyNzQ=") {
+  productChantarelleHome:  productCategory(id: "dGVybTo3MzQ=") {
     children {
       nodes {
         id
@@ -36,7 +36,7 @@ const GET_CATEGORI_QUERY = gql`query {
       }
     }
   }
-  productNorelHome:  productCategory(id: "dGVybTozMzg=") {
+  productNorelHome:  productCategory(id: "dGVybTo5NDA=") {
     children {
       nodes {
         id
@@ -52,7 +52,7 @@ const GET_CATEGORI_QUERY = gql`query {
       }
     }
   }
-  productMCCM:  productCategory(id: "dGVybToxMjg=") {
+  productMCCM:  productCategory(id: "dGVybTo5MTQ=") {
     children {
       nodes {
         id
@@ -68,7 +68,7 @@ const GET_CATEGORI_QUERY = gql`query {
       }
     }
   }
-  productDermaoxy:  productCategory(id: "dGVybTozMjI=") {
+  productDermaoxy:  productCategory(id: "dGVybTo4MTI=") {
     children {
       nodes {
         id
