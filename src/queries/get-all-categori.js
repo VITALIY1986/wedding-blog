@@ -5,12 +5,12 @@ import { gql } from "@apollo/client";
  */
 const GET_CATEGORI_QUERY = gql`query {
 	productCategoryArkanaHome:  productCategory(id: "dGVybTo4MTg=") {
-    children {
+    children(first: 20)  {
       nodes {
         id
         name
         slug
-        children{
+        children(first: 20) {
           nodes {
             name
             id
@@ -21,12 +21,12 @@ const GET_CATEGORI_QUERY = gql`query {
     }
   }
   productChantarelleHome:  productCategory(id: "dGVybTo3MzQ=") {
-    children {
+    children(first: 20)  {
       nodes {
         id
         name
         slug
-        children{
+        children(first: 20) {
           nodes {
             name
             id
@@ -37,12 +37,12 @@ const GET_CATEGORI_QUERY = gql`query {
     }
   }
   productNorelHome:  productCategory(id: "dGVybTo5NDA=") {
-    children {
+    children(first: 20)  {
       nodes {
         id
         name
         slug
-        children{
+        children(first: 20) {
           nodes {
             name
             id
@@ -53,12 +53,12 @@ const GET_CATEGORI_QUERY = gql`query {
     }
   }
   productMCCM:  productCategory(id: "dGVybTo5MTQ=") {
-    children {
+    children(first: 20)  {
       nodes {
         id
         name
         slug
-        children {
+        children(first: 20)  {
           nodes {
             name
             id
@@ -69,12 +69,12 @@ const GET_CATEGORI_QUERY = gql`query {
     }
   }
   productDermaoxy:  productCategory(id: "dGVybTo4MTI=") {
-    children {
+    children(first: 20)  {
       nodes {
         id
         name
         slug
-        children {
+        children(first: 20)  {
           nodes {
             name
             id
