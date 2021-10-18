@@ -5,12 +5,12 @@ import { gql } from "@apollo/client";
  */
 const GET_CATEGORI_QUERY = gql`query {
 	productCategoryArkanaHome:  productCategory(id: "dGVybTo4MTg=") {
-    children(first: 22)  {
+    children(first: 27)  {
       nodes {
         id
         name
         slug
-        children(first: 20) {
+        children(first: 27) {
           nodes {
             name
             id
@@ -37,12 +37,12 @@ const GET_CATEGORI_QUERY = gql`query {
     }
   }
   productNorelHome:  productCategory(id: "dGVybTo5NDA=") {
-    children(first: 28)  {
+    children(first: 35)  {
       nodes {
         id
         name
         slug
-        children(first: 20) {
+        children(first: 35) {
           nodes {
             name
             id
