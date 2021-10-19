@@ -61,7 +61,7 @@ export default function Home (props) {
 						) : '' }
 					</div>
 				</div>
-				{/*Products*/ }
+				{/*Produts*/ }
 				<div className="products container mx-auto my-32  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наши Марки</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
