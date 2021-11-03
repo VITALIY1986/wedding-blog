@@ -1,5 +1,5 @@
 import Layout from "../src/components/Layout";
-import RegisterForm from "./register";
+import RegisterForm from "../src/components/register";
 
 const Checkout = ({data}) => (
 	<Layout>
