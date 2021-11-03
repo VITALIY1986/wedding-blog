@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { gql, useMutation } from '@apollo/client';
 import Layout from "../src/components/Layout";
 import OrderSuccess from "./OrderSuccess";
-import { useRegistration } from './mut';
+
 const REGISTER = gql`
 	mutation RegisterUser(
 		$username: String!
