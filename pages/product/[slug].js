@@ -46,6 +46,7 @@ export default function Product(props) {
 								} }
 								className="product-description mb-5"
 							/>
+                            <div>{product.sku}</div>
                             <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 							<AddToCartButton product={ product }/>
 						</div>

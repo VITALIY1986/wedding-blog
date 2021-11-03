@@ -15,7 +15,7 @@ const Nav = () => {
 		id: 2,
 		  title: "СHANTARELLE",
 		linkhome:"/categori-chantarelle-home",
-		linkprof:"categori-chantarelle-prof"
+		linkprof:"/categori-chantarelle-prof"
 	  },
 	  {
 		id: 3,

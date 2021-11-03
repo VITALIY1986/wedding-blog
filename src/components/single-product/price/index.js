@@ -1,7 +1,7 @@
 import {isEmpty} from "lodash";
 
 const Price = ({ regularPrice = 0, salesPrice }) => {
-
+   
     if ( isEmpty( salesPrice ) ) {
     	return null;
     }
@@ -36,7 +36,7 @@ const Price = ({ regularPrice = 0, salesPrice }) => {
             { productMeta?.discountPercent ? <span className="product-price mr-2">{salesPrice}</span> : null }
 
             {/* Discounted price */}
-            <span className={productMeta?.strikeThroughClass}>{ regularPrice }</span>
+            <span className={productMeta?.strikeThroughClass}>{ regularPrice}</span>
 
             {/* Discount percent */}
             <span className="product-discount text-green-600 font-bold text-sm block">{productMeta?.discountPercent}</span>

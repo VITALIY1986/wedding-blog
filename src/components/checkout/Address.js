@@ -120,12 +120,12 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                 containerClassNames="mb-4"
             />
             {/*	@TODO Create an Account */}
-            {/*<div className="form-check">*/}
-            {/*	<label className="leading-7 text-sm text-gray-600" className="form-check-label">*/}
-            {/*		<input onChange={ handleOnChange } className="form-check-input" name="createAccount" type="checkbox"/>*/}
-            {/*			Create an account?*/}
-            {/*	</label>*/}
-            {/*</div>*/}
+            <div className="form-check">
+            <label className="leading-7 text-sm text-gray-600" className="form-check-label">
+            	<input onChange={ handleOnChange } className="form-check-input" name="createAccount" type="checkbox"/>
+            		Create an account?
+            </label>
+            </div>
             {/*<h2 className="mt-4 mb-4">Additional Information</h2>*/}
             {/* @TODO Order Notes */}
             {/*<div className="form-group mb-3">*/}

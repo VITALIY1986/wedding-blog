@@ -58,6 +58,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       averageRating
       slug
       description
+      sku
       image {
         id
         altText
