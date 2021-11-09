@@ -8,8 +8,8 @@
  /**
   * Internal dependencies
   */
- import { useLogoutMutation } from '../mutations/use-logout-mutation';
- import { useLoginMutation } from '../mutations/use-login-mutation';
+ import { useLogoutMutation } from '../../mutations/use-logout-mutation';
+ import { useLoginMutation } from '../../mutations/use-login-mutation';
  import { useViewerQuery } from './use-viewer-query';
  import { useAuthContext } from './auth-context';
  import { useSafeDispatch } from './use-safe-dispatch';

@@ -8,8 +8,8 @@
  /**
   * Internal dependencies
   */
- import Field from './field';
- import { useAuth } from './hooks';
+ import Field from './login/field';
+ import { useAuth } from './login/hooks';
  
  export const LoginForm = () => {
      const [ username, setUsername ] = useState( '' );
@@ -38,6 +38,7 @@
                  autoComplete="username"
                  onChange={ ( value ) => setUsername( value ) }
                  disabled={ status === 'resolving' }
+              
              />
              <Field
                  label="Password"

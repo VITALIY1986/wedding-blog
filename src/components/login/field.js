@@ -42,7 +42,7 @@ const Field = ( {
 				{ grow === true ? (
 					<TextareaAutosize
 						{ ...inputProps }
-						minRows={ 1 }
+						minRows={ 1}
 						onChange={ ( event ) => onChange( event.target.value ) }
 					/>
 				) : (

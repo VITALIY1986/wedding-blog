@@ -9,8 +9,8 @@
  /**
   * Internal dependencies
   */
- import Field from './field';
- import { useRegistration } from './use-registration';
+ import Field from './login/field';
+ import { useRegistration } from './login/use-registration';
  
  export const RegisterForm = () => {
      const [ username, setUsername ] = useState( '' );

@@ -8,7 +8,7 @@
  /**
   * Internal dependencies
   */
- import { useRegisterMutation } from '../mutations/use-register-mutation';
+ import { useRegisterMutation } from '../../mutations/use-register-mutation';
  import { useAuthContext } from './auth-context';
  
  const errorCodes = {
