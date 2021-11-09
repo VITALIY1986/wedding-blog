@@ -21,7 +21,7 @@ export const PRODUCT_BY_CATEGORY_SLUG = gql` query PRODUCT_BY_CATEGORY_SLUG($slu
 		  }
 		  name
 		  ... on SimpleProduct {
-			price
+			price(format: RAW)
 			regularPrice
 			id
 		  }
