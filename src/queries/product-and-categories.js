@@ -66,7 +66,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
       name
       ... on SimpleProduct {
-        price
+        price(format: RAW)
         regularPrice
         id
       }

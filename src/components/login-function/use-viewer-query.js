@@ -38,7 +38,7 @@
  
      const onCompleted = useSafeDispatch( ( theData ) => {
          if ( ! theData?.viewer ) {
-             setIsLoggedIn( false );
+             setIsLoggedIn( true );
          }
      } );
  

@@ -18,13 +18,15 @@
      { serialize = JSON.stringify, deserialize = JSON.parse } = {}
  ) => {
      const [ state, setState ] = useState( () => {
-         const valueInLocalStorage = window.localStorage.getItem( key );
-         if ( valueInLocalStorage ) {
+        if (typeof window !== "undefined"){
+         const valueInLocalStorage = localStorage.getItem( key );
+         if  ( valueInLocalStorage ) {
              return deserialize( valueInLocalStorage );
          }
          return typeof defaultValue === 'function'
              ? defaultValue()
              : defaultValue;
+            }
      } );
  
      const prevKeyRef = useRef( key );

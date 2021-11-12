@@ -9,16 +9,17 @@
  /**
   * Internal dependencies
   */
- import Field from './login/field';
- import { useRegistration } from './login/use-registration';
- 
+ import Field from '../login-function/field';
+ import { useRegistration } from '../login-function/use-registration';
+ import { useAuth } from '../login-function/hooks';
  export const RegisterForm = () => {
      const [ username, setUsername ] = useState( '' );
      const [ email, setEmail ] = useState( '' );
      const [ password, setPassword ] = useState( '' );
      const { register, error, status } = useRegistration();
      const [ passwordError, setPasswordError ] = useState( '' );
- 
+     const { isLoggedIn } = useAuth();
+   
      const onRegister = ( e ) => {
          e.preventDefault();
          setPasswordError( '' );

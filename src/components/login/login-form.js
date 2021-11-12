@@ -8,8 +8,8 @@
  /**
   * Internal dependencies
   */
- import Field from './login/field';
- import { useAuth } from './login/hooks';
+ import Field from '../login-function/field';
+ import { useAuth } from '../login-function/hooks';
  
  export const LoginForm = () => {
      const [ username, setUsername ] = useState( '' );

@@ -40,9 +40,9 @@
      } = useViewerQuery();
  
      const onLoginSuccess = useSafeDispatch( () => {
-        const responseData = '/categori-chantarelle-home';
+       //* const responseData = '/categori-chantarelle-home';
 	
-        window.location.href = responseData;
+       //* window.location.href = responseData;
          setIsLoggedIn( true );
          setStatus( 'resolved' );
      } );

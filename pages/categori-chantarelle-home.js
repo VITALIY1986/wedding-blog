@@ -3,9 +3,11 @@ import client from '../src/components/ApolloClient';
 import ParentCategoriesBlock from "../src/components/category/category-block/ParentCategoriesBlock";
 import GET_ALL_CATEGORI_QUERY from "../src/queries/get-all-categori";
 import HeroCarousel from "../src/components/home/hero-carousel";
+
 export default function Categories ( props ) {
 
 	const {productChantarelleHome,  heroCarousel } = props;
+	
 
 	return (
 		<Layout>
