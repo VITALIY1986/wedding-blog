@@ -31,7 +31,7 @@ const Product = ( props ) => {
 					<h3 className="product-title mt-3 font-medium text-gray-800 overflow-hidden ">
 						{ product.name ? product.name : '' }
 					</h3>
-					{props.ViewComponent}
+				
 					<div>₴{product?.price*2 }</div>
 					<div className="text-white bg-black">{product.sku}</div>
 					<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
