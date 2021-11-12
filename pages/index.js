@@ -8,7 +8,7 @@ import PRODUCTS_AND_CATEGORIES_QUERY from "../src/queries/product-and-categories
 import HeroCarousel from "../src/components/home/hero-carousel";
 import Accordion from "../src/components/Accordion";
 import { AuthContextProvider } from '../src/components/login-function/auth-context';
-
+import Login from "../src/components/login";
 
 export default function Home (props) {
 
@@ -19,12 +19,12 @@ export default function Home (props) {
 
 
 	return (
-	
+		<AuthContextProvider>
 			<Layout>
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				
-			
+				<Login/>
 				{/*Categories
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="main-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
@@ -81,7 +81,7 @@ export default function Home (props) {
 				</div>
 				</div>
 			</Layout>
-		
+			</AuthContextProvider>
 	)
 };
 
