@@ -16,10 +16,10 @@ export default function Home (props) {
 
 	const { products,  heroCarousel, posts, postsCategory,questionsAnswers,isLoggedIn} = props || {};
 	
-	const ViewComponent = isLoggedIn ?  "Login" : "Profile";
+
 
 	return (
-		<AuthContextProvider>
+	
 			<Layout>
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
@@ -81,7 +81,7 @@ export default function Home (props) {
 				</div>
 				</div>
 			</Layout>
-			</AuthContextProvider>
+		
 	)
 };
 
