@@ -9,12 +9,13 @@ import HeroCarousel from "../src/components/home/hero-carousel";
 import Accordion from "../src/components/Accordion";
 import { AuthContextProvider } from '../src/components/login-function/auth-context';
 import Login from "../src/components/login";
-
+import { useAuth } from '../src/components/login-function/hooks';
 export default function Home (props) {
 
+	
 
 
-	const { products,  heroCarousel, posts, postsCategory,questionsAnswers,isLoggedIn} = props || {};
+	const { products,  heroCarousel, posts, postsCategory,questionsAnswers,price} = props || {};
 	
 
 
@@ -24,12 +25,14 @@ export default function Home (props) {
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				
-				<Login/>
+			
 				{/*Categories
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="main-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 				</div>*/ }
+				
+				<div>	<Login/></div>
 			<div className="px-4">
 				<div className="products container mx-auto my-32  ">
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>

@@ -51,6 +51,11 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
     }
   }
+  pages(where: {id: 11}) {
+    nodes {
+      content
+    }
+  }
   products(first: 4) {
     nodes {
       id
@@ -66,7 +71,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
       name
       ... on SimpleProduct {
-        price(format: RAW)
+        price
         regularPrice
         id
       }

@@ -12,7 +12,7 @@ const YourOrder = ( { cart } ) => {
 						<thead>
 						<tr className="woo-next-cart-head-container text-left">
 							<th className="woo-next-cart-heading-el" scope="col"/>
-							<th className="woo-next-cart-heading-el" scope="col">Product</th>
+							<th className="woo-next-cart-heading-el" scope="col">Productss</th>
 							<th className="woo-next-cart-heading-el" scope="col">Total</th>
 						</tr>
 						</thead>

@@ -14,7 +14,7 @@
   */
  export const useLocalStorage = (
      key,
-     defaultValue = '',
+     defaultValue = false,
      { serialize = JSON.stringify, deserialize = JSON.parse } = {}
  ) => {
      const [ state, setState ] = useState( () => {

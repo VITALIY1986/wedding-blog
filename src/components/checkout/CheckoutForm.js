@@ -21,34 +21,34 @@ import CLEAR_CART_MUTATION from "../../mutations/clear-cart";
 
 // Use this for testing purposes, so you dont have to fill the checkout form over an over again.
  const defaultCustomerInfo = {
-  	firstName: 'Vitaliy',
+  	firstName: 'Vitiy',
  	lastName: 'Statk',
- 	address1: '123 Abc farm',
- 	address2: 'Hill Road',
+ 	address1: '123 bc farm',
+address2: 'Hill Road',
   	city: 'Mumbai',
  	country: 'IN',
 	state: 'Chernovic',
  	postcode: '221029',
-  	email: 'staslego1986@gmail.com',
+  	email: 'stasle1986@gmail.com',
   	phone: '0505908978',
   	company: 'The Company',
  	errors: null
   }
 
-// const defaultCustomerInfo = {
+//const defaultCustomerInfo = {
   //  firstName: '',
- //  lastName: '',
- //    address1: '',
- //  address2: '',
- //  city: '',
- //  country: '',
- //   state: '',
- //   postcode: '',
- //   email: '',
+ // lastName: '',
+ // address1: '',
+ // address2: '',
+  // city: '',
+  // country: '',
+  //  state: '',
+  //  postcode: '',
+  //  email: '',
  // phone: '',
- //   company: '',
- //   errors: null
- //}
+   // company: '',
+   // errors: null
+// }
 
 const CheckoutForm = ({countriesData}) => {
 
