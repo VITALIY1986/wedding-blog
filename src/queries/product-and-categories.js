@@ -56,7 +56,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       content
     }
   }
-  products(first: 4) {
+  products(first: 5) {
     nodes {
       id
       productId: databaseId

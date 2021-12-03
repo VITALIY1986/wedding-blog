@@ -11,9 +11,9 @@ const Product = ( props ) => {
 	return (
 		// @TODO Need to handle Group products differently.
 		undefined !== product && 'GroupProduct' !== product.__typename ? (
-			<div className="product mb-5 text-center hover:shadow">
-
-
+			<div className="product mb-5 text-center hover:shadow-xl relative">
+ 
+ <div className="bg-blue rounded absolute right-2 top-2 z-10 text-white p-2">NEW</div>
 				<Link href={ `/product/${ product?.slug }`} >
 					<a>
 						<Image

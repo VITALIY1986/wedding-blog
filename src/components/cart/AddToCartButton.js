@@ -88,8 +88,8 @@ const AddToCart = (props) => {
 					disabled={addToCartLoading}
                     onClick={handleAddToCartClick}
                     className={cx(
-                        'px-5 py-3 rounded-sm mr-3 text-sm border-solid border border-current',
-                        {'hover:bg-purple-600 hover:text-white hover:border-purple-600': !addToCartLoading},
+                        'px-5 py-2 rounded-sm  text-sm border-solid border-blue border border-current',
+                        {'hover:bg-blue hover:text-white hover:border-blue': !addToCartLoading},
                         {'opacity-50 cursor-not-allowed': addToCartLoading}
                     )}
                 >
@@ -100,7 +100,7 @@ const AddToCart = (props) => {
             {showViewCart ? (
                 <Link href="/cart">
                     <button
-                        className="px-3 py-1 rounded-sm text-sm border-solid border border-current inline-block hover:bg-purple-600 hover:text-white hover:border-purple-600">View
+                        className="px-3 py-1 rounded-sm text-sm border-solid border border-current inline-block hover:bg-purple hover:text-white hover:border-purple-600">View
                         Cart
                     </button>
                 </Link>

@@ -14,7 +14,7 @@ const Post = ( props ) => {
 					
 				  <div className="inline-block px-3">
 					<div
-					  className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+					  className=" rounded-lg shadow-md bg-white hover:shadow-xl "
 					>
 <Link href={ `/post/${ post?.id }`} >
 		<a>

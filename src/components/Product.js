@@ -27,12 +27,13 @@ const Product = ( props ) => {
 						/>
 					</a>
 				</Link>
+				<div className="text-center text-white  bg-black opacity-30">{product.sku}</div>
 				<div className="product-info text-center p-2 md:p-5">
 					<h3 className="product-title mt-3 font-medium text-gray-800 overflow-hidden ">
 						{ product.name ? product.name : '' }
 					</h3>
-					<div>₴{product?.price}</div>
-					<div className="text-white bg-black">{product.sku}</div>
+					
+				
 					<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
 					<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 					<AddToCartButton product={ product }/>
