@@ -31,9 +31,9 @@ export default function Home (props) {
 		
 	];
 	posts.map( post =>items.push(<Post key={ post.id } post={ post } />) );
-	const [username, setUsername] = useState('')
-	const [isLoggedIn, setIsLoggedIn] = useState(false)
-	const [serverMessage, setServerMessage] = useState(false)
+
+	
+
 	return (
 		<AuthContextProvider>
 			<Layout>
@@ -48,8 +48,8 @@ export default function Home (props) {
 					<h2 className="main-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 				</div>*/ }
-				<SignUp setUsername={setUsername} setIsLoggedIn={setIsLoggedIn} serverMessage={serverMessage} setServerMessage={setServerMessage} />
-				<div>	<Login/></div>
+			
+				{/*<div>	<Login/></div>*/ }
 			<div className="px-4">
 				<div className="products container mx-auto my-32  ">
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
