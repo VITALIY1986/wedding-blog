@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.alice-carousel__prev-btn{
+  left: -20px;
+  position: absolute;
+  top: 25%;
+  text-align: left !important;
+  transform: translateY(50%);
+}
 span.main-title-inner{
     position: relative;
     display: inline-block;
