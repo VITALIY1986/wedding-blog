@@ -51,7 +51,7 @@ export default function Home (props) {
 			
 				{/*<div>	<Login/></div>*/ }
 			<div className="px-4">
-				<div className="products container mx-auto my-32  ">
+				<div className="products container mx-auto mt-32  ">
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
 				<div className="flex flex-col bg-white m-auto p-auto">
 				
@@ -81,7 +81,7 @@ export default function Home (props) {
 				
 					<ParentProductBlock products={ products }/>
 				{/*Products*/ }
-				<div className="products container mx-auto my-32  ">
+				<div className="products container mx-auto my-10  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акции</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
 						{ products.length ? (
