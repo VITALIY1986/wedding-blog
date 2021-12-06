@@ -19,7 +19,7 @@ const Post = ( props ) => {
 <Link href={ `/post/${ post?.id }`} >
 		<a>
 			<Image
-				className="object-cover bg-gray-100"
+				className="object-cover bg-gray-100 "
 				width="500"
 				height="500"
 				loading="lazy"
