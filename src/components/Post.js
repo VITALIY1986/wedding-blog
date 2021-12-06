@@ -12,7 +12,7 @@ const Post = ( props ) => {
 
 
 					
-				  <div className="inline-block px-3">
+				  <div className="inline-block px-3 py-3">
 					<div
 					  className=" rounded-lg shadow-md bg-white hover:shadow-xl "
 					>
@@ -28,9 +28,14 @@ const Post = ( props ) => {
 		</a>
 	</Link>
 	<div className="product-info">
-		<h3 className="product-title mt-3 font-medium text-gray-800">
+		<h3 className="product-title mt-3 font-medium uppercase text-gray-800 p-3">
 		{ post.title ? post.title : '' }
 		</h3>
+		<span className="px-3 py-2 text-white bg-gradient-to-r from-black ...">{post.date}</span>
+		<p className="px-3 pb-8 pt-3  text-gray-500"dangerouslySetInnerHTML={ {
+									__html: post.excerpt
+								} }></p>
+	
 		</div>
 
 
