@@ -28,13 +28,13 @@ const Post = ( props ) => {
 		</a>
 	</Link>
 	<div className="product-info">
-		<h3 className="product-title mt-3 font-medium uppercase text-gray-800 p-3">
+		<h3 className="product-title mt-3 uppercase font-medium text-gray-800 p-3">
 		{ post.title ? post.title : '' }
 		</h3>
-		<span className="px-3 py-2 text-white bg-gradient-to-r from-black ...">{post.date}</span>
-		<p className="px-3 pb-8 pt-3  text-gray-500"dangerouslySetInnerHTML={ {
+		<span className="px-3 py-2 text-white bg-gradient-to-r from-blue ...">{post.date}</span>
+		<span className="block px-3 pb-8 pt-3 text-gray-500" dangerouslySetInnerHTML={ {
 									__html: post.excerpt
-								} }></p>
+								} }></span>
 	
 		</div>
 
