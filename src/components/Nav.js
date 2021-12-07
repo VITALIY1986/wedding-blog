@@ -128,23 +128,24 @@ const Nav = () => {
 
 				{/*MMenu in mobile*/}
 				<div className={`${ isMenuVisible ? 'max-h-full h-full' : 'h-0' } w-full hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}>
-					<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex h-full ">
+					<ul className="text-sm font-medium  lg:flex-grow lg:flex h-full ">
 					<li className="nav-item relative   ">
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						СHANTARELLE
 						</a>
-						<ul className="dropdown-menus py-2 ">
+						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
 							    <Link href="/categori-chantarelle-home">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-									Профессиональная косметика
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
+									Домашняя косметика
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-chantarelle-prof">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						            Домашняя косметика
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Профессиональная косметика
 						            </a>
 					            </Link>
 							</li>
@@ -155,18 +156,19 @@ const Nav = () => {
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						ARKANA	
 						</a>
-						<ul className="dropdown-menus py-2 text-center">
+						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
 							    <Link href="/categori-arkana-home">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						             HOME
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
+									Домашняя косметика
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-arkana-prof">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						            Prof
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Профессиональная косметика
 						            </a>
 					            </Link>
 							</li>
@@ -177,18 +179,19 @@ const Nav = () => {
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						NOREL	
 						</a>
-						<ul className="dropdown-menus py-2 text-center">
+						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
 							    <Link href="/categori-norel-home">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						             HOME
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
+									Домашняя косметика
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-norel-prof">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black">
-						            Prof
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Профессиональная косметика
 						            </a>
 					            </Link>
 							</li>
@@ -201,18 +204,19 @@ const Nav = () => {
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						MCCM	
 						</a>
-						<ul className="dropdown-menus py-2 text-center">
+						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
 							    <Link href="/categori-mccm-home">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						             HOME
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
+									Домашняя косметика
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-mccm-prof">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						            Prof
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Профессиональная косметика
 						            </a>
 					            </Link>
 							</li>
@@ -225,20 +229,21 @@ const Nav = () => {
 						</li>
 						<li className="nav-item relative"  >
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
-						dermaoxy	
+						DERMAOXY	
 						</a>
-						<ul className="dropdown-menus py-2 text-center">
+						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
 							    <Link href="/categori-dermaoxy-home">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						             HOME
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
+									Домашняя косметика
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-dermaoxy-prof">
-						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
-						            Prof
+								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Профессиональная косметика
 						            </a>
 					            </Link>
 							</li>
