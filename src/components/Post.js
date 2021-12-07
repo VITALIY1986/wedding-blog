@@ -16,8 +16,9 @@ const Post = ( props ) => {
 					<div
 					  className=" rounded-lg shadow-md bg-white hover:shadow-xl "
 					>
+						<div className="shadow_post relative">
 <Link href={ `/post/${ post?.id }`}  className="h-full">
-		<a>
+		
 			<Image
 				className="object-cover bg-gray-100 "
 				width="500"
@@ -25,8 +26,9 @@ const Post = ( props ) => {
 				loading="lazy"
 				sourceUrl={post?.featuredImage?.node.sourceUrl }
 			/>
-		</a>
+	
 	</Link>
+	</div>
 	<div className="product-info pb-8">
 		<h3 className="product-title mt-3 uppercase font-medium text-gray-800 p-3">
 		{ post.title ? post.title : '' }
