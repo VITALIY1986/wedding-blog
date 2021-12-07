@@ -26,21 +26,7 @@
   cursor: pointer;
   transform: scaleX(0);
 }
-.alice-carousel__prev-btn{
-  left: -20px;
-  position: absolute;
-  top: 25%;
-  text-align: left !important;
-  transform: translateY(50%);
 
-}
-.alice-carousel__next-btn{
-  right: -20px;
-  position: absolute;
-  top: 25%;
-  text-align: right !important;
-  transform: translateY(50%);
-}
 span.main-title-inner{
     position: relative;
     display: inline-block;
