@@ -1,6 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.lead_hover{
+  line-height:100px ;
+}
+.nav-item:hover .dropdown-menus {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleX(1);
+}
+ .nav-item .dropdown-menus {
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+  background: #fff;
+  position: absolute;
+  border: none;
+  top: 100px;
+  left: 0;
+  width: 250px;
+  z-index: 100000099;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 0;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  transform: scaleX(0);
+}
 .alice-carousel__prev-btn{
   left: -20px;
   position: absolute;

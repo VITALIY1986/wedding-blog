@@ -91,7 +91,7 @@ const Nav = () => {
 		);
 	  });
 	return (
-		<nav className=" p-4">
+		<nav className="">
 			<div className="flex items-center justify-between flex-wrap container mx-auto">
 
 				<div className="flex items-center flex-shrink-0 text-black mr-20 w-24">
@@ -127,45 +127,45 @@ const Nav = () => {
 				</div>
 
 				{/*MMenu in mobile*/}
-				<div className={`${ isMenuVisible ? 'max-h-full h-full' : 'h-0' } w-full overflow-hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}>
-					<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex">
-					<li onClick={() => setMenuChidrenVisibleNorel(! isMenuChidrenVisibleNorel)}>
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+				<div className={`${ isMenuVisible ? 'max-h-full h-full' : 'h-0' } w-full hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}>
+					<ul className="text-sm font-medium uppercase lg:flex-grow lg:flex h-full ">
+					<li className="nav-item relative   ">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						СHANTARELLE
 						</a>
-						<ul className={`${ isMenuChidrenVisibleNorel ? 'block lg:fixed' : 'hidden' } `}>
+						<ul className="dropdown-menus py-2 ">
 							<li>
 							    <Link href="/categori-chantarelle-home">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-						             HOME
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
+									Профессиональная косметика
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-chantarelle-prof">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
-						            Prof
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
+						            Домашняя косметика
 						            </a>
 					            </Link>
 							</li>
 							
 						</ul>
 						</li>
-						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						<li className="nav-item relative" >
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						ARKANA	
 						</a>
-						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+						<ul className="dropdown-menus py-2 text-center">
 							<li>
 							    <Link href="/categori-arkana-home">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
 						             HOME
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-arkana-prof">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
 						            Prof
 						            </a>
 					            </Link>
@@ -173,21 +173,21 @@ const Nav = () => {
 							
 						</ul>
 						</li>
-						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						<li className="nav-item relative" >
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						NOREL	
 						</a>
-						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+						<ul className="dropdown-menus py-2 text-center">
 							<li>
 							    <Link href="/categori-norel-home">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
 						             HOME
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-norel-prof">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black">
 						            Prof
 						            </a>
 					            </Link>
@@ -197,21 +197,21 @@ const Nav = () => {
 				
 				
 					
-						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						<li className="nav-item relative"  >
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						MCCM	
 						</a>
-						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+						<ul className="dropdown-menus py-2 text-center">
 							<li>
 							    <Link href="/categori-mccm-home">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
 						             HOME
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-mccm-prof">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
 						            Prof
 						            </a>
 					            </Link>
@@ -223,21 +223,21 @@ const Nav = () => {
 							
 						</ul>
 						</li>
-						<li onClick={() => setMenuChidrenVisibleArkana(! isMenuChidrenVisibleArkana)} >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						<li className="nav-item relative"  >
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
 						dermaoxy	
 						</a>
-						<ul className={`${ isMenuChidrenVisibleArkana ? 'block lg:fixed' : 'hidden' } `}>
+						<ul className="dropdown-menus py-2 text-center">
 							<li>
 							    <Link href="/categori-dermaoxy-home">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
 						             HOME
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href="/categori-dermaoxy-prof">
-						            <a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10">
+						            <a className="block py-2 lg:inline-block lg:mt-0 text-black hover:text-black ">
 						            Prof
 						            </a>
 					            </Link>

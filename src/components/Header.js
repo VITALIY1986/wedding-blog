@@ -8,7 +8,7 @@ const Header = () => {
 	  });
 	}, []);
 	return (
-		<div className={scroll ? "bg-white w-full fixed z-50 duration-300 py-0 shadow top-0 border-b-2 border-blue" : "relative duration-300 py-2 border-b-2 border-blue"}>
+		<div className={scroll ? "bg-white w-full fixed z-50 duration-300 py-0 shadow top-0 border-b-2 border-blue" : "relative duration-300  border-b-2 border-blue"}>
 			<Nav/>
 		</div>
 	)
