@@ -131,7 +131,7 @@ const Nav = () => {
 					<ul className="text-sm font-medium  lg:flex-grow lg:flex h-full ">
 					<li className="nav-item relative   ">
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
-						СHANTARELLE
+						СHANTARELLE <span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
@@ -149,12 +149,20 @@ const Nav = () => {
 						            </a>
 					            </Link>
 							</li>
+							<li> 
+								<Link href="#">
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Статьи
+						            </a>
+					            </Link>
+							</li>
 							
 						</ul>
 						</li>
 						<li className="nav-item relative" >
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
-						ARKANA	
+						ARKANA	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
@@ -177,7 +185,7 @@ const Nav = () => {
 						</li>
 						<li className="nav-item relative" >
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
-						NOREL	
+						NOREL	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
@@ -202,7 +210,7 @@ const Nav = () => {
 					
 						<li className="nav-item relative"  >
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
-						MCCM	
+						MCCM	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>
@@ -229,7 +237,7 @@ const Nav = () => {
 						</li>
 						<li className="nav-item relative"  >
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
-						DERMAOXY	
+						DERMAOXY	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
 							<li>

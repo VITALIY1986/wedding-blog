@@ -16,7 +16,7 @@ const Post = ( props ) => {
 					<div
 					  className=" rounded-lg shadow-md bg-white hover:shadow-xl "
 					>
-<Link href={ `/post/${ post?.id }`} >
+<Link href={ `/post/${ post?.id }`}  className="h-full">
 		<a>
 			<Image
 				className="object-cover bg-gray-100 "
@@ -27,14 +27,14 @@ const Post = ( props ) => {
 			/>
 		</a>
 	</Link>
-	<div className="product-info">
+	<div className="product-info pb-8">
 		<h3 className="product-title mt-3 uppercase font-medium text-gray-800 p-3">
 		{ post.title ? post.title : '' }
 		</h3>
 		<span className="px-3 py-2 text-white bg-gradient-to-r from-blue ...">{post.date}</span>
-		<span className="block px-3 pb-8 pt-3 text-gray-500" dangerouslySetInnerHTML={ {
+		{/*	<span className="block px-3 pb-8 pt-3 text-gray-500" dangerouslySetInnerHTML={ {
 									__html: post.excerpt
-								} }></span>
+								} }></span>*/}
 	
 		</div>
 
