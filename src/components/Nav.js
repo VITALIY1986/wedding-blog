@@ -110,14 +110,14 @@ const Nav = () => {
 	
 			</>
 				{/*Menu button*/}
-				<div className="block lg:hidden">
+				<div className="block p-3 lg:hidden">
 				<input id="hamburger" className="hamburger" type="checkbox"/>
 				<label className=" hamburger" for="hamburger">
 		  <i></i>
-		  <span>
+		{/*  <span>
 			<span className="close">close</span>
 			<span className="open">menu</span>
-		  </span>
+		  </span>*/}
 		</label>
 		<section className="drawer-list bg-blue ">
 		<ul className="">
