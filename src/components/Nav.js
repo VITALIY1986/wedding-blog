@@ -15,31 +15,36 @@ const Nav = () => {
 		id: 2,
 		  title: "СHANTARELLE",
 		linkhome:"/categori-chantarelle-home",
-		linkprof:"/categori-chantarelle-prof"
+		linkprof:"/categori-chantarelle-prof",
+		linkarticle:"/chantarelle"
 	  },
 	  {
 		id: 3,
 		  title: "ARKANA",
 		  linkhome:"/categori-arkana-home",
-		  linkprof:"/categori-arkana-prof"
+		  linkprof:"/categori-arkana-prof",
+		  linkarticle:"/chantarelle"
 	  },
 	  {
 		id: 3,
 		  title: "NOREL",
 		  linkhome:"/categori-norel-home",
-		  linkprof:"/categori-norel-prof"
+		  linkprof:"/categori-norel-prof",
+		  linkarticle:"/chantarelle"
 	  },
 	  {
 		id: 3,
 		  title: "MCCM",
 		  linkhome:"/categori-mccm-home",
-		  linkprof:"/categori-mccm-prof"
+		  linkprof:"/categori-mccm-prof",
+		  linkarticle:"/chantarelle"
 	  },
 	  {
 		id: 3,
 		  title: "DermaOxy",
 		  linkhome:"/categori-dermaoxy-home",
-		  linkprof:"/categori-dermaoxy-prof"
+		  linkprof:"/categori-dermaoxy-prof",
+		  linkarticle:"/chantarelle"
 	  }
 	 
 	
@@ -77,6 +82,11 @@ const Nav = () => {
 								Prof 
 								</a>
 							</Link>
+							<Link href={item.linkarticle	}>
+								<a className="">
+								Статьи
+								</a>
+							</Link>
 						</li>
 						
 						
@@ -92,7 +102,7 @@ const Nav = () => {
 		);
 	  });
 	return (
-		<nav className="">
+		<nav className="mx-2">
 			<div className="flex items-center justify-between container mx-auto">
 
 				<div className="flex items-center flex-shrink-0 text-black mr-20 w-24">
@@ -112,11 +122,11 @@ const Nav = () => {
 			</>
 				{/*Menu button*/}
 				<div>
-				<a href="/registration/register/" className="block lg:inline-block lg:mt-0 text-black hover:text-black  rounded-full p-2 bg-gray">
-						<svg xmlns="http://www.w3.org/2000/svg" className=" lg:block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="auto" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+				<a href="/registration/register/" className="block  lg:hidden lg:mt-0 text-black hover:text-black  rounded-full p-2 bg-gray-200">
+						<svg xmlns="http://www.w3.org/2000/svg" className=" lg:block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="auto" stroke="gray"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
 							
 						</a></div>
-				<div className="block p-3 lg:hidden">
+				<div className="block py-3 lg:hidden">
 				<input id="hamburger" className="hamburger" type="checkbox"/>
 				<label className=" hamburger" for="hamburger">
 		  <i></i>
@@ -157,7 +167,7 @@ const Nav = () => {
 					            </Link>
 							</li>
 							<li> 
-								<Link href="#">
+								<Link href="/chantarelle">
 						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
 						            
 									Статьи
