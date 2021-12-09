@@ -71,6 +71,11 @@ export const POST_BY_SLUG_QUERY = gql` query Post($slug: ID!) {
         title
         slug 
 		content
+		featuredImage {
+			node {
+			  sourceUrl
+			}
+		  }
   }
   
 }

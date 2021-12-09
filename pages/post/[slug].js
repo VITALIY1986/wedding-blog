@@ -21,12 +21,25 @@ export default function Post(props) {
 	return (
 		
 			<Layout>
-							<h4 className="products-main-title text-2xl uppercase">{ post?.title }</h4>
-                            
-                            <span dangerouslySetInnerHTML={ {
-									__html: post.content
-								} }></span>
-                            </Layout>				
+                <div className="flex flex-col lg:flex-row mx-3 md:mx-10 lg:mx-20 lg:flex    my-20">
+                    	
+                    <div className="lg:w-2/4 mt-6 lg:mt-0 lg:order-first ">		
+                        <h4 className="products-main-title text-2xl lg:text-4xl lg:w-11/12 uppercase">{ post?.title }</h4>
+                        <p className="lg:w-4/5  mt-3 lg:text-lg text-gray-500 ">
+                           <span  dangerouslySetInnerHTML={ {
+						   			__html: post.content
+						   } }></span>
+                        </p>
+                    </div>
+                    <div className="lg:w-2/4 order-first ">
+                        <img
+			            className="object-cover w-full"
+				        src={post?.featuredImage?.node.sourceUrl }
+			            />
+		            </div>
+                </div>
+            </Layout>	
+                           
 	
 	);
 };
