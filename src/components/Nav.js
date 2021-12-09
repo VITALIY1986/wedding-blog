@@ -93,7 +93,7 @@ const Nav = () => {
 	  });
 	return (
 		<nav className="">
-			<div className="flex items-center justify-between   container mx-auto">
+			<div className="flex items-center justify-between container mx-auto">
 
 				<div className="flex items-center flex-shrink-0 text-black mr-20 w-24">
 					{/*<svg className="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>*/}
@@ -110,14 +110,13 @@ const Nav = () => {
 		
 	
 			</>
-			<div className="flex">
-			<a href="/registration/register/" className="block  lg:inline-block lg:mt-0 text-black hover:text-black mr-2  ">
-						<svg xmlns="http://www.w3.org/2000/svg" className=" block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="auto" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-							
-						</a>
 				{/*Menu button*/}
-				<div className=" p-3 lg:hidden ">
-				
+				<div>
+				<a href="/registration/register/" className="block lg:inline-block lg:mt-0 text-black hover:text-black  rounded-full p-2 bg-gray">
+						<svg xmlns="http://www.w3.org/2000/svg" className=" lg:block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="auto" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+							
+						</a></div>
+				<div className="block p-3 lg:hidden">
 				<input id="hamburger" className="hamburger" type="checkbox"/>
 				<label className=" hamburger" for="hamburger">
 		  <i></i>
@@ -126,14 +125,11 @@ const Nav = () => {
 			<span className="open">menu</span>
 		  </span>*/}
 		</label>
-	</div>
 		<section className="drawer-list bg-blue ">
-			
 		<ul className="">
 			
 		{renderedQuestionsAnswers}
 		</ul>
-		
 			</section>
 				</div>
 
