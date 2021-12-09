@@ -5,45 +5,52 @@ import Image from "../image";
 import {DEFAULT_PRODUCT_HOME_IMG_URL} from "../constants/urls";
 
 const Post = ( props ) => {
-	const { post } = props;
+	const { post,index } = props;
 
 	return (
 		
 
-
-					
-				  <div className="inline-block px-3 py-3">
-					<div
-					  className=" rounded-lg shadow-md bg-white hover:shadow-xl "
-					>
-						<div className="shadow_post relative">
-<Link href={ `/post/${ post?.id }`}  className="h-full">
-		<a>
-			<Image
-				className="object-cover bg-gray-100 "
-				width="500"
-				height="500"
-				loading="lazy"
-				sourceUrl={post?.featuredImage?.node.sourceUrl }
-			/>
-	</a>
-	</Link>
-	</div>
-	<div className="product-info pb-8">
-		<h3 className="product-title mt-3 uppercase font-medium text-gray-800 p-3">
-		{ post.title ? post.title : '' }
-		</h3>
-		<span className="px-3 py-2 text-white bg-gradient-to-r from-blue ...">{post.date}</span>
-		<span className="block px-3 pb-8 pt-3 text-gray-500" dangerouslySetInnerHTML={ {
-									__html: post.excerpt
-								} }></span>
-	
-		</div>
-
-
-					</div>
-				  
-				  </div>
+        index % 2 == 0   ? 
+        <div className="flex flex-col lg:flex-row mx-3 md:mx-10 lg:mx-20 lg:flex    my-20">
+                    	
+        <div className="lg:w-2/4 mt-6 lg:mt-0 lg:order-first ">		
+            <h4 className="products-main-title text-2xl lg:text-4xl lg:w-11/12 uppercase">{ post?.title }</h4>
+            <p className="lg:w-4/5  mt-3 lg:text-lg text-gray-500 ">
+               <span  dangerouslySetInnerHTML={ {
+                           __html: post.excerpt
+               } }></span>
+            </p>
+        </div>
+        <div className="lg:w-2/4 order-first ">
+            <img
+            className="object-cover w-full"
+            src={post?.featuredImage?.node.sourceUrl }
+            />
+        </div>
+    </div> 
+    
+    
+    :   
+    
+    
+    
+    <div className="flex flex-col lg:flex-row mx-3 md:mx-10 lg:mx-20 lg:flex    my-20">
+                    	
+    <div className="lg:w-2/4 mt-6 lg:mt-0 lg:order-last ">		
+        <h4 className="products-main-title text-2xl lg:text-4xl lg:w-11/12 uppercase">{ post?.title }</h4>
+        <p className="lg:w-4/5  mt-3 lg:text-lg text-gray-500 ">
+           <span  dangerouslySetInnerHTML={ {
+                       __html: post.excerpt
+           } }></span>
+        </p>
+    </div>
+    <div className="lg:w-2/4 order-first ">
+        <img
+        className="object-cover w-full"
+        src={post?.featuredImage?.node.sourceUrl }
+        />
+    </div>
+</div> 
 				 
 		
 			);

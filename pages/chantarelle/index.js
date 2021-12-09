@@ -3,35 +3,41 @@ import Post from "../../src/components/Post_article";
 import client from '../../src/components/ApolloClient';
 import PRODUCTS_AND_CATEGORIES_QUERY from "../../src/queries/product-and-categories";
 import { AuthContextProvider } from '../../src/components/login-function/auth-context';
+import InfiniteScroll from "react-infinite-scroll-component";
+import { useState } from 'react';
 export default function Home (props) {
-
-
-	const { posts} = props || {};
-
-
+    
+	
+    const [posts, setPosts] = useState(props.posts);
+    const [hasMore, setHasMore] = useState(true);
 
 	
-	
-
+    const getMorePost = () => {
+       
+        const newPosts = props.posts;
+        return(
+            
+        setPosts((post) => [...post, ...newPosts]))
+      };
+    
 	
 
 	return (
-		<AuthContextProvider>
-			<Layout>
-			
-				
-   
-
-			
-			
-			
-                { posts.length ? (
-							posts.map( post => <Post key={ post.id } post={ post } />)
-						) : '' }				
-			
-		
-			</Layout>
-			</AuthContextProvider>
+        <Layout>
+        <InfiniteScroll
+          dataLength={posts.length}
+          next={getMorePost}
+          hasMore={hasMore}
+          loader={<h3> Loading...</h3>}
+          endMessage={<h4>Nothing more to show</h4>}
+        >
+         
+          { 
+							posts.map( (post,index) => <Post key={ post.id } index={index} post={ post } /> )
+					 }
+        </InfiniteScroll>
+     
+      </Layout>
 	)
 };
 

@@ -30,7 +30,7 @@ export default function Home (props) {
 	
 		
 	];
-	posts.map( post =>items.push(<Post key={ post.id } post={ post } />) );
+	posts.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
 
 	
 
