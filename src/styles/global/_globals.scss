@@ -1,7 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+//.shadow_post::after{
+ // content: "";
+ // position: absolute;
+ // top:0;
+//  bottom: 0;
+ // right: 0;
+ // left: 0;
+ // background: rgb(5,5,5);
+ /// background: linear-gradient(0deg, rgba(5,5,5,0.8970938717283788) 0%, rgba(0,0,0,0.6617997540813201) 35%, rgba(0,0,0,0.04275213503370101) 100%);
+//}
 .lead_hover{
   line-height:100px ;
 }

@@ -49,7 +49,7 @@ export default function Home (props) {
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 				</div>*/ }
 			
-				{/*<div>	<Login/></div>*/ }
+				<div>	<Login/></div>
 			<div className="px-4">
 				<div className="products container mx-auto mt-32  ">
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>

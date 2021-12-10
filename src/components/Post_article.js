@@ -22,10 +22,12 @@ const Post = ( props ) => {
             </p>
         </div>
         <div className="lg:w-2/4 order-first ">
-            <img
-            className="object-cover w-full"
-            src={post?.featuredImage?.node.sourceUrl }
-            />
+        <Link href={ `/post/${ post?.id }`}  className="h-full">
+        <img
+        className="object-cover w-full"
+        src={post?.featuredImage?.node.sourceUrl }
+        />
+        </Link>
         </div>
     </div> 
     
@@ -45,10 +47,12 @@ const Post = ( props ) => {
         </p>
     </div>
     <div className="lg:w-2/4 order-first ">
+    <Link href={ `/post/${ post?.id }`}  className="h-full">
         <img
         className="object-cover w-full"
         src={post?.featuredImage?.node.sourceUrl }
         />
+        </Link>
     </div>
 </div> 
 				 
