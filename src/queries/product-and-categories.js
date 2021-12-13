@@ -58,7 +58,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       content
     }
   }
-  products(first: 5) {
+  products(first: 5, where: {visibility: VISIBLE, sku: "CD1622"}) {
     nodes {
       id
       productId: databaseId

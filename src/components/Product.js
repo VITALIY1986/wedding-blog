@@ -33,7 +33,7 @@ const Product = ( props ) => {
 						{ product.name ? product.name : '' }
 					</h3>
 					
-				
+					{product?.price}{product?.regularPrice}
 					<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
 					<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 					<AddToCartButton product={ product }/>
