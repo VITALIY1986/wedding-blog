@@ -2,9 +2,9 @@
  * Internal dependencies
  */
  import { useQuery, gql, ApolloError } from "@apollo/client";
- import client from '../context/AppContext';
+ 
  import { useAuth } from '../login-function/hooks';
- import PRODUCTS_AND_CATEGORIES_QUERY from "../../queries/product-and-categories";
+
  import Product from "../../components/Product";
  	 export const GET_USER = gql`
 	 query getUser {
