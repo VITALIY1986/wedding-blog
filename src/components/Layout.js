@@ -6,13 +6,14 @@ import client from "./ApolloClient";
 import Router from "next/router";
 import NProgress from "nprogress";
 import { ApolloProvider } from "@apollo/client";
-
+import { AuthContextProvider } from './login-function/auth-context';
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
 const Layout = (props) => {
   return (
+    <AuthContextProvider>
     <AppProvider>
       <ApolloProvider client={client}>
         <div>
@@ -25,6 +26,7 @@ const Layout = (props) => {
         </div>
       </ApolloProvider>
     </AppProvider>
+    </AuthContextProvider>
   );
 };
 

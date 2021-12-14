@@ -7,7 +7,7 @@ import Profile from '../profile';
  const Account = () => {
      const { isLoggedIn } = useAuth();
      const ViewComponent = isLoggedIn ? Profile : Login;
-     console.log(ViewComponent)
+    
      return (
         <>
         <ViewComponent/>
