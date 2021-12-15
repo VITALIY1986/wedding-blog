@@ -2,7 +2,9 @@ import {isEmpty} from "lodash";
 
 const Price = ({ regularPrice = 0, salesPrice }) => {
    
-  
+    if ( isEmpty( salesPrice ) ) {
+    	return null;
+    }
 
     /**
      * Get discount percent.

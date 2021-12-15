@@ -6,14 +6,18 @@ import {DEFAULT_PRODUCT_HOME_IMG_URL} from "../constants/urls";
 
 const Product = ( props ) => {
 	const { product } = props;
-
+    
+const amount = product?.regularPrice - product?.price;
+const interest = product?.regularPrice/100;
+const result = amount/interest;
 
 	return (
 		// @TODO Need to handle Group products differently.
 		undefined !== product && 'GroupProduct' !== product.__typename ? (
-			<div className="product mb-5  hover:shadow">
+			<div className="product mb-5  hover:shadow relative">
 
-
+{ product.featured  ? <div className="bg-blue rounded absolute right-2 top-2 z-10 text-white p-2">NEW</div>: ''}
+{ product?.salePrice  ? <div className="bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2">{result.toFixed(0)}% OFF</div> : ''}
 				<Link href={ `/product/${ product?.slug }`} >
 					<a>
 						<Image
@@ -33,9 +37,9 @@ const Product = ( props ) => {
 						{ product.name ? product.name : '' }
 					</h3>
 					
-					
+                    {product?.salePrice ?  <div className="">  <strike className="mr-1 text-red-200">{product?.regularPrice}</strike>{product?.price}</div> :   <div className="">{product?.regularPrice}</div>}
 					<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
-					<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
+				{/*	<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>*/}
 					<AddToCartButton product={ product }/>
 				</div>
 

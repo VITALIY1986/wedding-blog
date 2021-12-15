@@ -1,5 +1,5 @@
 import Layout from "../src/components/Layout";
-import Product from "../src/components/Product";
+import ProductHome from "../src/components/ProductHomePage";
 import Post from "../src/components/Post";
 import client from '../src/components/ApolloClient';
 import ParentCategoriesBlock from "../src/components/category/category-block/ParentCategoriesBlock";
@@ -22,7 +22,7 @@ export default function Home (props) {
 	const ViewComponent = isLoggedIn ? "Profile" : "Login";
 	
 	
-	const { products,  heroCarousel, posts, postsCategory,questionsAnswers,price} = props || {};
+	const { products,  heroCarousel, posts, postsCategory,questionsAnswers,featuredproducts} = props || {};
 	const handleDragStart = (e) => e.preventDefault();
 	const responsive = {
 		0: { items: 1 },
@@ -86,22 +86,30 @@ export default function Home (props) {
 					{/*Star*/ }
 			
 				
-					<ParentProductBlock products={ products }/>
+					
 				{/*Products*/ }
 				<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акции</span></h2>
+					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Новинки</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
-						{ products.length ? (
-							products.map( product => <Product key={ product.id } product={ product }/> )
+					{ featuredproducts.length ? (
+							featuredproducts.map( product => <ProductHome key={ product.id } product={ product }/> )
 						) : '' }
 					</div>
 				</div>
 				{/*Prodduts*/ }
 				<div className="products container mx-auto my-32  ">
+					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акции</span></h2>
+					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
+						{ products.length ? (
+							products.map( product => <ProductHome key={ product.id } product={ product }/> )
+						) : '' }
+					</div>
+				</div>
+				<div className="products container mx-auto my-32  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наши Марки</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
 						{ products.length ? (
-							products.map( product => <Product key={ product.id } product={ product }/> )
+							products.map( product => <ProductHome key={ product.id } product={ product }/> )
 						) : '' }
 					</div>
 				</div>
@@ -124,6 +132,7 @@ export async function getStaticProps () {
 			posts: data?.category?.posts?.nodes ? data.category.posts.nodes : [],
 			productCategories: data?.productCategories?.nodes ? data.productCategories.nodes : [],
 			products: data?.products?.nodes ? data.products.nodes : [],
+			featuredproducts: data?.featuredproducts?.nodes ? data.featuredproducts.nodes : [],
 			heroCarousel: data?.heroCarousel?.nodes[0]?.children?.nodes ? data.heroCarousel.nodes[0].children.nodes : []
 		},
 		revalidate: 1

@@ -58,7 +58,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       content
     }
   }
-  products(first: 5, where: {visibility: VISIBLE, sku: "CD1622"}) {
+  featuredproducts:  products(where: {featured: true}, first: 5) {
     nodes {
       id
       productId: databaseId
@@ -73,20 +73,26 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
       name
       ... on SimpleProduct {
-        price
-        regularPrice
+        price(format: RAW)
+        regularPrice(format: RAW)
+        salePrice(format: RAW)
         id
+        featured
       }
       ... on VariableProduct {
-        price
+        price(format: RAW)
         id
-        regularPrice
+        regularPrice(format: RAW)
+        salePrice(format: RAW)
+        featured
       }
       ... on ExternalProduct {
-        price
+        price(format: RAW)
         id
         externalUrl
-        regularPrice
+        regularPrice(format: RAW)
+        salePrice(format: RAW)
+        featured
       }
       ... on GroupProduct {
         id
@@ -94,14 +100,73 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
           nodes {
             ... on SimpleProduct {
               id
-              price
-              regularPrice
+              price(format: RAW)
+              regularPrice(format: RAW)
+              salePrice(format: RAW)
+              featured
             }
           }
         }
       }
     }
   }
+
+
+  products(where: { onSale: true}, first: 5) {
+    nodes {
+      id
+      productId: databaseId
+      averageRating
+      slug
+      description
+      sku
+      image {
+        id
+        altText
+        sourceUrl
+      }
+      name
+      ... on SimpleProduct {
+        price(format: RAW)
+        regularPrice(format: RAW)
+        salePrice(format: RAW)
+        id
+      }
+      ... on VariableProduct {
+        price(format: RAW)
+        id
+        regularPrice(format: RAW)
+        salePrice(format: RAW)
+      }
+      ... on ExternalProduct {
+        price(format: RAW)
+        id
+        externalUrl
+        regularPrice(format: RAW)
+        salePrice(format: RAW)
+      }
+      ... on GroupProduct {
+        id
+        products {
+          nodes {
+            ... on SimpleProduct {
+              id
+              price(format: RAW)
+              regularPrice(format: RAW)
+              salePrice(format: RAW)
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
 }
 `;
 

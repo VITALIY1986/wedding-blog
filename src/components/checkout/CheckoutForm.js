@@ -21,7 +21,7 @@ import CLEAR_CART_MUTATION from "../../mutations/clear-cart";
 
 // Use this for testing purposes, so you dont have to fill the checkout form over an over again.
  const defaultCustomerInfo = {
-  	firstName: 'Vitiy',
+  	firstName: '',
  	lastName: 'Statk',
  	address1: '123 bc farm',
 address2: 'Hill Road',
@@ -29,7 +29,7 @@ address2: 'Hill Road',
  	country: 'IN',
 	state: 'Chernovic',
  	postcode: '221029',
-  	email: 'stasle1986@gmail.com',
+  	email: '',
   	phone: '0505908978',
   	company: 'The Company',
  	errors: null

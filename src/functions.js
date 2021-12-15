@@ -336,12 +336,12 @@ export const createCheckoutData = ( order ) => {
 		isPaid: false,
 	};
 
-	if (order.createAccount) {
-		checkoutData.account = {
-			username: order.username,
-			password: order.password,
-		};
-	}
+//	if (order.createAccount) {
+//		checkoutData.account = {
+//			username: order.username,
+///			password: order.password,
+//		};
+	//}
 
 	return checkoutData;
 };

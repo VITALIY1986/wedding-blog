@@ -28,7 +28,7 @@
      return (
          <AuthContext.Provider value={ contextValue }>
              { children }
-             <div>asdasdasda</div>
+          
          </AuthContext.Provider>
      );
  };
