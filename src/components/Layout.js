@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { AppProvider } from "./context/AppContext";
 import Header from "./Header";
+
 import Footer from "./Footer";
 import client from "./ApolloClient";
 import Router from "next/router";
@@ -12,6 +13,7 @@ Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
 const Layout = (props) => {
+  
   return (
     <AuthContextProvider>
     <AppProvider>
@@ -21,6 +23,7 @@ const Layout = (props) => {
             <title>4Prof next.js</title>
           </Head>
           <Header />
+        
           {props.children}
           <Footer />
         </div>

@@ -17,3 +17,4 @@ import Profile from '../profile';
  };
  
  export default Account;
+

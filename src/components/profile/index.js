@@ -2,7 +2,7 @@
  * Internal dependencies
  */
  import { useQuery, gql, ApolloError } from "@apollo/client";
- import {useState,useEffect} from  'react'
+ import {useState} from  'react'
  import { useAuth } from '../login-function/hooks';
  
  import Product from "../../components/Product";
@@ -60,13 +60,12 @@
 	 const { isLoggedIn } = useAuth();
 	 const products = data?.products.nodes;
 	 const[count,setCount]=useState( '');
-
 	let handler=()=>{
 		let count =products;
 	const al =count.map( product => <Product key={ product.id } product={ product }/>)
 		setCount(al)
 	}
-
+	
 	 return (
 		 <div className="profile">
 			 <hgroup>

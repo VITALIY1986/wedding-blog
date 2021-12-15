@@ -8,7 +8,7 @@ import PRODUCTS_AND_CATEGORIES_QUERY from "../src/queries/product-and-categories
 import HeroCarousel from "../src/components/home/hero-carousel";
 import Accordion from "../src/components/Accordion";
 import { AuthContextProvider } from '../src/components/login-function/auth-context';
-import ProductLogin from "../src/components/productlogin";
+import { ApolloProvider } from "@apollo/client";
 import Login from "../src/components/login";
 import SignUp from '../src/components/signup/SignUp'
 import { useState } from 'react';
@@ -17,10 +17,11 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 export default function Home (props) {
-	
 
+	const { isLoggedIn } = useAuth();
+	const ViewComponent = isLoggedIn ? "Profile" : "Login";
 	
-
+	
 	const { products,  heroCarousel, posts, postsCategory,questionsAnswers,price} = props || {};
 	const handleDragStart = (e) => e.preventDefault();
 	const responsive = {
@@ -55,7 +56,7 @@ export default function Home (props) {
 				</div>*/ }
 			
 				<div>	<Login/></div>
-				<ProductLogin />
+			
 			<div className="px-4">
 				<div className="products container mx-auto mt-32  ">
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
