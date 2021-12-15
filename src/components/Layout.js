@@ -15,9 +15,9 @@ Router.events.on("routeChangeError", () => NProgress.done());
 const Layout = (props) => {
   
   return (
-    <AuthContextProvider>
-    <AppProvider>
-      <ApolloProvider client={client}>
+ 
+   
+   
         <div>
           <Head>
             <title>4Prof next.js</title>
@@ -27,9 +27,7 @@ const Layout = (props) => {
           {props.children}
           <Footer />
         </div>
-      </ApolloProvider>
-    </AppProvider>
-    </AuthContextProvider>
+  
   );
 };
 
