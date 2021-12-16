@@ -5,7 +5,7 @@
  import {useState} from  'react'
  import { useAuth } from '../login-function/hooks';
  
- import Product from "../../components/Product";
+ import Product from "../../components/ProductHomePage";
  	 export const GET_USER = gql`
 	 query getUser {
 	    products( where: {sku: "CD1622"}) {
