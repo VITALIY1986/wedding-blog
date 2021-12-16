@@ -12,7 +12,7 @@ const interest = product?.regularPrice/100;
 const result = amount/interest;
 
 	return (
-		// @TODO Need to handle Group products differently.
+		// @TODO Need to hndle Group products differently.
 		undefined !== product && 'GroupProduct' !== product.__typename ? (
 			<div className="product mb-5  hover:shadow relative">
 
@@ -39,7 +39,7 @@ const result = amount/interest;
 					
                     {product?.salePrice ?  <div className="">  <strike className="mr-1 text-red-200">{product?.regularPrice}</strike>{product?.price}</div> :   <div className="">{product?.regularPrice}</div>}
 					<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
-				{/*	<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>*/}
+				<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 					<AddToCartButton product={ product }/>
 				</div>
 
