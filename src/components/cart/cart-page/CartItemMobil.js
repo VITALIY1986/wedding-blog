@@ -59,34 +59,36 @@ const CartItem = ( {
 	return (
 		
 		<div className="woo-next-cart-item" key={ item.productId }>
-			<th className="woo-next-cart-element woo-next-cart-el-close">
+            <div>Продукт </div>
+			<div className=" flex mt-2">
 				{/* Remove item */}
-				<span className="woo-next-cart-close-icon cursor-pointer"
-				      onClick={ ( event ) => handleRemoveProductClick( event, item.cartKey, products ) }>
-					<Cross/>
-				</span>
-			</th>
+				
+                <img width="200" src={ item.image.sourceUrl } srcSet={ item.image.srcSet } alt={ item.image.title }/>
+			</div>
 			
-				<img width="64" src={ item.image.sourceUrl } srcSet={ item.image.srcSet } alt={ item.image.title }/>
+				
 		
-			{ item.name }
-			<td className="woo-next-cart-element">{ ( 'string' !== typeof item.price ) ? item.price.toFixed( 2 ) : item.price }</td>
+		<span className='text-xl'>	{ item.name }</span>
+            <div className='mt-6'>Ціна -<span className="ml-3 woo-next-cart-element">{ ( 'string' !== typeof item.price ) ? item.price.toFixed( 2 ) : item.price }</span></div>
+		
 
 			{/* Qty Input */ }
-			<span className="woo-next-cart-element woo-next-cart-qty">
+            <div className='mt-2'>
+			<span className="woo-next-cart-element woo-next-cart-qty">Кількість - 
 				{/* @TODO Need to update this with graphQL query */ }
 				<input
 					type="number"
 					min="1"
 					data-cart-key={ item.cartKey }
-					className={ `woo-next-cart-qty-input form-control ${ updateCartProcessing ? 'opacity-25 cursor-not-allowed' : '' } ` }
+					className={ `woo-next-cart-qty-input form-control ml-3${ updateCartProcessing ? 'opacity-25 cursor-not-allowed' : '' } ` }
 					value={ productCount }
 					onChange={ ( event ) => handleQtyChange( event, item.cartKey ) }
 				/>
 			</span>
-		
-				{ ( 'string' !== typeof item.totalPrice ) ? item.totalPrice.toFixed( 2 ) : item.totalPrice }
-			
+            </div>
+            <div className='mt-2'>
+			Всього -	<span className='ml-3'>{ ( 'string' !== typeof item.totalPrice ) ? item.totalPrice.toFixed( 2 ) : item.totalPrice }</span>
+                </div>
 		</div>
 		
 	)

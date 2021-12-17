@@ -19,11 +19,11 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 export default function Home (props) {
 
 	const { isLoggedIn } = useAuth();
-	const ViewComponent = isLoggedIn ? "Profile" : "Login";
+
 	
 	
-	const { products,  heroCarousel, posts, postsCategory,questionsAnswers,featuredproducts} = props || {};
-	const handleDragStart = (e) => e.preventDefault();
+	const { products,  heroCarousel, posts, postsCategory,featuredproducts} = props || {};
+
 	const responsive = {
 		0: { items: 1 },
 		568: { items: 2 },
@@ -37,7 +37,7 @@ export default function Home (props) {
 	];
 	posts.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
 
-	console.log(products)
+	
 
 	return (
 
@@ -53,25 +53,7 @@ export default function Home (props) {
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="mai-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				</div>*/ }
+</div>*/ }
 			
 				{/*<div>	<Login/></div>*/}
 			

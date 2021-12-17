@@ -6,9 +6,7 @@ import Image from 'next/image'
 const Nav = () => {
 
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
-	const [ isMenuChidrenVisibleArkana, setMenuChidrenVisibleArkana ] = useState(false);
-	const [ isMenuChidrenVisibleNorel, setMenuChidrenVisibleNorel ] = useState(false); 
-	const [activeIndex, setActiveIndex] = useState(2);
+    const [activeIndex, setActiveIndex] = useState(2);
 	const questionsAnswers = [
 	
 	  {

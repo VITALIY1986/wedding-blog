@@ -199,7 +199,7 @@ const CartItemsContainer = () => {
 
 
 
-<div className="block md:block  my-32 mx-4 ">
+<div className="block md:hidden  my-32 mx-4 ">
 			{ cart ? (
 				<div className="woo-next-cart-wrapper container">
 					<div className="cart-header grid grid-cols-2 gap-4">
@@ -215,7 +215,7 @@ const CartItemsContainer = () => {
 						</div>
 					</div>
 					<div className="grid grid-cols-1 xl:grid-cols-4 gap-0 xl:gap-4 mb-5">
-						<div>Продукт</div>
+					
 					
 								
 								{ cart.products.length && (
@@ -234,7 +234,7 @@ const CartItemsContainer = () => {
 							
 
 						{/*Cart Total*/ }
-						<div className=" border p-5 bg-gray-200">
+						<div className="mt-8 border p-5 bg-gray-200">
 							<div className="w-full">
 								{/* <h2 className="text-2xl">Cart Total</h2> */}
 								<table className="table table-hover mb-5">

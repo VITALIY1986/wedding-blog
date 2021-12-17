@@ -6,59 +6,12 @@
  import { useAuth } from '../login-function/hooks';
  
  import Product from "../../components/ProductHomePage";
- 	 export const GET_USER = gql`
-	 query getUser {
-	    products( where: {sku: "CD1622"}) {
-			nodes {
-			  id
-			  productId: databaseId
-			  averageRating
-			  slug
-			  description
-			  sku
-			  image {
-				id
-				altText
-				sourceUrl
-			  }
-			  name
-			  ... on SimpleProduct {
-				price
-				regularPrice
-				id
-			  }
-			  ... on VariableProduct {
-				price
-				id
-				regularPrice
-			  }
-			  ... on ExternalProduct {
-				price
-				id
-				externalUrl
-				regularPrice
-			  }
-			  ... on GroupProduct {
-				id
-				products {
-				  nodes {
-					... on SimpleProduct {
-					  id
-					  price
-					  regularPrice
-					}
-				  }
-				}
-			  }
-			}
-		  }
-	 }
-   `;
+ 
  export const Profile = ({ children }) => {
-	const { data, loading, error } = useQuery(GET_USER);
+	
 	 const { viewer, loadingViewer, logout } = useAuth();
-	 const { isLoggedIn } = useAuth();
-	 const products = data?.products.nodes;
+
+
 	
 
 	
