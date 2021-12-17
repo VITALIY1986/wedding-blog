@@ -49,7 +49,8 @@ const Nav = () => {
 	];
 	const renderedQuestionsAnswers = questionsAnswers.map((item, index) => {
 		const showDescription = index === activeIndex ? "show-description" : "";
-		const fontWeightBold = index === activeIndex ? "font-weight-bold" : "";
+		const fontWeightBold = index === activeIndex ? "font-light " : "";
+		
 		const ariaExpanded = index === activeIndex ? "false" : "true";
 		return (
 			
@@ -58,7 +59,7 @@ const Nav = () => {
 					aria-expanded={ariaExpanded}
         aria-controls={`faq${index + 1}_desc`}
         data-qa="faq__question-button"
-        className={`faq__question-button ${fontWeightBold}`}
+        className={`faq__question-button ${fontWeightBold} `}
 	
 		onClick={() => {
 			setActiveIndex(index);
@@ -133,7 +134,7 @@ const Nav = () => {
 			<span className="open">menu</span>
 		  </span>*/}
 		</label>
-		<section className="drawer-list bg-blue ">
+		<section className="drawer-list bg-purple-100 ">
 		<ul className="">
 			
 		{renderedQuestionsAnswers}
