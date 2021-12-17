@@ -56,7 +56,7 @@ const result = amount/interest;
 					{product?.salePrice  ?  <div className={`${ isLoggedIn ? 'block' : 'hidden ' }`}> ₴{par.toFixed(2)}</div> :   ''}
 				{/*	<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>*/}
 			{/*	<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>*/}
-					<AddToCartButton product={ product }/>
+					<AddToCartButton product={ product } />
 				</div>
 
 			</div>

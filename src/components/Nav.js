@@ -147,10 +147,10 @@ const Nav = () => {
 				<div className={`${ isMenuVisible ? 'max-h-full h-full' : 'h-0' } w-full hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}>
 					<ul className="text-sm font-medium  lg:flex-grow lg:flex h-full ">
 					<li className="nav-item relative   ">
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
 						СHANTARELLE <span className="caret"></span>
 						</a>
-						<ul className="dropdown-menus py-2 px-6 bg-blue">
+						<ul className="dropdown-menus py-2 px-6 bg-blue ">
 							<li>
 							    <Link href="/categori-chantarelle-home">
 						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
@@ -178,7 +178,7 @@ const Nav = () => {
 						</ul>
 						</li>
 						<li className="nav-item relative" >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
 						ARKANA	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
@@ -201,7 +201,7 @@ const Nav = () => {
 						</ul>
 						</li>
 						<li className="nav-item relative" >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
 						NOREL	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
@@ -226,7 +226,7 @@ const Nav = () => {
 				
 					
 						<li className="nav-item relative"  >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
 						MCCM	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">
@@ -253,7 +253,7 @@ const Nav = () => {
 						</ul>
 						</li>
 						<li className="nav-item relative"  >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:text-white transition-all cursor-pointer lead_hover px-3">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
 						DERMAOXY	<span className="caret"></span>
 						</a>
 						<ul className="dropdown-menus py-2 px-6 bg-blue">

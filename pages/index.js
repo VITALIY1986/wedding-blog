@@ -53,9 +53,27 @@ export default function Home (props) {
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="mai-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
 					<ParentCategoriesBlock productCategories={ productCategories }/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				</div>*/ }
 			
-				<div>	<Login/></div>
+				{/*<div>	<Login/></div>*/}
 			
 			<div className="px-4">
 				<div className="products container mx-auto mt-32  ">
@@ -69,6 +87,7 @@ export default function Home (props) {
         items={items}
         responsive={responsive}
         controlsStrategy="alternate"
+		disableButtonsControls={true}
     />
 							
 			
@@ -97,7 +116,7 @@ export default function Home (props) {
 					</div>
 				</div>
 				{/*Prodduts*/ }
-				<div className="products container mx-auto my-32  ">
+				<div className="products container mx-auto my-10  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акции</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
 						{ products.length ? (
@@ -105,7 +124,7 @@ export default function Home (props) {
 						) : '' }
 					</div>
 				</div>
-				<div className="products container mx-auto my-32  ">
+				<div className="products container mx-auto my-10  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наши Марки</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
 						{ products.length ? (

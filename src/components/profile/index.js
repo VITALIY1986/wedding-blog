@@ -59,12 +59,8 @@
 	 const { viewer, loadingViewer, logout } = useAuth();
 	 const { isLoggedIn } = useAuth();
 	 const products = data?.products.nodes;
-	 const[count,setCount]=useState( '');
-	let handler=()=>{
-		let count =products;
-	const al =count.map( product => <Product key={ product.id } product={ product }/>)
-		setCount(al)
-	}
+	
+
 	
 	 return (
 		 <div className="profile">
@@ -77,9 +73,9 @@
 						 <button onClick={ logout } className="link-button">
 							 sign out here
 						 </button>
-					<button onClick={handler}>sfffs</button>
+					
 					 </p>
-				{count}
+				
 				 </div>
 				
 			 </hgroup>

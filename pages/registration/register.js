@@ -1,29 +1,41 @@
 import Layout from "../../src/components/Layout";
 
-
+import Login from "../../src/components/login";
 
 function App() {
 
 	return (
-	<>	
+	<Layout>	
 				
-	<div className="absolute top-0 z-50 p-3 text-4xl  "><a href="/"><h1 className="font-bold text-white text-center hover:text-purple-400 cursor-pointer">Назад в магазме</h1></a></div>			
-<div class=" h-screen md:flex">
-	<div
-		class="relative h-1/2 md:h-full overflow-hidden flex md:w-1/2 bg-gradient-to-tr from-blue to-blue i justify-around items-center ">
-		<div>
-			<h1 class="text-white font-bold text-4xl font-sans">4Prof</h1>
-			<p class="text-white mt-1">Регистрация косметологов</p>
-			<button type="submit" class="block w-28 bg-white text-indigo-800 mt-4 py-2 px-2 rounded-2xl font-bold mb-2">Узнать больше</button>
-		</div>
-		<div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-		<div class="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-		<div class="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-		<div class="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+	
+	
+	<div class="relative h-screen overflow-x-hidden ">
+		<div class="h-screen flex justify-center items-center">
+	<Login></Login>
 	</div>
-	<div class="flex md:w-1/2 justify-center py-10 items-center bg-white">
-        
-		<form class="bg-white">
+		<div class="absolute -bottom-40 lg:-bottom-0 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8 z-0"></div>
+		<div class="absolute -bottom-40 lg:-bottom-0 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8 z-0"></div>
+		<div class="absolute -top-40 lg:-top-0  -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+		<div class="absolute -top-40 lg:-top-0 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+	</div>
+	
+				
+	</Layout>
+	);
+}
+
+
+
+
+export default App;
+
+
+{/*<div className="absolute top-0 z-50 p-3 text-4xl  "><a href="/"><h1 className="font-bold text-white text-center hover:text-purple-400 cursor-pointer">Назад в магазме</h1></a></div> 
+	
+	
+	
+	
+		 <form class="bg-white">
 			<h1 class="text-gray-800 font-bold text-2xl mb-1">Добро пожаловать!</h1>
 			<p class="text-sm font-normal text-gray-600 mb-7">Welcome Back</p>
 			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
@@ -62,14 +74,18 @@ function App() {
 							<button type="submit" class="block w-full bg-blue mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
 							<span class="text-sm ml-2 hover:text-blue-500 cursor-pointer">Forgot Password ?</span>
 		</form>
-	</div>
-</div>
-				
-	</>
-	);
-}
-
-
-
-
-export default App;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	*/}
+	

@@ -89,7 +89,7 @@ const AddToCart = (props) => {
                     onClick={handleAddToCartClick}
                     className={cx(
                         'px-5 py-2 rounded-sm  text-sm border-solid border-blue border border-current',
-                        {'hover:bg-blue hover:text-white hover:border-blue ': !addToCartLoading},
+                        {'hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white hover:border-blue ': !addToCartLoading},
                         {'opacity-50 cursor-not-allowed': addToCartLoading}
                     )}
                 >

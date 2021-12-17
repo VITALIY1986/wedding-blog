@@ -58,7 +58,7 @@ const CartItem = ( {
 
 	return (
 		
-		<tr className="woo-next-cart-item" key={ item.productId }>
+		<div className="woo-next-cart-item" key={ item.productId }>
 			<th className="woo-next-cart-element woo-next-cart-el-close">
 				{/* Remove item */}
 				<span className="woo-next-cart-close-icon cursor-pointer"
@@ -66,14 +66,14 @@ const CartItem = ( {
 					<Cross/>
 				</span>
 			</th>
-			<td className="woo-next-cart-element">
+			
 				<img width="64" src={ item.image.sourceUrl } srcSet={ item.image.srcSet } alt={ item.image.title }/>
-			</td>
-			<td className="woo-next-cart-element">{ item.name }</td>
+		
+			{ item.name }
 			<td className="woo-next-cart-element">{ ( 'string' !== typeof item.price ) ? item.price.toFixed( 2 ) : item.price }</td>
 
 			{/* Qty Input */ }
-			<td className="woo-next-cart-element woo-next-cart-qty">
+			<span className="woo-next-cart-element woo-next-cart-qty">
 				{/* @TODO Need to update this with graphQL query */ }
 				<input
 					type="number"
@@ -83,11 +83,11 @@ const CartItem = ( {
 					value={ productCount }
 					onChange={ ( event ) => handleQtyChange( event, item.cartKey ) }
 				/>
-			</td>
-			<td className="woo-next-cart-element">
+			</span>
+		
 				{ ( 'string' !== typeof item.totalPrice ) ? item.totalPrice.toFixed( 2 ) : item.totalPrice }
-			</td>
-		</tr>
+			
+		</div>
 		
 	)
 };
