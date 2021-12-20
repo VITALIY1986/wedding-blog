@@ -18,10 +18,12 @@ export default function Product(props) {
  
   const re = product?.regularPrice ;
   const regula = +re + +regular;
-  const login = product?.regularPrice;
+  const login = Number(product?.regularPrice);
+  const paste = Number(login/2);
   const rar = isLoggedIn ? login :  regula  ;  
 const par = Number(rar);
 
+const price = login+paste ;
 
 const amount = par - product?.price;
 const interest = par/100;
@@ -65,9 +67,10 @@ className="singl_product_description mb-5 mt-3 "
 								} }
 							
 							/>
+                        {}
                             <div className='mt-10'>
                             <span className='text-white  bg-black opacity-30 p-3'>{product.sku}</span>
-                              {product?.salePrice   ?  <div className={`${ isLoggedIn ? 'hidden' : 'block mt-4 ' }`}>  <strike className="mr-1 text-red-200 text-xl">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="mt-4 text-xl">{isLoggedIn ? login : par.toFixed(2)}</div>}
+                              {product?.salePrice   ?  <div className={`${ isLoggedIn ? 'hidden' : 'block mt-4 ' }`}>  <strike className="mr-1 text-red-200 text-xl">₴{price.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="mt-4 text-xl">{isLoggedIn ? login : price.toFixed(2)}</div>}
 					{product?.salePrice  ?  <div className={`${ isLoggedIn ? 'block text-xl mt-4' : 'hidden ' }`}> ₴{par.toFixed(2)}</div> :   ''}
                     </div>
                            {/* <Price salesPrice={product?.price } regularPrice={product?.regularPrice}/>*/}
