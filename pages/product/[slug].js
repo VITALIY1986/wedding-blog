@@ -29,7 +29,7 @@ const amount = par - product?.price;
 const interest = par/100;
 const result = amount/interest;
  // initially until getStaticProps() finishes running
-console.log(typeof product.description)
+
     const router = useRouter()
 
     // If the page is not yet generated, this will be displayed
