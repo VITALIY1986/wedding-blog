@@ -14,28 +14,28 @@ const Nav = () => {
 		  title: "СHANTARELLE",
 		linkhome:"/categori-chantarelle-home",
 		linkprof:"/categori-chantarelle-prof",
-		linkarticle:"/chantarelle"
+		linkarticle:"/posts/chantarelle"
 	  },
 	  {
 		id: 3,
 		  title: "ARKANA",
 		  linkhome:"/categori-arkana-home",
 		  linkprof:"/categori-arkana-prof",
-		  linkarticle:"/chantarelle"
+		  linkarticle:"/posts/arkana"
 	  },
 	  {
 		id: 3,
 		  title: "NOREL",
 		  linkhome:"/categori-norel-home",
 		  linkprof:"/categori-norel-prof",
-		  linkarticle:"/chantarelle"
+		  linkarticle:"/posts/norel"
 	  },
 	  {
 		id: 3,
 		  title: "MCCM",
 		  linkhome:"/categori-mccm-home",
 		  linkprof:"/categori-mccm-prof",
-		  linkarticle:"/chantarelle"
+		  linkarticle:"/posts/mccm"
 	  },
 	  {
 		id: 3,
@@ -166,7 +166,7 @@ const Nav = () => {
 					            </Link>
 							</li>
 							<li> 
-								<Link href="/chantarelle">
+								<Link href="/posts/chantarelle">
 						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
 						            
 									Статьи
@@ -196,7 +196,14 @@ const Nav = () => {
 						            </a>
 					            </Link>
 							</li>
-							
+							<li> 
+								<Link href="/posts/arkana">
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Статьи
+						            </a>
+					            </Link>
+							</li>
 						</ul>
 						</li>
 						<li className="nav-item relative" >
@@ -216,6 +223,14 @@ const Nav = () => {
 								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
 						            
 									Профессиональная косметика
+						            </a>
+					            </Link>
+							</li>
+							<li> 
+								<Link href="/posts/norel">
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Статьи
 						            </a>
 					            </Link>
 							</li>
@@ -245,7 +260,14 @@ const Nav = () => {
 					            </Link>
 							</li>
 
-
+							<li> 
+								<Link href="/posts/mccm">
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            
+									Статьи
+						            </a>
+					            </Link>
+							</li>
 
 							
 							

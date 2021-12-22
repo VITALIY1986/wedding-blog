@@ -35,7 +35,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
       }
     }
   }
-  category(id: "dGVybTox") {
+ news: category(id: "dGVybTox") {
     name
     posts {
       nodes {
@@ -50,6 +50,91 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
         }
         date
       
+      }
+    }
+  }
+ arkana: category(id: "dGVybTozMjgw") {
+    name
+    posts {
+      nodes {
+        slug
+        title
+        id
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        date
+      }
+    }
+  }
+ chantarelle: category(id: "dGVybTozMjc4") {
+    name
+    posts {
+      nodes {
+        slug
+        title
+        id
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        date
+      }
+    }
+  }
+ norel: category(id: "dGVybTozMjgy") {
+    name
+    posts {
+      nodes {
+        slug
+        title
+        id
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        date
+      }
+    }
+  }
+mccm:  category(id: "dGVybTozMjg0") {
+    name
+    posts {
+      nodes {
+        slug
+        title
+        id
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        date
+      }
+    }
+  }
+  sittara: category(id: "dGVybTozMjg2") {
+    name
+    posts {
+      nodes {
+        slug
+        title
+        id
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        date
       }
     }
   }

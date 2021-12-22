@@ -30,7 +30,7 @@ const result = amount/interest;
 			<div className="product mb-5  hover:shadow relative">
 
 { product.featured  ? <div className="bg-blue rounded absolute right-2 top-2 z-10 text-white p-2">NEW</div>: ''}
-{ product?.salePrice  ? <div className={`${ isLoggedIn ? 'hidden' : 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' }`}>{ result.toFixed(0)}%OFF</div> : ''}
+{ product?.salePrice  ? <div className={`${ isLoggedIn ? 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' : 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' }`}>{ result.toFixed(0)}%OFF</div> : ''}
 				<Link href={ `/product/${ product?.slug }`} >
 					<a>
 						<Image
@@ -50,10 +50,11 @@ const result = amount/interest;
 					<h3 className="product-title mt-3 font-medium text-gray-800 overflow-hidden ">
 						{ product.name ? product.name : '' }
 					</h3>
+				
 					{/*{product?.regularPrice }/////{product?.salePrice }/////{product?.price}*/}
                  {/*}   {product?.salePrice ?  <div className="">  <strike className="mr-1 text-red-200">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="">₴{par.toFixed(2)}</div>}*/}
-		  {product?.salePrice   ?  <div className={`${ isLoggedIn ? 'hidden' : 'block ' }`}>  <strike className="mr-1 text-red-200">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="">{isLoggedIn ? login : par.toFixed(2)}</div>}
-					{product?.salePrice  ?  <div className={`${ isLoggedIn ? 'block' : 'hidden ' }`}> ₴{par.toFixed(2)}</div> :   ''}
+		  {product?.salePrice   ?  <div className="{`${ isLoggedIn ? 'hidden' : 'block ' }`}">  <strike className="mr-1 text-red-200">₴{par.toFixed(4)}</strike>₴{product?.price}</div> :   <div className="">{isLoggedIn ? login : par.toFixed(4)}</div>}
+				{/*	{product?.salePrice  ?  <div className={`${ isLoggedIn ? 'block' : 'hidden ' }`}> ₴{par.toFixed(4)}</div> :   ''}*/}
 				{/*	<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>*/}
 			{/*	<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>*/}
 					<AddToCartButton product={ product } />

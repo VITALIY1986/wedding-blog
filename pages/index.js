@@ -22,7 +22,7 @@ export default function Home (props) {
 
 	
 	
-	const { products,  heroCarousel, posts, postsCategory,featuredproducts} = props || {};
+	const { products,  heroCarousel, posts, postsCategory,featuredproducts,news} = props || {};
 
 	const responsive = {
 		0: { items: 1 },
@@ -35,7 +35,7 @@ export default function Home (props) {
 	
 		
 	];
-	posts.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
+	news.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
 
 	
 
@@ -59,7 +59,7 @@ export default function Home (props) {
 			
 			<div className="px-4">
 				<div className="products container mx-auto mt-32  ">
-				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
+				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">НОВОСТИ</span></h2>
 				
 				
 			
@@ -130,7 +130,7 @@ export async function getStaticProps () {
 		props: {
 		questionsAnswers:data?.category?.posts?.nodes ? data.category.posts.nodes : [],
 			postsCategory: data?.category ? data.category : [],
-			posts: data?.category?.posts?.nodes ? data.category.posts.nodes : [],
+			news: data?.news?.posts?.nodes ? data.news.posts.nodes : [],
 			productCategories: data?.productCategories?.nodes ? data.productCategories.nodes : [],
 			products: data?.products?.nodes ? data.products.nodes : [],
 			featuredproducts: data?.featuredproducts?.nodes ? data.featuredproducts.nodes : [],

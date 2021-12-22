@@ -4,17 +4,23 @@ import { gql } from "@apollo/client";
  * GraphQL categories query.
  */
 const GET_CATEGORI_QUERY = gql`query {
-	productCategoryArkanaHome:  productCategory(id: "dGVybToyOTY2") {
-    children(first: 27)  {
+	productCategoryArkanaHome: productCategory(id: "dGVybToyOTY2") {
+    children(first: 27) {
       nodes {
         id
         name
         slug
+          image {
+              sourceUrl
+            }
         children(first: 27) {
           nodes {
             name
             id
             slug
+            image {
+              sourceUrl
+            }
           }
         }
       }

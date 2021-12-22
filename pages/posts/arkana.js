@@ -8,13 +8,13 @@ import { useState } from 'react';
 export default function Home (props) {
     
 	
-    const [posts, setPosts] = useState(props.posts);
+    const [arkana, setPosts] = useState(props.arkana);
     const [hasMore, setHasMore] = useState(true);
 
 	
     const getMorePost = () => {
        
-        const newPosts = props.posts;
+        const newPosts = props.arkana;
         return(
             
         setPosts((post) => [...post, ...newPosts]))
@@ -25,7 +25,7 @@ export default function Home (props) {
 	return (
         <Layout>
         <InfiniteScroll
-          dataLength={posts.length}
+          dataLength={arkana.length}
           next={getMorePost}
           hasMore={hasMore}
           loader={<h3> Loading...</h3>}
@@ -33,7 +33,7 @@ export default function Home (props) {
         >
          
           { 
-							posts.map( (post,index) => <Post key={ post.id } index={index} post={ post } /> )
+							arkana.map( (post,index) => <Post key={ post.id } index={index} post={ post } /> )
 					 }
         </InfiniteScroll>
      
@@ -51,7 +51,7 @@ export async function getStaticProps () {
 		props: {
 	
 			
-			posts: data?.category?.posts?.nodes ? data.category.posts.nodes : [],
+			arkana: data?.arkana?.posts?.nodes ? data.arkana.posts.nodes : [],
 		
 		},
 		revalidate: 1
