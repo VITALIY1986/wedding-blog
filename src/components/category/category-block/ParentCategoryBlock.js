@@ -19,7 +19,7 @@ const ParentCategoryBlock = ( props ) => {
 						altText={category?.image?.altText ?? category.slug}
 					/>
 					<div className="product-title-container p-3">
-						<h3 className="product-title text-lg font-medium">{category?.name}</h3>
+						<h3 className="product-title text-lg font-medium text-white bg-gradient-to-r from-blue ... p-3">{category?.name}</h3>
 					
 					</div>
 				</a>
