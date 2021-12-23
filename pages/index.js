@@ -59,7 +59,7 @@ export default function Home (props) {
 			
 			<div className="px-4">
 				<div className="products container mx-auto mt-32  ">
-				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">НОВОСТИ</span></h2>
+				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">НОВИНИ</span></h2>
 				
 				
 			
@@ -99,7 +99,7 @@ export default function Home (props) {
 				</div>
 				{/*Prodduts*/ }
 				<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акции</span></h2>
+					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акції</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
 						{ products.length ? (
 							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
@@ -107,7 +107,7 @@ export default function Home (props) {
 					</div>
 				</div>
 				<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наши Марки</span></h2>
+					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наші Марки</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
 						{ products.length ? (
 							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )

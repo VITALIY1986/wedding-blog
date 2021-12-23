@@ -60,14 +60,8 @@ const result = amount/interest;
 						</div>
 						<div className="product-info px-4 mt-10 lg:mt-0">
 							<h4 className="products-main-title text-2xl uppercase">{ product.name }</h4>
-							<div
-className="singl_product_description mb-5 mt-3 "
-								dangerouslySetInnerHTML={ {
-									__html: product.description,
-								} }
 							
-							/>
-                        {}
+                   
                             <div className='mt-10'>
                             <span className='text-white  bg-black opacity-30 p-3'>{product.sku}</span>
                               {product?.salePrice   ?  <div className={`${ isLoggedIn ? 'hidden' : 'block mt-4 ' }`}>  <strike className="mr-1 text-red-200 text-xl">₴{price.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="mt-4 text-xl">{isLoggedIn ? login : price.toFixed(2)}</div>}
@@ -77,6 +71,13 @@ className="singl_product_description mb-5 mt-3 "
                            <div className="mt-3">
 							<AddToCartButton className="mt-3"    product={ product }/>
                             </div>
+                            <div
+className="singl_product_description mb-5 mt-3 "
+								dangerouslySetInnerHTML={ {
+									__html: product.description,
+								} }
+							
+							/>
 						</div>
 					</div>
 

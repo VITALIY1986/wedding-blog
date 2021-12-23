@@ -5,7 +5,7 @@ const Footer = () => (
 		<div className="container mx-auto">
 			<div className="md:grid  md:grid-cols-6 gap-4 ">
 				<div className="col-start-1 col-end-4 ">
-					<h3 className="mt-5 text-3xl text-blue">КОНТАКТЫ</h3>
+					<h3 className="mt-5 text-3xl text-blue">НАШІ КОМПАНІЇ</h3>
 					<div className="flex-none md:flex mt-5">
 						<div className="flex-1 opacity-75" >
 					     <p className="mb-3">Chantarelle</p>
@@ -20,18 +20,18 @@ const Footer = () => (
 					</div>
 			    </div>
 				<div className="col-start-4 col-end-6 ">
-					<h3 className="mt-5 text-3xl text-blue">КОНТАКТЫ</h3>
+					<h3 className="mt-5 text-3xl text-blue">КОНТАКТИ</h3>
 					<div className="mt-5 opacity-75">
-						<p>Mенеджер (Киев): +38 (097) 860 06 06 </p>
-						<p>Mенеджер (Киев): +38 (068) 706 70 67 </p>
-						<p>Mенеджер (регионы): +38 (097) 209 54 45</p>
+						<p>Mенеджер (Київ): +38 (097) 860 06 06 </p>
+						<p>Mенеджер (Київ): +38 (068) 706 70 67 </p>
+						<p>Mенеджер (регіони): +38 (097) 209 54 45</p>
 						<p>Mенеджер (Beyond): +38 (067) 328-74-26</p>
-						<p>г. Киев, пер. Западный 3ц</p>
+						<p>м. Київ, вул. Виборзька 25 </p>
 						<p>info@4prof.com.ua</p>
 					</div>
 				</div>
 				<div className="col-start-6 col-end-6">
-				     <h3 className="mt-5 text-3xl text-blue">МЫ В СОЦ.СЕТЯХ</h3>
+				     <h3 className="mt-5 text-3xl text-blue">МИ В СОЦ.МЕРЕЖАХ</h3>
 				     <ul className="social-links flex  mt-5 ">
 				        <li><a href="https://www.facebook.com/4ProfUkraine" className="" target="_blank"><Facebook/></a></li>
 				        <li className="ml-2 mt-1"><a href="#" target="_blank"><Twitter/></a></li>
