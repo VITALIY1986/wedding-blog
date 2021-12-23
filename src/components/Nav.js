@@ -134,7 +134,7 @@ const Nav = () => {
 			<span className="open">menu</span>
 		  </span>*/}
 		</label>
-		<section className="drawer-list bg-purple-100 ">
+		<section className="drawer-list bg-very_peri ">
 		<ul className="">
 			
 		{renderedQuestionsAnswers}
