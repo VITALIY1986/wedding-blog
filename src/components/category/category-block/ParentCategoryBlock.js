@@ -11,9 +11,9 @@ const ParentCategoryBlock = ( props ) => {
 			<Link href={`/category/${category?.slug}`}>
 				<a>
 					<Image
-						className="object-cover h-40 md:h-64"
+						className="object-cover "
 						layout="fill"
-						containerClassNames="h-56"
+						containerClassNames="h-80 md:h-96 "
 						sourceUrl={ category?.image?.sourceUrl ?? '' }
 						defaultImgUrl={DEFAULT_CATEGORY_IMG_URL}
 						altText={category?.image?.altText ?? category.slug}
