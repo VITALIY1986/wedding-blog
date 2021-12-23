@@ -53,7 +53,7 @@ const result = amount/interest;
 				
 					{/*{product?.regularPrice }/////{product?.salePrice }/////{product?.price}*/}
                  {/*}   {product?.salePrice ?  <div className="">  <strike className="mr-1 text-red-200">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="">₴{par.toFixed(2)}</div>}*/}
-		  {product?.salePrice   ?  <div className="{`${ isLoggedIn ? 'hidden' : 'block ' }`}">  <strike className="mr-1 text-red-200">₴{par.toFixed(4)}</strike>₴{product?.price}</div> :   <div className="">{isLoggedIn ? login : par.toFixed(4)}</div>}
+		  {product?.salePrice   ?  <div className="{`${ isLoggedIn ? 'hidden' : 'block ' }`}">  <strike className="mr-1 text-red-200">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="">{isLoggedIn ? login : par.toFixed(2)}</div>}
 				{/*	{product?.salePrice  ?  <div className={`${ isLoggedIn ? 'block' : 'hidden ' }`}> ₴{par.toFixed(4)}</div> :   ''}*/}
 				{/*	<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>*/}
 			{/*	<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>*/}
