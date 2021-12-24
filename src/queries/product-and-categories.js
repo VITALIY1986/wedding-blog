@@ -43,6 +43,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
         title
         id
         excerpt
+        content
         featuredImage {
           node {
             sourceUrl
@@ -61,6 +62,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
         title
         id
         excerpt
+        content
         featuredImage {
           node {
             sourceUrl
@@ -78,6 +80,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
         title
         id
         excerpt
+        content
         featuredImage {
           node {
             sourceUrl
@@ -95,6 +98,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
         title
         id
         excerpt
+        content
         featuredImage {
           node {
             sourceUrl
@@ -112,6 +116,7 @@ mccm:  category(id: "dGVybTozMjg0") {
         title
         id
         excerpt
+        content
         featuredImage {
           node {
             sourceUrl
@@ -129,6 +134,7 @@ mccm:  category(id: "dGVybTozMjg0") {
         title
         id
         excerpt
+        content
         featuredImage {
           node {
             sourceUrl

@@ -90,7 +90,7 @@ export const POST_BY_SLUG_QUERY = gql` query Post($slug: ID!) {
 `;
 
 export const POSTS_SLUGS = gql` query Posts {
-	posts(first: 10) {
+	posts {
 		nodes {
 		  id
 		  slug
