@@ -12,7 +12,7 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
   
-  return <AuthContextProvider><AppProvider><ApolloProvider client={client}><Component {...pageProps} /></ApolloProvider></AppProvider></AuthContextProvider>
+  return <AuthContextProvider><AppProvider><ApolloProvider client={client}><Component {...pageProps}  /></ApolloProvider></AppProvider></AuthContextProvider>
 
 
 

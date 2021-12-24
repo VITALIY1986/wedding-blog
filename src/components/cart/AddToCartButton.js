@@ -12,9 +12,7 @@ import ADD_TO_CART from "../../mutations/add-to-cart";
 const AddToCart = (props) => {
 
 	const { isLoggedIn } = useAuth();
-	const ViewComponent = isLoggedIn ? true : false;
-  const ver  = false;
-  const ver2=false;
+	
 
     const {product} = props;
 
@@ -93,15 +91,15 @@ const AddToCart = (props) => {
                         {'opacity-50 cursor-not-allowed': addToCartLoading}
                     )}
                 >
-					{ addToCartLoading ? 'Adding to cart...' : 'Add to cart' }
+					{ addToCartLoading ? 'завантаження...' : 'додати в кошик' }
                 </button>
                 
             }
             {showViewCart ? (
                 <Link href="/cart">
                     <button
-                        className="px-3 py-1 rounded-sm text-sm border-solid border border-current inline-block hover:bg-purple hover:text-white hover:border-purple-600">View
-                        Cart
+                        className="px-3 py-1 rounded-sm text-sm border-solid border border-current inline-block hover:bg-purple hover:text-white hover:border-purple-600">Переглянути кошик
+                     
                     </button>
                 </Link>
             ) : ''}

@@ -22,7 +22,7 @@ export default function Home (props) {
 
 	
 	
-	const { products,  heroCarousel, posts, postsCategory,featuredproducts,news} = props || {};
+	const { products,  heroCarousel, posts, postsCategory,featuredproducts,news ,ret} = props || {};
 
 	const responsive = {
 		0: { items: 1 },
@@ -37,7 +37,7 @@ export default function Home (props) {
 	];
 	news.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
 
-	
+
 
 	return (
 

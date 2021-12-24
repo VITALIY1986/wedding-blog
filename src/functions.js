@@ -9,7 +9,7 @@ import {isEmpty, isArray} from 'lodash'
  */
 export const getFloatVal = ( string ) => {
 
-	let floatValue = string.match( /[+-]?\d+(\.\d+)?/g )[0];
+	let floatValue = string.match( /[+-]?\d+(\.\d+)?/g )[0] + string.match( /[+-]?\d+(\.\d+)?/g )[1];
 	return ( null !== floatValue ) ? parseFloat( parseFloat( floatValue ).toFixed( 2 ) ) : '';
 
 };
