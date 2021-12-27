@@ -7,7 +7,11 @@ import Navigation from "../src/components/navigation-chantarelle";
 import profilePic from "../public/pattern_chant.png"
 import Image from 'next/image'
 export default function Home (props) {
-    const questionsAnswers = [
+
+    const { chantarelle,  heroCarousel} = props || {};
+
+  
+	const questionsAnswers = [
 	
         {
           id: 2,
@@ -23,7 +27,7 @@ export default function Home (props) {
             linkarticle:"/categori-chantarelle-home"
         },
         {
-          id: 3,
+          id: 4,
             title: "СТАТТІ",
             description: "ЧИТАТИ",
             linkarticle:"/posts/chantarelle"
@@ -33,9 +37,6 @@ export default function Home (props) {
        
       
       ];
-    const { chantarelle,  heroCarousel} = props || {};
-
-
 	return (
 
 			<Layout>

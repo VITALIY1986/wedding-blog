@@ -15,28 +15,28 @@ export default function Post(props) {
 
     // If the page is not yet generated, this will be displayed
 
-    const [convertedText, setConvertedText] = useState('');
+  //  const [convertedText, setConvertedText] = useState('');
     
-    useEffect(() => {
-    const response = axios
-        .post(
-          'https://translation.googleapis.com/language/translate/v2',
-          {},
-          {
-            params: {
-              q: post.content , //или div.innerText
-              target: "ru",
-              key: 'AIzaSyAXYTi9B39Zc7ObHf0hHhnAuM9JTu2ua3s'
-            }
-          }
-        )
-        .then((response) => {
-          setConvertedText(response.data.data.translations[0].translatedText);
-        })
-        .catch((err) => {
-          console.log('rest api error', err);
-        });
-    }, );
+ //   useEffect(() => {
+ //   const response = axios
+  //      .post(
+ //         'https://translation.googleapis.com/language/translate/v2',
+   //       {},
+   //       {
+  //          params: {
+   //           q: post.content , //или div.innerText
+   //           target: "ru",
+  //            key: 'AIzaSyAXYTi9B39Zc7ObHf0hHhnAuM9JTu2ua3s'
+    //        }
+   //       }
+  //      )
+    //    .then((response) => {
+  //        setConvertedText(response.data.data.translations[0].translatedText);
+  //      })
+   //     .catch((err) => {
+  //        console.log('rest api error', err);
+  //      });
+ //   }, );
 
 
 
@@ -55,9 +55,9 @@ export default function Post(props) {
                         <h4 className="products-main-title text-2xl lg:text-4xl lg:w-11/12 uppercase">{ post?.title }</h4>
                         <p className="lg:w-4/5  mt-3 lg:text-lg text-gray-500 ">
                
-                           <span  dangerouslySetInnerHTML={ {
+                           <div  dangerouslySetInnerHTML={ {
 						   			__html: post.content
-						   } }></span>
+						   } }></div>
                         </p>
                     </div>
                     <div className="lg:w-2/4 order-first ">

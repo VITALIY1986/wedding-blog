@@ -16,9 +16,9 @@ const Post = ( props ) => {
         <div className="lg:w-2/4 mt-6 lg:mt-0 lg:order-first ">		
             <h4 className="products-main-title text-2xl lg:text-4xl lg:w-11/12 uppercase">{ post?.title }</h4>
             <p className="lg:w-4/5  mt-3 lg:text-lg text-gray-500 ">
-               <span  dangerouslySetInnerHTML={ {
+               <div  dangerouslySetInnerHTML={ {
                            __html: post.excerpt
-               } }></span>
+               } }></div>
             </p>
         </div>
         <div className="lg:w-2/4 order-first ">
@@ -41,9 +41,9 @@ const Post = ( props ) => {
     <div className="lg:w-2/4 mt-6 lg:mt-0 lg:order-last lg:ml-6">		
         <h4 className="products-main-title text-2xl lg:text-4xl lg:w-11/12 uppercase">{ post?.title }</h4>
         <p className="lg:w-4/5  mt-3 lg:text-lg text-gray-500 ">
-           <span  dangerouslySetInnerHTML={ {
+           <div  dangerouslySetInnerHTML={ {
                        __html: post.excerpt
-           } }></span>
+           } }></div>
         </p>
     </div>
     <div className="lg:w-2/4 order-first ">

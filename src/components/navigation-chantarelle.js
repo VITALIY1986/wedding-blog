@@ -6,8 +6,7 @@ import Image from 'next/image'
 const Navigation = (props) => {
 
 	
-   
-	
+ 
 	const renderedQuestionsAnswers = props.questionsAnswers.map((item, index) => {
 	
 		return (

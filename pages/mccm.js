@@ -8,27 +8,28 @@ import profilePic from "../public/pattern_chant.png"
 import Image from 'next/image'
 export default function Home (props) {
 
-    const { norel,  heroCarousel} = props || {};
+    const { mccm,  heroCarousel} = props || {}; 
+ 
 	const questionsAnswers = [
 	
         {
           id: 2,
             title: "ПРОФЕСІЙНА КОСМЕТИКА",
             description: "ДИВИТИСЯ КАТАЛОГ",
-            linkarticle:"/categori-norel-prof"
+            linkarticle:"/categori-mccm-prof"
       
         },
         {
           id: 3,
             title: "ДОМАШНЯ КОСМЕТИКА",
             description: "ДИВИТИСЯ КАТАЛОГ",
-            linkarticle:"/categori-norel-home"
+            linkarticle:"/categori-mccm-home"
         },
         {
           id: 4,
             title: "СТАТТІ",
             description: "ЧИТАТИ",
-            linkarticle:"/posts/norel"
+            linkarticle:"/posts/mccm"
            
         },
        
@@ -36,16 +37,15 @@ export default function Home (props) {
       
       ];
 
-
 	return (
 
 			<Layout>
                 <HeroCarousel heroCarousel={heroCarousel}/>
                 <div className=" mx-3 md:mx-10 lg:mx-20     my-20">	
-				<h1 className="products-main-title text-2xl lg:text-4xl  uppercase">{norel.title}</h1>
+				<h1 className="products-main-title text-2xl lg:text-4xl  uppercase">{mccm.title}</h1>
            
                 <span className="mt-3 block lg:text-lg text-gray-500" dangerouslySetInnerHTML={ {
-						   			__html: norel.content
+						   			__html:mccm.content
 						   } }></span>
 		   
                 </div>
@@ -68,7 +68,7 @@ export async function getStaticProps () {
 
 	return {
 		props: {
-	        norel: data?.norel ? data.norel : [],
+          mccm: data?.mccm ? data.mccm : [],
 	        heroCarousel: data?.heroCarousel?.nodes[0]?.children?.nodes ? data.heroCarousel.nodes[0].children.nodes : []
 		},
 		revalidate: 1

@@ -43,8 +43,18 @@ const PAGE_QUERY = gql`query {
     content
   }
 
-
-
+  mccm:page(id: "cG9zdDoxMTIyMw==") {
+    id
+    slug
+    title
+    content
+  }
+  dermaoxy:page(id: "cG9zdDoxMTIyNQ==") {
+    id
+    slug
+    title
+    content
+  }
 
 
 

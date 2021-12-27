@@ -8,8 +8,8 @@ import profilePic from "../public/pattern_chant.png"
 import Image from 'next/image'
 export default function Home (props) {
 
-    const { arkana,  heroCarousel} = props || {};
-
+    const { arkana,  heroCarousel} = props || {}; 
+	
 	const questionsAnswers = [
 	
         {
@@ -26,7 +26,7 @@ export default function Home (props) {
             linkarticle:"/categori-arkana-home"
         },
         {
-          id: 3,
+          id: 4,
             title: "СТАТТІ",
             description: "ЧИТАТИ",
             linkarticle:"/posts/arkana"
@@ -36,6 +36,7 @@ export default function Home (props) {
        
       
       ];
+
 	return (
 
 			<Layout>

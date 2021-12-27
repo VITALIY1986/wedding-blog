@@ -8,44 +8,38 @@ import profilePic from "../public/pattern_chant.png"
 import Image from 'next/image'
 export default function Home (props) {
 
-    const { norel,  heroCarousel} = props || {};
+    const { dermaoxy,  heroCarousel} = props || {}; 
+ 
 	const questionsAnswers = [
-	
+	 
         {
           id: 2,
             title: "ПРОФЕСІЙНА КОСМЕТИКА",
             description: "ДИВИТИСЯ КАТАЛОГ",
-            linkarticle:"/categori-norel-prof"
+            linkarticle:"/categori-dermaoxy-prof"
       
         },
         {
           id: 3,
             title: "ДОМАШНЯ КОСМЕТИКА",
             description: "ДИВИТИСЯ КАТАЛОГ",
-            linkarticle:"/categori-norel-home"
-        },
-        {
-          id: 4,
-            title: "СТАТТІ",
-            description: "ЧИТАТИ",
-            linkarticle:"/posts/norel"
-           
-        },
+            linkarticle:"/categori-dermaoxy-home"
+        }
+       
        
        
       
       ];
-
 
 	return (
 
 			<Layout>
                 <HeroCarousel heroCarousel={heroCarousel}/>
                 <div className=" mx-3 md:mx-10 lg:mx-20     my-20">	
-				<h1 className="products-main-title text-2xl lg:text-4xl  uppercase">{norel.title}</h1>
+				<h1 className="products-main-title text-2xl lg:text-4xl  uppercase">{dermaoxy.title}</h1>
            
                 <span className="mt-3 block lg:text-lg text-gray-500" dangerouslySetInnerHTML={ {
-						   			__html: norel.content
+						   			__html:dermaoxy.content
 						   } }></span>
 		   
                 </div>
@@ -68,7 +62,7 @@ export async function getStaticProps () {
 
 	return {
 		props: {
-	        norel: data?.norel ? data.norel : [],
+          dermaoxy: data?.dermaoxy ? data.dermaoxy : [],
 	        heroCarousel: data?.heroCarousel?.nodes[0]?.children?.nodes ? data.heroCarousel.nodes[0].children.nodes : []
 		},
 		revalidate: 1

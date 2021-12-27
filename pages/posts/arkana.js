@@ -24,19 +24,12 @@ export default function Home (props) {
 
 	return (
         <Layout>
-        <InfiniteScroll
-          dataLength={arkana.length}
-          next={getMorePost}
-          hasMore={hasMore}
-          loader={<h3> Loading...</h3>}
-          endMessage={<h4>Nothing more to show</h4>}
-        >
+       
          
           { 
 							arkana.map( (post,index) => <Post key={ post.id } index={index} post={ post } /> )
 					 }
-        </InfiniteScroll>
-     
+        
       </Layout>
 	)
 };

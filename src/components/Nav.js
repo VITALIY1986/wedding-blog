@@ -14,35 +14,40 @@ const Nav = () => {
 		  title: "СHANTARELLE",
 		linkhome:"/categori-chantarelle-home",
 		linkprof:"/categori-chantarelle-prof",
-		linkarticle:"/posts/chantarelle"
+		linkarticle:"/posts/chantarelle",
+		linkhomepage:"/chantarelle"
 	  },
 	  {
 		id: 3,
 		  title: "ARKANA",
 		  linkhome:"/categori-arkana-home",
 		  linkprof:"/categori-arkana-prof",
-		  linkarticle:"/posts/arkana"
+		  linkarticle:"/posts/arkana",
+		  linkhomepage:"/arkana"
 	  },
 	  {
 		id: 3,
 		  title: "NOREL",
 		  linkhome:"/categori-norel-home",
 		  linkprof:"/categori-norel-prof",
-		  linkarticle:"/posts/norel"
+		  linkarticle:"/posts/norel",
+		  linkhomepage:"/norel"
 	  },
 	  {
 		id: 3,
 		  title: "MCCM",
 		  linkhome:"/categori-mccm-home",
 		  linkprof:"/categori-mccm-prof",
-		  linkarticle:"/posts/mccm"
+		  linkarticle:"/posts/mccm",
+		  linkhomepage:"/mccm"
 	  },
 	  {
 		id: 3,
 		  title: "DermaOxy",
 		  linkhome:"/categori-dermaoxy-home",
 		  linkprof:"/categori-dermaoxy-prof",
-		  linkarticle:"/chantarelle"
+		  linkarticle:"",
+		  linkhomepage:"/dermaoxy"
 	  }
 	 
 	
@@ -55,7 +60,8 @@ const Nav = () => {
 		return (
 			
 			
-					<li  key={item.id}
+			
+			<li  key={item.id}
 					aria-expanded={ariaExpanded}
         aria-controls={`faq${index + 1}_desc`}
         data-qa="faq__question-button"
@@ -64,25 +70,27 @@ const Nav = () => {
 		onClick={() => {
 			setActiveIndex(index);
 		  }}>
-					<a className="">
+					<a className="block">
 					{item.title	}
-					</a>
+				</a>
+				
 					<ul id={`faq${index + 1}_desc`}
         data-qa="faq__desc"
         className={`faq__desc ${showDescription}`}>
 						<li className="block">
-							<Link href={item.linkhome	}>
-								<a className="">
-								 HOME 
-								</a>
-							</Link>
-							<Link href={item.linkprof	}>
-								<a className="">
+						<Link href={item.linkprof	}>
+								<a className="block">
 								Prof 
 								</a>
 							</Link>
-							<Link href={item.linkarticle	}>
-								<a className="">
+							<Link href={item.linkhome	}>
+								<a className="block">
+								 HOME 
+								</a>
+							</Link>
+							
+							<Link  href={item.linkarticle	}>
+								<a className={`${ item.linkarticle === "" ? 'hidden' : 'block'}`} >
 								Статьи
 								</a>
 							</Link>
@@ -96,6 +104,49 @@ const Nav = () => {
 			
 				
 				
+			
+		
+		);
+	  });
+	  const renderedQuestionsAnswersDesctop = questionsAnswers.map((item, index) => {
+	
+		return (
+			
+			
+			<li className="nav-item relative   " key={item.id}>
+					<Link href={item.linkhomepage}>
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
+						{item.title	} <span className="caret"></span>
+						</a>
+						</Link>
+						<ul className="dropdown-menus py-2 px-6 bg-blue ">
+							<li>
+							    <Link href={item.linkprof	}>
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
+									Профессиональная косметика
+									
+						            </a>
+					            </Link>
+							</li>
+							<li> 
+								<Link href={item.linkhome	}>
+						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
+						            Домашняя косметика
+								
+						            </a>
+					            </Link>
+							</li>
+							<li> 
+								<Link href={item.linkarticle	}>
+						            <a className={`${ item.linkarticle === "" ? 'hidden' : 'block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  '}`}>
+						            
+									Статьи
+						            </a>
+					            </Link>
+							</li>
+							
+						</ul>
+						</li>
 			
 		
 		);
@@ -145,168 +196,7 @@ const Nav = () => {
 				{/*MMenu in mobile*/}
 				<div className={`${ isMenuVisible ? 'max-h-full h-full' : 'h-0' } w-full hidden lg:h-full flex-grow lg:flex lg:items-center lg:w-auto`}>
 					<ul className="text-sm font-medium  lg:flex-grow lg:flex h-full ">
-					<li className="nav-item relative   ">
-					<Link href="/chantarelle">
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
-						СHANTARELLE <span className="caret"></span>
-						</a>
-						</Link>
-						<ul className="dropdown-menus py-2 px-6 bg-blue ">
-							<li>
-							    <Link href="/categori-chantarelle-home">
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
-									Домашняя косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/categori-chantarelle-prof">
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Профессиональная косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/posts/chantarelle">
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Статьи
-						            </a>
-					            </Link>
-							</li>
-							
-						</ul>
-						</li>
-						<li className="nav-item relative" >
-						<Link href="/arkana">
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
-						ARKANA	<span className="caret"></span>
-						</a>
-						</Link>
-						<ul className="dropdown-menus py-2 px-6 bg-blue">
-							<li>
-							    <Link href="/categori-arkana-home">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
-									Домашняя косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/categori-arkana-prof">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Профессиональная косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/posts/arkana">
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Статьи
-						            </a>
-					            </Link>
-							</li>
-						</ul>
-						</li>
-						<li className="nav-item relative" >
-						<Link href="/norel">
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
-						NOREL	<span className="caret"></span>
-						</a>
-						</Link>
-						<ul className="dropdown-menus py-2 px-6 bg-blue">
-							<li>
-							    <Link href="/categori-norel-home">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
-									Домашняя косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/categori-norel-prof">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Профессиональная косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/posts/norel">
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Статьи
-						            </a>
-					            </Link>
-							</li>
-</ul>
-						</li>
-				
-				
-					
-						<li className="nav-item relative"  >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
-						MCCM	<span className="caret"></span>
-						</a>
-						<ul className="dropdown-menus py-2 px-6 bg-blue">
-							<li>
-							    <Link href="/categori-mccm-home">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
-									Домашняя косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/categori-mccm-prof">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Профессиональная косметика
-						            </a>
-					            </Link>
-							</li>
-
-							<li> 
-								<Link href="/posts/mccm">
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Статьи
-						            </a>
-					            </Link>
-							</li>
-
-							
-							
-						</ul>
-						</li>
-						<li className="nav-item relative"  >
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
-						DERMAOXY	<span className="caret"></span>
-						</a>
-						<ul className="dropdown-menus py-2 px-6 bg-blue">
-							<li>
-							    <Link href="/categori-dermaoxy-home">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
-									Домашняя косметика
-						            </a>
-					            </Link>
-							</li>
-							<li> 
-								<Link href="/categori-dermaoxy-prof">
-								<a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            
-									Профессиональная косметика
-						            </a>
-					            </Link>
-							</li>
-
-
-
-							
-							
-						</ul>
-						</li>
-					
+					{renderedQuestionsAnswersDesctop}
 					</ul>
 					
 					<div className="text-sm font-medium">
