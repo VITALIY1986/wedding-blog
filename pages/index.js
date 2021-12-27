@@ -46,8 +46,7 @@ export default function Home (props) {
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				
-				
-   
+			
 
 				{/*Categories
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">

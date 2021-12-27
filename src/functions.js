@@ -96,7 +96,7 @@ export const updateCart = ( existingCart, product, qtyToBeAdded, newQty = false 
 /**
  * Get updated products array
  * Update the product if it exists else,
- * add the new product to existing cart,
+ * add the new product to existing cart,я
  *
  * @param {Object} existingProductsInCart Existing product in cart
  * @param {Object} product Product

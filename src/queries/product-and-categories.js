@@ -37,7 +37,7 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`query {
   }
  news: category(id: "dGVybTox") {
     name
-    posts {
+    posts(first: 30) {
       nodes {
         slug
         title
