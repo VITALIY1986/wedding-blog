@@ -9,7 +9,32 @@ import Image from 'next/image'
 export default function Home (props) {
 
     const { norel,  heroCarousel} = props || {};
-
+	const questionsAnswers = [
+	
+        {
+          id: 2,
+            title: "ПРОФЕСІЙНА КОСМЕТИКА",
+            description: "ДИВИТИСЯ КАТАЛОГ",
+            linkarticle:"/categori-arkana-prof"
+      
+        },
+        {
+          id: 3,
+            title: "ДОМАШНЯ КОСМЕТИКА",
+            description: "ДИВИТИСЯ КАТАЛОГ",
+            linkarticle:"/categori-arkana-home"
+        },
+        {
+          id: 3,
+            title: "СТАТТІ",
+            description: "ЧИТАТИ",
+            linkarticle:"/posts/arkana"
+           
+        },
+       
+       
+      
+      ];
 
 	return (
 
@@ -26,7 +51,7 @@ export default function Home (props) {
                 <div className="md:mx-10 lg:mx-20   lg:my-20  my-0">
               	
 			
-                <Navigation profilePic={profilePic}/>
+                <Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
                
                 </div>
 	        </Layout>
