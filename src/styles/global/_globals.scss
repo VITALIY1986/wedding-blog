@@ -76,7 +76,7 @@ figure.effect-oscar:hover figcaption::before, figure.effect-oscar:hover p {
   min-width: 320px;
   max-width: 480px;
   max-height: 360px;
-  width: 48%;
+  
   background: #3085a3;
   text-align: center;
   cursor: pointer;
@@ -153,6 +153,7 @@ figure.effect-oscar h2 {
     font-size: 1.25em;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+
 }
 }
 
