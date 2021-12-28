@@ -4,7 +4,7 @@ import PAGE_QUERY from "../src/queries/page";
 import HeroCarousel from "../src/components/home/hero-carousel";
 import { useAuth } from '../src/components/login-function/hooks';
 import Navigation from "../src/components/navigation-chantarelle";
-import profilePic from "../public/pattern_chant.png"
+import profilePic from "../public/mccm.jpg"
 import Image from 'next/image'
 export default function Home (props) {
 
