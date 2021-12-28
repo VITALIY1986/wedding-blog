@@ -78,6 +78,11 @@ const Nav = () => {
         data-qa="faq__desc"
         className={`faq__desc ${showDescription}`}>
 						<li className="block">
+						<Link href={item.linkhomepage	}>
+								<a className="block">
+								{item.title	}
+								</a>
+							</Link>
 						<Link href={item.linkprof	}>
 								<a className="block">
 								Prof 
