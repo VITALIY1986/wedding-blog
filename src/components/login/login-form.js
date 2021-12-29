@@ -22,7 +22,8 @@
      };
  
      return (
-         <form onSubmit={ onLogin } className="login-form" autoComplete="on">
+       
+         <form onSubmit={ onLogin } className="login-form px-3" autoComplete="on">
              { error && (
                  <div className="error-notice">
                      <FontAwesomeIcon
@@ -33,14 +34,15 @@
                  </div>
              ) }
              <Field
-                 label="Username or Email Address"
+                 label="Ім'я користувача або адреса електронної пошти"
                  value={ username }
-                 autoComplete="username"
+                 autoComplete="ім'я користувача"
                  onChange={ ( value ) => setUsername( value ) }
                  disabled={ status === 'resolving' }
               
              />
              <Field
+           
                  label="Password"
                  type="password"
                  autoComplete="current-password"
@@ -50,7 +52,7 @@
              />
              <p>
                  <button
-                     className="button button--inline button--large"
+                     className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded"
                      onClick={ onLogin }
                      disabled={ status === 'resolving' }
                  >
@@ -58,6 +60,7 @@
                  </button>
              </p>
          </form>
+         
      );
  };
  

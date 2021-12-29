@@ -14,7 +14,10 @@ import SignUp from '../src/components/signup/SignUp'
 import { useState } from 'react';
 import { useAuth } from '../src/components/login-function/hooks';
 import AliceCarousel from 'react-alice-carousel';
+
 import 'react-alice-carousel/lib/alice-carousel.css';
+
+
 
 export default function Home (props) {
 
@@ -47,9 +50,8 @@ export default function Home (props) {
 	
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
+				<a href="myfile.pdf"  download>Download</a>
 				
-			
-
 				{/*Categories
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="mai-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>

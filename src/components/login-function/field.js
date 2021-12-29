@@ -34,19 +34,21 @@ const Field = ( {
 		value,
 	};
 	return (
-		<div className={ error ? 'field field--error' : 'field' }>
+		<div className={ error ? 'field field--error' : 'field text-white ' }>
 			<label htmlFor={ `field-${ label }` } aria-hidden={ hideLabel }>
 				{ label }
 			</label>
 			<div className="field-input">
 				{ grow === true ? (
 					<TextareaAutosize
+					
 						{ ...inputProps }
 						minRows={ 1}
 						onChange={ ( event ) => onChange( event.target.value ) }
 					/>
 				) : (
 					<input
+					className="pl-2 py-2 outline-none border-none rounded w-full "
 						type="text"
 						{ ...inputProps }
 						onChange={ ( event ) => onChange( event.target.value ) }
