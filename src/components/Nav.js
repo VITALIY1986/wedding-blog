@@ -157,6 +157,8 @@ const Nav = () => {
 		);
 	  });
 	return (
+
+		
 		<nav className="mx-2">
 			<div className="flex items-center justify-between container mx-auto">
 
@@ -176,11 +178,11 @@ const Nav = () => {
 	
 			</>
 				{/*Menu button*/}
-				<div>
+				{/*<div>
 				<a href="/registration/register/" className="block  lg:hidden lg:mt-0 text-black hover:text-black  rounded-full p-2 bg-gray-200">
 						<svg xmlns="http://www.w3.org/2000/svg" className=" lg:block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="auto" stroke="gray"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
 							
-						</a></div>
+						</a></div>*/}
 				<div className="block py-3 lg:hidden">
 				<input id="hamburger" className="hamburger" type="checkbox"/>
 				<label className=" hamburger" for="hamburger">
@@ -219,6 +221,7 @@ const Nav = () => {
 
 			</div>
 		</nav>
+	
 	)
 };
 

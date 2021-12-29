@@ -4,7 +4,7 @@
  import { useQuery, gql, ApolloError } from "@apollo/client";
  import {useState} from  'react'
  import { useAuth } from '../login-function/hooks';
- 
+ import Link from 'next/link';
  import Product from "../../components/ProductHomePage";
  
  export const Profile = ({ children }) => {
@@ -17,17 +17,23 @@
 	
 	 return (
 		 <div className="profile">
+		
 			 <hgroup>
-				 <h2>Account</h2>
-				 <div>
 			
-					 <p>
-						 Edit your account details below, or{ ' ' }
-						 <button onClick={ logout } className="link-button">
-							 sign out here
+				 <div>
+				<p className="text-white"> Ви успішно ввійшли в свій акаунт{ ' ' }</p>
+					 <div className="text-white flex">
+						
+						 <a href="/">
+						 <button  className="button button--inline button--large p-3 bg-gray-600 mt-4 text-white w-full rounded">
+						  магазин
+						 </button>
+						 </a>
+						 <button onClick={ logout } className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded">
+						 вийти тут
 						 </button>
 					
-					 </p>
+					 </div>
 				
 				 </div>
 				

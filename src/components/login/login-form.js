@@ -56,7 +56,7 @@
                      onClick={ onLogin }
                      disabled={ status === 'resolving' }
                  >
-                     Sign in
+                     Увійти
                  </button>
              </p>
          </form>
