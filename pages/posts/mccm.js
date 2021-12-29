@@ -51,7 +51,7 @@ export async function getStaticProps () {
 		props: {
 	
 			
-			mccm: data?.arkana?.posts?.nodes ? data.arkana.posts.nodes : [],
+			mccm: data?.mccm?.posts?.nodes ? data.mccm.posts.nodes : [],
 		
 		},
 		revalidate: 1

@@ -39,16 +39,17 @@
                  autoComplete="ім'я користувача"
                  onChange={ ( value ) => setUsername( value ) }
                  disabled={ status === 'resolving' }
-              
+                 placeholder="Введить ім'я користувача "
              />
              <Field
            
-                 label="Password"
+                 label="Пароль"
                  type="password"
                  autoComplete="current-password"
                  value={ password }
                  onChange={ ( value ) => setPassword( value ) }
                  disabled={ status === 'resolving' }
+                 placeholder="Введить пароль "
              />
              <p>
                  <button

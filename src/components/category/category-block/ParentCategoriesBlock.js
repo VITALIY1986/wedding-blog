@@ -13,7 +13,7 @@ const ParentCategoriesBlock = ( props ) => {
 				: productChantarelleProf ? productChantarelleProf?.map( ( productCategory, index ) => <ProductCategoryBlock key={ productCategory?.id ?? index }  category={ productCategory }/> )
 				: productNorelHome ? productNorelHome?.map( ( productCategory, index ) => <div>{ productCategory.children?.nodes.map((pr, index) => <ProductCategoryBlock key={ productCategory?.id ?? index }  category={ pr }/>)}</div> ) 
 				: productNorelProf ? productNorelProf?.map( ( productCategory, index ) => <ProductCategoryBlock key={ productCategory?.id ?? index }  category={ productCategory }/> )
-				: productMccmHome ? productMccmHome?.map( ( productCategory, index ) => <div>{ productCategory.children?.nodes.map((pr, index) => <ProductCategoryBlock key={ productCategory?.id ?? index }  category={ pr }/>)}</div> )
+				
 				:  productMccmProf ?  productMccmProf?.map( ( productCategory, index ) => <ProductCategoryBlock key={ productCategory?.id ?? index }  category={ productCategory }/> )
 				: productDermaoxyHome ? productDermaoxyHome?.map( ( productCategory, index ) => <div>{ productCategory.children?.nodes.map((pr, index) => <ProductCategoryBlock key={ productCategory?.id ?? index }  category={ pr }/>)}</div> )
 				: productDermaoxyProf ? productDermaoxyProf?.map( ( productCategory, index ) => <ProductCategoryBlock key={ productCategory?.id ?? index }  category={ productCategory }/> )

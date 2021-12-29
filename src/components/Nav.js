@@ -36,7 +36,7 @@ const Nav = () => {
 	  {
 		id: 3,
 		  title: "MCCM",
-		  linkhome:"/categori-mccm-home",
+		  linkhome:"",
 		  linkprof:"/categori-mccm-prof",
 		  linkarticle:"/posts/mccm",
 		  linkhomepage:"/mccm"
@@ -71,7 +71,7 @@ const Nav = () => {
 			setActiveIndex(index);
 		  }}>
 					<a className="block">
-					{item.title	}
+					{item.title	}<span className="caret ml-6"></span>
 				</a>
 				
 					<ul id={`faq${index + 1}_desc`}
@@ -80,23 +80,23 @@ const Nav = () => {
 						<li className="block">
 						<Link href={item.linkhomepage	}>
 								<a className="block">
-								{item.title	}
+								{item.title	} HOME
 								</a>
 							</Link>
 						<Link href={item.linkprof	}>
 								<a className="block">
-								Prof 
+								Професійна косметика
 								</a>
 							</Link>
 							<Link href={item.linkhome	}>
-								<a className="block">
-								 HOME 
+								<a className={`${ item.linkhome === "" ? 'hidden' : 'block'}`}>
+								Домашня косметика
 								</a>
 							</Link>
 							
 							<Link  href={item.linkarticle	}>
 								<a className={`${ item.linkarticle === "" ? 'hidden' : 'block'}`} >
-								Статьи
+								Статті
 								</a>
 							</Link>
 						</li>
@@ -121,22 +121,22 @@ const Nav = () => {
 			<li className="nav-item relative   " key={item.id}>
 					<Link href={item.linkhomepage}>
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
-						{item.title	} <span className="caret"></span>
+						{item.title	}  <span className="caret"></span>
 						</a>
 						</Link>
 						<ul className="dropdown-menus py-2 px-6 bg-blue ">
 							<li>
 							    <Link href={item.linkprof	}>
 						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
-									Профессиональная косметика
+									Професійна косметика
 									
 						            </a>
 					            </Link>
 							</li>
 							<li> 
 								<Link href={item.linkhome	}>
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  ">
-						            Домашняя косметика
+						            <a className={`${ item.linkhome=== "" ? 'hidden' : 'block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white '}`}>
+						            Домашня косметика
 								
 						            </a>
 					            </Link>
@@ -145,7 +145,7 @@ const Nav = () => {
 								<Link href={item.linkarticle	}>
 						            <a className={`${ item.linkarticle === "" ? 'hidden' : 'block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white  '}`}>
 						            
-									Статьи
+									Статті
 						            </a>
 					            </Link>
 							</li>

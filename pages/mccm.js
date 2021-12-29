@@ -19,12 +19,7 @@ export default function Home (props) {
             linkarticle:"/categori-mccm-prof"
       
         },
-        {
-          id: 3,
-            title: "ДОМАШНЯ КОСМЕТИКА",
-            description: "ДИВИТИСЯ КАТАЛОГ",
-            linkarticle:"/categori-mccm-home"
-        },
+      
         {
           id: 4,
             title: "СТАТТІ",

@@ -68,11 +68,12 @@ export default function Home (props) {
 			
 			
 				 <AliceCarousel
-        mouseTracking
+        
         items={items}
         responsive={responsive}
-        controlsStrategy="alternate"
+		disableDotsControls={true}
 		disableButtonsControls={true}
+	
     />
 							
 			
