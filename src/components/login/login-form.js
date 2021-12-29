@@ -4,7 +4,7 @@
  import { useState } from 'react';
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
- 
+ import Link from 'next/link';
  /**
   * Internal dependencies
   */
@@ -59,6 +59,7 @@
                      Увійти
                  </button>
              </p>
+             <div className="flex-none mt-6"><Link href="../../../registration/register-users">Реєстрація</Link></div>
          </form>
          
      );

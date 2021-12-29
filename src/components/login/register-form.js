@@ -41,7 +41,7 @@
      return (
          <form
              onSubmit={ onRegister }
-             className="register-form"
+             className="register-form text-white"
              autoComplete="on"
          >
              { ( error || passwordError ) && (
@@ -82,6 +82,7 @@
                  disabled={ status === 'resolving' }
              />
              <PasswordStrengthBar
+       
                  password={ password }
                  scoreWords={ [
                      'critical fail',
@@ -94,7 +95,7 @@
              />
              <p>
                  <button
-                     className="button button--inline button--large"
+                     className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded"
                      onClick={ onRegister }
                      disabled={ status === 'resolving' }
                  >

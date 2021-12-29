@@ -47,12 +47,14 @@ const Field = ( {
 						onChange={ ( event ) => onChange( event.target.value ) }
 					/>
 				) : (
+				
 					<input
 					className="pl-2 py-2 outline-none border-none rounded w-full "
 						type="text"
 						{ ...inputProps }
 						onChange={ ( event ) => onChange( event.target.value ) }
 					/>
+					
 				) }
 			</div>
 			{ description && (

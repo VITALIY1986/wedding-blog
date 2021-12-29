@@ -10,8 +10,11 @@ function App() {
 	
 	
 	<div class="relative h-screen overflow-x-hidden bg-blue ">
+	
 		<div class="h-screen flex justify-center items-center">
+			
 	<Login></Login>
+	
 	</div>
 		<div class="absolute -bottom-40 lg:-bottom-0 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8 z-0"></div>
 		<div class="absolute -bottom-40 lg:-bottom-0 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8 z-0"></div>
