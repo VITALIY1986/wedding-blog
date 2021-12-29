@@ -34,11 +34,11 @@ const Field = ( {
 		value,
 	};
 	return (
-		<div className={ error ? 'field field--error' : 'field text-white ' }>
+		<div className={ error ? 'field field--error' : 'field  ' }>
 			<label htmlFor={ `field-${ label }` } aria-hidden={ hideLabel }>
 				{ label }
 			</label>
-			<div className="field-input">
+			<div className="field-input text-black">
 				{ grow === true ? (
 					<TextareaAutosize
 					

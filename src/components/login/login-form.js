@@ -23,7 +23,7 @@
  
      return (
        
-         <form onSubmit={ onLogin } className="login-form px-3" autoComplete="on">
+         <form onSubmit={ onLogin } className="login-form px-3 text-white" autoComplete="on">
              { error && (
                  <div className="error-notice">
                      <FontAwesomeIcon
