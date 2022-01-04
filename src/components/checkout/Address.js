@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import CountrySelection from "./CountrySelection";
+import Delivery from "./CountrySelection-copy";
 import StateSelection from "./StatesSelection";
 import InputField from "./form-elements/InputField";
 
-const Address = ({input, countries, states, handleOnChange, isFetchingStates, isShipping}) => {
-
+const Address = ({input,countries,  states, handleOnChange, isFetchingStates, isShipping}) => {
+    let countrieses = [{countryCode:"Кур'єрська доставка",countryName:"Кур'єрська доставка"},{countryCode:"Нова пошта від.№1",countryName:"Нова пошта від.№1"},{countryCode:" від.№2",countryName:" від.№2"},{countryCode:" від.№3",countryName:" від.№3"}];  
     const {errors} = input || {};
 
     return (
@@ -15,7 +16,7 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                     inputValue={input?.firstName}
                     required
                     handleOnChange={handleOnChange}
-                    label="First name"
+                    label="Ім'я"
                     errors={errors}
                     isShipping={isShipping}
                     containerClassNames="w-full overflow-hidden sm:my-2 sm:px-2 md:w-1/2"
@@ -25,13 +26,13 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                     inputValue={input?.lastName}
                     required
                     handleOnChange={handleOnChange}
-                    label="Last name"
+                    label="Прізвище"
                     errors={errors}
                     isShipping={isShipping}
                     containerClassNames="w-full overflow-hidden sm:my-2 sm:px-2 md:w-1/2"
                 />
             </div>
-            <InputField
+         {/*  <InputField
                 name="company"
                 inputValue={input?.company}
                 handleOnChange={handleOnChange}
@@ -39,26 +40,30 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                 errors={errors}
                 isShipping={isShipping}
                 containerClassNames="mb-4"
-            />
+         />*/}
             {/* Country Selection*/}
-            <CountrySelection
-                input={input}
+            <InputField
+                name="city"
+                required
+                inputValue={input?.city}
                 handleOnChange={handleOnChange}
-                countries={countries}
+                label="Місто"
+                errors={errors}
                 isShipping={isShipping}
+                containerClassNames="mb-4"
             />
             <InputField
                 name="address1"
                 inputValue={input?.address1}
                 required
                 handleOnChange={handleOnChange}
-                label="Street address"
-                placeholder="House number and street name"
+                label="Адреса вулиці"
+                placeholder="Номер будинку та назва вулиці"
                 errors={errors}
                 isShipping={isShipping}
                 containerClassNames="mb-4"
             />
-            <InputField
+           {/*} <InputField
                 name="address2"
                 inputValue={input?.address2}
                 handleOnChange={handleOnChange}
@@ -67,16 +72,19 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                 errors={errors}
                 isShipping={isShipping}
                 containerClassNames="mb-4"
-            />
-            <InputField
-                name="city"
-                required
-                inputValue={input?.city}
+    />*/}
+           
+             <CountrySelection
+                input={input}
                 handleOnChange={handleOnChange}
-                label="Town/City"
-                errors={errors}
+                countries={countries}
                 isShipping={isShipping}
-                containerClassNames="mb-4"
+            />
+            <Delivery
+                input={input}
+                handleOnChange={handleOnChange}
+                countries={countrieses}
+                isShipping={isShipping}
             />
             {/* State */}
             <StateSelection
@@ -86,8 +94,8 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                 isShipping={isShipping}
                 isFetchingStates={isFetchingStates}
             />
-            <div className="flex flex-wrap overflow-hidden sm:-mx-3">
-                <InputField
+          
+              {/*  <InputField
                     name="postcode"
                     inputValue={input?.postcode}
                     required
@@ -96,7 +104,7 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                     errors={errors}
                     isShipping={isShipping}
                     containerClassNames="w-full overflow-hidden sm:my-2 sm:px-2 md:w-1/2"
-                />
+              />*/}
                 <InputField
                     name="phone"
                     inputValue={input?.phone}
@@ -105,10 +113,10 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                     label="Phone"
                     errors={errors}
                     isShipping={isShipping}
-                    containerClassNames="w-full overflow-hidden sm:my-2 sm:px-2 md:w-1/2"
+                    containerClassNames="mb-4"
                 />
-            </div>
-            <InputField
+        
+         {/*   <InputField
                 name="email"
                 type="email"
                 inputValue={input?.email}
@@ -118,7 +126,7 @@ const Address = ({input, countries, states, handleOnChange, isFetchingStates, is
                 errors={errors}
                 isShipping={isShipping}
                 containerClassNames="mb-4"
-            />
+            />*/}
             {/*	@TODO Create an Account
             <div className="form-check">
             <label className="leading-7 text-sm text-gray-600" className="form-check-label">

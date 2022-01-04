@@ -22,16 +22,14 @@ import CLEAR_CART_MUTATION from "../../mutations/clear-cart";
 // Use this for testing purposes, so you dont have to fill the checkout form over an over again.
  const defaultCustomerInfo = {
   	firstName: '',
- 	lastName: 'Statk',
- 	address1: '123 bc farm',
-address2: 'Hill Road',
-  	city: 'Mumbai',
- 	country: 'IN',
-	state: 'Chernovic',
- 	postcode: '221029',
-  	email: '',
-  	phone: '0505908978',
-  	company: 'The Company',
+ 	lastName: '',
+ 	address1: '',
+address2: '',
+  	city: '',
+ 	
+	
+  	phone: '',
+  
  	errors: null
   }
 
@@ -214,7 +212,7 @@ const CheckoutForm = ({countriesData}) => {
                         <div>
                             {/*Shipping Details*/}
                             <div className="billing-details">
-                                <h2 className="text-xl font-medium mb-4">Shipping Details</h2>
+                                <h2 className="text-xl font-medium mb-4">Деталі доставки</h2>
                                 <Address
                                     states={theShippingStates}
                                     countries={shippingCountries}
@@ -225,20 +223,20 @@ const CheckoutForm = ({countriesData}) => {
                                     isBillingOrShipping
                                 />
                             </div>
-                            <div>
+                            <div className='hidden'>
                                 <CheckboxField
                                     name="billingDifferentThanShipping"
                                     type="checkbox"
                                     checked={input?.billingDifferentThanShipping}
                                     handleOnChange={handleOnChange}
-                                    label="Billing different than shipping"
-                                    containerClassNames="mb-4 pt-4"
+                                    label="Оплата відрізняється від доставки"
+                                    containerClassNames="mb-4 pt-4 "
                                 />
                             </div>
                             {/*Billing Details*/}
                             {input?.billingDifferentThanShipping ? (
-                                <div className="billing-details">
-                                    <h2 className="text-xl font-medium mb-4">Billing Details</h2>
+                                <div className="billing-details hidden ">
+                                    <h2 className="text-xl font-medium mb-4">Платіжна інформація</h2>
                                     <Address
                                         states={theBillingStates}
                                         countries={billingCountries}
@@ -255,7 +253,7 @@ const CheckoutForm = ({countriesData}) => {
                         {/* Order & Payments*/}
                         <div className="your-orders">
                             {/*	Order*/}
-                            <h2 className="text-xl font-medium mb-4">Your Order</h2>
+                            <h2 className="text-xl font-medium mb-4">Ваше замовлення</h2>
                             <YourOrder cart={cart}/>
 
                             {/*Payment*/}
@@ -270,13 +268,13 @@ const CheckoutForm = ({countriesData}) => {
                                     )}
                                     type="submit"
                                 >
-                                    Place Order
+                                   Зробити замовлення
                                 </button>
                             </div>
 
                             {/* Checkout Loading*/}
-                            {isOrderProcessing && <p>Processing Order...</p>}
-                            {requestError && <p>Error : {requestError} :( Please try again</p>}
+                            {isOrderProcessing && <p>Обробка замовлення...</p>}
+                            {requestError && <p>Error : {requestError} :( Будь ласка спробуйте ще раз</p>}
                         </div>
                     </div>
                 </form>

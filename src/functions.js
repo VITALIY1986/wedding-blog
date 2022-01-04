@@ -312,11 +312,9 @@ export const createCheckoutData = ( order ) => {
 			address2: order?.shipping?.address2,
 			city: order?.shipping?.city,
 			country: order?.shipping?.country,
-			state: order?.shipping?.state,
-			postcode: order?.shipping?.postcode,
-			email: order?.shipping?.email,
+		
 			phone: order?.shipping?.phone,
-			company: order?.shipping?.company,
+		
 		},
 		billing: {
 			firstName: billingData?.firstName,
@@ -325,23 +323,26 @@ export const createCheckoutData = ( order ) => {
 			address2: billingData?.address2,
 			city: billingData?.city,
 			country: billingData?.country,
-			state: billingData?.state,
-			postcode: billingData?.postcode,
-			email: billingData?.email,
+			
 			phone: billingData?.phone,
-			company: billingData?.company,
+		
+		},
+		shipToDifferentAddress: {
+			firstName: billingData?.firstName,
+			lastName: billingData?.lastName,
+			
 		},
 		shipToDifferentAddress: order.billingDifferentThanShipping,
 		paymentMethod: order.paymentMethod,
 		isPaid: false,
 	};
 
-//	if (order.createAccount) {
-//		checkoutData.account = {
-//			username: order.username,
-///			password: order.password,
-//		};
-	//}
+	if (order.createAccount) {
+		checkoutData.account = {
+			username: order.username,
+			password: order.password,
+	};
+	}
 
 	return checkoutData;
 };
