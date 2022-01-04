@@ -233,7 +233,7 @@ const CheckoutForm = ({countriesData}) => {
                                     containerClassNames="mb-4 pt-4 "
                                 />
                             </div>
-                            {/*Billing Details*/}
+                            {/*Billing Detais*/}
                             {input?.billingDifferentThanShipping ? (
                                 <div className="billing-details hidden ">
                                     <h2 className="text-xl font-medium mb-4">Платіжна інформація</h2>
