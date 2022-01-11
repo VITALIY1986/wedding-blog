@@ -18,7 +18,7 @@ const Layout = (props) => {
  
    
    
-        <div>
+        <div className="wrapper">
           <Head>
             <title>4Prof next.js</title>
           </Head>

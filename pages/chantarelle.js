@@ -40,6 +40,7 @@ export default function Home (props) {
 	return (
 
 			<Layout>
+        
                 <HeroCarousel heroCarousel={heroCarousel}/>
                 <div className=" mx-3 md:mx-10 lg:mx-20     my-20">	
 				<h1 className="products-main-title text-2xl lg:text-4xl  uppercase">{chantarelle.title}</h1>

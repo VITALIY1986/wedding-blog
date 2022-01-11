@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
-
+import Layout from "../src/components/Layout";
 
 import useSearch, { SEARCH_STATE_LOADED } from '../src/components/use-search';
 
@@ -171,34 +171,35 @@ const Nav = () => {
   }, []);
 
   return (
-  <>
+  <Layout>
        
-       
-        <div >
-          {searchVisibility === SEARCH_HIDDEN && (
-            <button onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
-              <span className="sr-only">Toggle Search</span>
-             ertertre
+       <div className='main bg-blue py-6 h-screen  flex justify-center  items-center'>
+        <div className='w-full lg:w-3/5 px-6' >
+         {/*} {searchVisibility === SEARCH_HIDDEN && (
+            <button className="p-6  bg-white" onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
+              <span className="sr-only bg-white w-60">Toggle Search</span>
+             ПОШУК
             </button>
-          )}
-          {searchVisibility === SEARCH_VISIBLE && (
-            <form ref={formRef} action="/search" data-search-is-active={!!query}>
+         )}*/}
+       
+            <form className='w-full' ref={formRef} action="/search" data-search-is-active={!!query}>
               <input
+              className="pl-2 py-2 outline-none border-none rounded w-full "
                 type="search"
                 name="q"
                 value={query || ''}
                 onChange={handleOnSearch}
                 autoComplete="off"
-                placeholder="Search..."
+                placeholder="Знайти..."
                 required
               />
               <div >
                 {results.length > 0 && (
-                  <ul>
+                  <ul className=' text-blue  w-full'>
                     {results.map(({ slug, name }, index) => {
                       return (
-                        <li key={slug}>
-                          <Link tabIndex={index} href='#'>
+                        <li className='bg-white p-3 border-2' key={slug}>
+                          <Link tabIndex={index} href={ `/product/${slug }`} >
                             <a>{name}</a>
                           </Link>
                         </li>
@@ -207,16 +208,16 @@ const Nav = () => {
                   </ul>
                 )}
                 {results.length === 0 && (
-                  <p>
-                    Sorry, not finding anything for <strong>{query}</strong>
+                  <p className='w-60 text-white'>
+                   Нічого не знайдено <strong>{query}</strong>
                   </p>
                 )}
               </div>
             </form>
-          )}
+       
         </div>
-    
-        </>
+        </div>
+        </Layout>
   );
 };
 

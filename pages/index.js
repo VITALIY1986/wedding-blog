@@ -47,7 +47,7 @@ export default function Home (props) {
 	return (
 
 			<Layout>
-	
+	<div>
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				<a href="myfile.pdf"  download>Download</a>
@@ -117,6 +117,7 @@ export default function Home (props) {
 							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
 						) : '' }
 					</div>
+				</div>
 				</div>
 				</div>
 			</Layout>

@@ -9,6 +9,7 @@ export default function Categories ( props ) {
 
 	return (
 		<Layout>
+			
 			{/*Categories*/}
 			<div className="categories product-categories-container container mx-auto my-32  xl:px-0">
 				<h2 className="text-2xl mb-5 uppercase">Categories</h2>
