@@ -16,6 +16,8 @@
     "@wordpress/html-entities": "^3.2.2",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
+    "dompurify": "^2.3.4",
+    "fuse.js": "^6.5.3",
     "graphql": "^15.5.1",
     "invariant": "^2.2.4",
     "lodash": "^4.17.21",
