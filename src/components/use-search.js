@@ -3,7 +3,7 @@ import Fuse from 'fuse.js';
 
 import { getSearchData } from './search';
 
-const SEARCH_KEYS = ['slug', 'title'];
+const SEARCH_KEYS = ['slug', 'name'];
 
 export const SEARCH_STATE_LOADING = 'LOADING';
 export const SEARCH_STATE_READY = 'READY';
@@ -21,10 +21,11 @@ export function useSearchState() {
   const [state, setState] = useState(SEARCH_STATE_READY);
   const [data, setData] = useState(null);
 
+ 
   let client;
-
+  console.log(data)
   if (data) {
-    client = new Fuse(data.post, {
+    client = new Fuse(data.par.post, {
       keys: SEARCH_KEYS,
       isCaseSensitive: false,
     });

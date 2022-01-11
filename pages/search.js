@@ -195,11 +195,11 @@ const Nav = () => {
               <div >
                 {results.length > 0 && (
                   <ul>
-                    {results.map(({ slug, title }, index) => {
+                    {results.map(({ slug, name }, index) => {
                       return (
                         <li key={slug}>
                           <Link tabIndex={index} href='#'>
-                            <a>{title}</a>
+                            <a>{name}</a>
                           </Link>
                         </li>
                       );

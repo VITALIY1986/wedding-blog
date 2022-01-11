@@ -41,7 +41,7 @@ export default function Home (props) {
 	news.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
 
 	
-	
+	console.log(news)
 	 
 
 	return (
