@@ -6,8 +6,8 @@ const Footer = () => (
 			<div className="md:grid  md:grid-cols-6 gap-4 ">
 				<div className="col-start-1 col-end-4 ">
 					<h3 className="mt-5 text-3xl text-blue">НАШІ КОМПАНІЇ</h3>
-					<div className="flex-none md:flex mt-5">
-						<div className="flex-1 opacity-75" >
+					<div className=" flex mt-5 font-thin">
+						<div className="flex-1 opacity-75 " >
 					     <p className="mb-3">Chantarelle</p>
 					     <p className="mb-3">Norel</p>
 					     <p className="mb-3">Dermaoxy</p>
@@ -21,7 +21,7 @@ const Footer = () => (
 			    </div>
 				<div className="col-start-4 col-end-6 ">
 					<h3 className="mt-5 text-3xl text-blue">КОНТАКТИ</h3>
-					<div className="mt-5 opacity-75">
+					<div className="mt-5 opacity-75 font-thin">
 						<p>Mенеджер (Київ): +38 (097) 860 06 06 </p>
 						<p>Mенеджер (Київ): +38 (068) 706 70 67 </p>
 						<p>Mенеджер (регіони): +38 (097) 209 54 45</p>
