@@ -3,7 +3,7 @@ import Fuse from 'fuse.js';
 
 import { getSearchData } from './search';
 
-const SEARCH_KEYS = ['slug', 'name'];
+const SEARCH_KEYS = ['slug', 'name',"sku"];
 
 export const SEARCH_STATE_LOADING = 'LOADING';
 export const SEARCH_STATE_READY = 'READY';

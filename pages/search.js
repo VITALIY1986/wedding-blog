@@ -196,11 +196,11 @@ const Nav = () => {
               <div >
                 {results.length > 0 && (
                   <ul className=' text-blue  w-full'>
-                    {results.map(({ slug, name }, index) => {
+                    {results.map(({ slug, name, sku }, index) => {
                       return (
                         <li className='bg-white p-3 border-2' key={slug}>
                           <Link tabIndex={index} href={ `/product/${slug }`} >
-                            <a>{name}</a>
+                            <a>{name}({sku})</a>
                           </Link>
                         </li>
                       );
