@@ -14,7 +14,8 @@ import SignUp from '../src/components/signup/SignUp'
 import { useState } from 'react';
 import { useAuth } from '../src/components/login-function/hooks';
 import AliceCarousel from 'react-alice-carousel';
-
+import Navigation from "../src/components/navigation-chantarelle";
+import profilePic from "../public/pattern_chant.png"
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 
@@ -23,7 +24,50 @@ export default function Home (props) {
 
 	const { isLoggedIn } = useAuth();
 
+	  
+	const questionsAnswers = [
 	
+        {
+          id: 2,
+            title: "CHANTARELLE",
+            description: "Професійна і домашня косметика, косметологічні апарати (Франція, Польща)",
+            linkarticle:"/categori-chantarelle-prof"
+      
+        },
+        {
+          id: 3,
+            title: "ARKANA",
+            description: "Професійна і домашня косметика (Польща)",
+            linkarticle:"/categori-chantarelle-home"
+        },
+        {
+          id: 4,
+            title: "NOREL Dr. Wilsz",
+            description: "Професійна і домашня косметика (Польща)",
+            linkarticle:"/posts/chantarelle"
+           
+        },
+		{
+			id: 2,
+			  title: "CHANTARELLE",
+			  description: "Професійна і домашня косметика, косметологічні апарати (Франція, Польща)",
+			  linkarticle:"/categori-chantarelle-prof"
+		
+		  },
+		  {
+			id: 3,
+			  title: "ARKANA",
+			  description: "Професійна і домашня косметика (Польща)",
+			  linkarticle:"/categori-chantarelle-home"
+		  },
+		  {
+			id: 4,
+			  title: "NOREL Dr. Wilsz",
+			  description: "Професійна і домашня косметика (Польща)",
+			  linkarticle:"/posts/chantarelle"
+			 
+		  }
+	]
 	
 	const { products,  heroCarousel, posts, postsCategory,featuredproducts,news ,ret} = props || {};
 
@@ -47,7 +91,7 @@ export default function Home (props) {
 	return (
 
 			<Layout>
-	<div>
+	<div className="main">
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				<a href="myfile.pdf"  download>Download</a>
@@ -110,16 +154,18 @@ export default function Home (props) {
 						) : '' }
 					</div>
 				</div>
-				<div className="products container mx-auto my-10  ">
+			{/*}	<div className="products container mx-auto my-10  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наші Марки</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
 						{ products.length ? (
 							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
 						) : '' }
-					</div>
+						</div>
+				</div>*/}
 				</div>
 				</div>
-				</div>
+				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наші Марки</span></h2>
+				<Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
 			</Layout>
 		
 	)

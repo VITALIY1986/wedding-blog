@@ -120,11 +120,11 @@ const Nav = () => {
 			
 			<li className="nav-item relative   " key={item.id}>
 					<Link href={item.linkhomepage}>
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3 py-5">
 						{item.title	}  <span className="caret"></span>
 						</a>
 						</Link>
-						<ul className="dropdown-menus py-2 px-6 bg-blue ">
+						<ul className="dropdown-menus py-5 px-6 bg-blue mt-10 ">
 							<li>
 							    <Link href={item.linkprof	}>
 						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
@@ -159,7 +159,7 @@ const Nav = () => {
 	return (
 
 		
-		<nav className="mx-2">
+		<nav className="mx-2 ">
 			<div className="flex items-center justify-between container mx-auto">
 
 				<div className="flex items-center flex-shrink-0 text-black mr-20 w-24">
