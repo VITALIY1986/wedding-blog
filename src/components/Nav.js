@@ -26,7 +26,7 @@ const Nav = () => {
 		  linkhomepage:"/arkana"
 	  },
 	  {
-		id: 3,
+		id:4,
 		  title: "NOREL",
 		  linkhome:"/categori-norel-home",
 		  linkprof:"/categori-norel-prof",
@@ -34,7 +34,7 @@ const Nav = () => {
 		  linkhomepage:"/norel"
 	  },
 	  {
-		id: 3,
+		id:5,
 		  title: "MCCM",
 		  linkhome:"",
 		  linkprof:"/categori-mccm-prof",
@@ -42,7 +42,7 @@ const Nav = () => {
 		  linkhomepage:"/mccm"
 	  },
 	  {
-		id: 3,
+		id: 6,
 		  title: "DermaOxy",
 		  linkhome:"/categori-dermaoxy-home",
 		  linkprof:"/categori-dermaoxy-prof",
@@ -51,20 +51,22 @@ const Nav = () => {
 	  },
 	  
 	  {
-		id: 3,
+		id: 7,
 		  title: "Sittara",
 		  linkhome:"",
 		  linkprof:"",
 		  linkarticle:"",
-		  linkhomepage:"/"
+		  linkhomepage:"/",
+		  item:""
 	  },
 	  {
-		id: 3,
+		id: 8,
 		  title: "Контакти",
 		  linkhome:"",
 		  linkprof:"",
 		  linkarticle:"",
-		  linkhomepage:"/"
+		  linkhomepage:"/",
+		  item:""
 	  }
 	
 	];
@@ -140,7 +142,7 @@ const Nav = () => {
 						{item.title	}  <span className="caret"></span>
 						</a>
 						</Link>
-						<ul className={`${ item.linkhome=== "" ? 'hidden' : 'dropdown-menus py-5 px-6 bg-blue mt-10  '}`}>
+						<ul className={`${ item.item === "" ? 'hidden' : 'dropdown-menus py-5 px-6 bg-blue mt-10  '}`}>
 							<li>
 							    <Link href={item.linkprof	}>
 						            <a className={`${ item.linkprof=== "" ? 'hidden' : 'block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white '}`}>

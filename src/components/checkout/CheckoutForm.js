@@ -207,7 +207,7 @@ const CheckoutForm = ({countriesData}) => {
     return (
         <>
             {cart ? (
-                <form onSubmit={handleFormSubmit} className="woo-next-checkout-form">
+                <form onSubmit={handleFormSubmit} className="woo-next-checkout-form ">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
                         <div>
                             {/*Shipping Details*/}

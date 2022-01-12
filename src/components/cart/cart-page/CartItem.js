@@ -70,7 +70,7 @@ const CartItem = ( {
 				<img width="64" src={ item.image.sourceUrl } srcSet={ item.image.srcSet } alt={ item.image.title }/>
 			</td>
 			<td className="woo-next-cart-element">{ item.name }</td>
-			<td className="woo-next-cart-element">{ ( 'string' !== typeof item.price ) ? item.price.toFixed( 2 ) : item.price }</td>
+			{/*<td className="woo-next-cart-element">{ ( 'string' !== typeof item.price ) ? item.price.toFixed( 2 ) : item.price }</td>*/}
 
 			{/* Qty Input */ }
 			<td className="woo-next-cart-element woo-next-cart-qty">

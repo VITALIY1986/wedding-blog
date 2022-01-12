@@ -111,7 +111,7 @@ const CartItemsContainer = () => {
 
 	return (
 		<>
-		<div className="hidden md:block  my-32 mx-4 ">
+		<div className="hidden    mx-4 md:h-screen md:flex md: justify-center md:items-center ">
 			{ cart ? (
 				<div className="woo-next-cart-wrapper container">
 					<div className="cart-header grid grid-cols-2 gap-4">
@@ -133,8 +133,9 @@ const CartItemsContainer = () => {
 									<th className="woo-next-cart-heading-el" scope="col"/>
 									<th className="woo-next-cart-heading-el" scope="col"/>
 									<th className="woo-next-cart-heading-el" scope="col">Продукт</th>
-									<th className="woo-next-cart-heading-el" scope="col">Ціна</th>
 									<th className="woo-next-cart-heading-el" scope="col">Кількість</th>
+									{/*<th className="woo-next-cart-heading-el" scope="col">Ціна</th>*/}
+									
 									<th className="woo-next-cart-heading-el" scope="col">Всього</th>
 								</tr>
 								</thead>
@@ -185,10 +186,10 @@ const CartItemsContainer = () => {
 				</div>
 			) : (
 				<div className="container mx-auto my-32 px-4 xl:px-0">
-					<h2 className="text-2xl mb-5">No items in the cart</h2>
+					<h2 className="text-2xl mb-5">У кошику немає товарів</h2>
 					<Link href="/">
 						<button className="bg-purple-600 text-white px-5 py-3 rounded-sm">
-							<span className="woo-next-cart-checkout-txt">Add New Products</span>
+							<span className="woo-next-cart-checkout-txt">Додати нові продукти</span>
 							<i className="fas fa-long-arrow-alt-right"/>
 						</button>
 					</Link>
