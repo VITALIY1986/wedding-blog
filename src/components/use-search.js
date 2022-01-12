@@ -23,7 +23,7 @@ export function useSearchState() {
 
  
   let client;
-  console.log(data)
+  
   if (data) {
     client = new Fuse(data.par.post, {
       keys: SEARCH_KEYS,

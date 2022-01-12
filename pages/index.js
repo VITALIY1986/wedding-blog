@@ -31,39 +31,39 @@ export default function Home (props) {
           id: 2,
             title: "CHANTARELLE",
             description: "Професійна і домашня косметика, косметологічні апарати (Франція, Польща)",
-            linkarticle:"/categori-chantarelle-prof"
+            linkarticle:"/chantarelle"
       
         },
         {
           id: 3,
             title: "ARKANA",
             description: "Професійна і домашня косметика (Польща)",
-            linkarticle:"/categori-chantarelle-home"
+            linkarticle:"/arkana"
         },
         {
           id: 4,
             title: "NOREL Dr. Wilsz",
             description: "Професійна і домашня косметика (Польща)",
-            linkarticle:"/posts/chantarelle"
+            linkarticle:"/norel"
            
         },
 		{
 			id: 2,
-			  title: "CHANTARELLE",
-			  description: "Професійна і домашня косметика, косметологічні апарати (Франція, Польща)",
-			  linkarticle:"/categori-chantarelle-prof"
+			  title: "MCCM",
+			  description: "Одна з провідних компаній в індустрії краси",
+			  linkarticle:"/mccm"
 		
 		  },
 		  {
 			id: 3,
-			  title: "ARKANA",
-			  description: "Професійна і домашня косметика (Польща)",
-			  linkarticle:"/categori-chantarelle-home"
+			  title: "DERMAOXY",
+			  description: "апарат кисневої Безін'єкційної мезотерапії (Данія)",
+			  linkarticle:"/dermaoxy"
 		  },
 		  {
 			id: 4,
-			  title: "NOREL Dr. Wilsz",
-			  description: "Професійна і домашня косметика (Польща)",
+			  title: "SITTARA",
+			  description: "Професійні косметологічні апарати",
 			  linkarticle:"/posts/chantarelle"
 			 
 		  }
@@ -154,18 +154,16 @@ export default function Home (props) {
 						) : '' }
 					</div>
 				</div>
-			{/*}	<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наші Марки</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
-						{ products.length ? (
-							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
-						) : '' }
-						</div>
-				</div>*/}
+			
 				</div>
 				</div>
 				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наші Марки</span></h2>
-				<Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
+			<div className="w-full lg:mb-20">
+				<div className="products container mx-auto ">
+			
+					<Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
+				</div>
+				</div>
 			</Layout>
 		
 	)
