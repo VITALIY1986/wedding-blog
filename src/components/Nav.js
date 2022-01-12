@@ -48,8 +48,24 @@ const Nav = () => {
 		  linkprof:"/categori-dermaoxy-prof",
 		  linkarticle:"",
 		  linkhomepage:"/dermaoxy"
+	  },
+	  
+	  {
+		id: 3,
+		  title: "Sittara",
+		  linkhome:"",
+		  linkprof:"",
+		  linkarticle:"",
+		  linkhomepage:"/"
+	  },
+	  {
+		id: 3,
+		  title: "Контакти",
+		  linkhome:"",
+		  linkprof:"",
+		  linkarticle:"",
+		  linkhomepage:"/"
 	  }
-	 
 	
 	];
 	const renderedQuestionsAnswers = questionsAnswers.map((item, index) => {
@@ -124,10 +140,10 @@ const Nav = () => {
 						{item.title	}  <span className="caret"></span>
 						</a>
 						</Link>
-						<ul className="dropdown-menus py-5 px-6 bg-blue mt-10 ">
+						<ul className={`${ item.linkhome=== "" ? 'hidden' : 'dropdown-menus py-5 px-6 bg-blue mt-10  '}`}>
 							<li>
 							    <Link href={item.linkprof	}>
-						            <a className="block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200 hover:text-white ">
+						            <a className={`${ item.linkprof=== "" ? 'hidden' : 'block py-2 lg:inline-block lg:mt-0 font-thin text-lg text-purple-200  hover:text-white '}`}>
 									Професійна косметика
 									
 						            </a>
