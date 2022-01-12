@@ -125,7 +125,7 @@ $text: #414141;
      /*ie workaround */
     -ms-transform: translatex(-100vw);
     &:last-child {
-      margin-bottom: 2em;
+      
     }
     a {
       text-decoration: none;
@@ -133,7 +133,7 @@ $text: #414141;
       text-align: center;
     
       padding: 1rem;
-      font-size: calc(24px - .5vw);
+     
       @media (min-width: 768px) {
         text-align: right;
         padding: .5rem;
@@ -280,10 +280,11 @@ $dark-grayish-blue: hsl(240, 6%, 50%);
 
 //Dividers
 $light-grayish-blue: hsl(240, 5%, 91%);
-.faq__desc.show-description {
+.show-description {
   background: #413f5d;
-  height: 11.5rem;
+  height:2.5rem;
   margin-bottom: 0px;
+  display: block;
 }
 
 /* Arrows */

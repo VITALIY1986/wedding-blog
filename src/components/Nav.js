@@ -94,26 +94,26 @@ const Nav = () => {
 				
 					<ul id={`faq${index + 1}_desc`}
         data-qa="faq__desc"
-        className={`faq__desc ${showDescription}`}>
+        className="">
 						<li className="block">
 						<Link href={item.linkhomepage	}>
-								<a className="block">
+								<a className={`hidden ${showDescription}`}>
 								{item.title	} HOME
 								</a>
 							</Link>
 						<Link href={item.linkprof	}>
-								<a className="block">
+								<a className={`${ item.linkprof === "" ? 'hidden' : `hidden ${showDescription}`}`}>
 								Професійна косметика
 								</a>
 							</Link>
 							<Link href={item.linkhome	}>
-								<a className={`${ item.linkhome === "" ? 'hidden' : 'block'}`}>
+								<a className={`${ item.linkhome === "" ? 'hidden' : `hidden ${showDescription}`}`}>
 								Домашня косметика
 								</a>
 							</Link>
 							
 							<Link  href={item.linkarticle	}>
-								<a className={`${ item.linkarticle === "" ? 'hidden' : 'block'}`} >
+								<a className={`${ item.linkarticle === "" ? 'hidden' : `hidden ${showDescription}`}`} >
 								Статті
 								</a>
 							</Link>
