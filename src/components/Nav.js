@@ -3,17 +3,19 @@ import CartIcon from "./cart/CartIcon";
 import { useState } from 'react';
 import profilePic from '../../public/logo.png'
 import Image from 'next/image'
+import { useAuth } from './login-function/hooks';
 const Nav = () => {
-
+	const { isLoggedIn } = useAuth();
 	const [ isMenuVisible, setMenuVisibility ] = useState(false);
     const [activeIndex, setActiveIndex] = useState(2);
-	const questionsAnswers = [
 	
+	const questionsAnswers = [
+			
 	  {
 		id: 2,
 		  title: "СHANTARELLE",
 		linkhome:"/categori-chantarelle-home",
-		linkprof:"/categori-chantarelle-prof",
+		linkprof:"",
 		linkarticle:"/posts/chantarelle",
 		linkhomepage:"/chantarelle"
 	  },
@@ -21,7 +23,7 @@ const Nav = () => {
 		id: 3,
 		  title: "ARKANA",
 		  linkhome:"/categori-arkana-home",
-		  linkprof:"/categori-arkana-prof",
+		  linkprof:"",
 		  linkarticle:"/posts/arkana",
 		  linkhomepage:"/arkana"
 	  },
@@ -29,7 +31,7 @@ const Nav = () => {
 		id:4,
 		  title: "NOREL",
 		  linkhome:"/categori-norel-home",
-		  linkprof:"/categori-norel-prof",
+		  linkprof:"",
 		  linkarticle:"/posts/norel",
 		  linkhomepage:"/norel"
 	  },
@@ -37,7 +39,7 @@ const Nav = () => {
 		id:5,
 		  title: "MCCM",
 		  linkhome:"",
-		  linkprof:"/categori-mccm-prof",
+		  linkprof:"",
 		  linkarticle:"/posts/mccm",
 		  linkhomepage:"/mccm"
 	  },
@@ -45,7 +47,7 @@ const Nav = () => {
 		id: 6,
 		  title: "DermaOxy",
 		  linkhome:"/categori-dermaoxy-home",
-		  linkprof:"/categori-dermaoxy-prof",
+		  linkprof:"",
 		  linkarticle:"",
 		  linkhomepage:"/dermaoxy"
 	  },
@@ -70,7 +72,71 @@ const Nav = () => {
 	  }
 	
 	];
-	const renderedQuestionsAnswers = questionsAnswers.map((item, index) => {
+	const questionsAnswersLog = [
+			
+		{
+		  id: 2,
+			title: "СHANTARELLE",
+		  linkhome:"/categori-chantarelle-home",
+		  linkprof:"/categori-chantarelle-prof",
+		  linkarticle:"/posts/chantarelle",
+		  linkhomepage:"/chantarelle"
+		},
+		{
+		  id: 3,
+			title: "ARKANA",
+			linkhome:"/categori-arkana-home",
+			linkprof:"/categori-arkana-prof",
+			linkarticle:"/posts/arkana",
+			linkhomepage:"/arkana"
+		},
+		{
+		  id:4,
+			title: "NOREL",
+			linkhome:"/categori-norel-home",
+			linkprof:"/categori-norel-prof",
+			linkarticle:"/posts/norel",
+			linkhomepage:"/norel"
+		},
+		{
+		  id:5,
+			title: "MCCM",
+			linkhome:"",
+			linkprof:"/categori-mccm-prof",
+			linkarticle:"/posts/mccm",
+			linkhomepage:"/mccm"
+		},
+		{
+		  id: 6,
+			title: "DermaOxy",
+			linkhome:"/categori-dermaoxy-home",
+			linkprof:"/categori-dermaoxy-prof",
+			linkarticle:"",
+			linkhomepage:"/dermaoxy"
+		},
+		
+		{
+		  id: 7,
+			title: "Sittara",
+			linkhome:"",
+			linkprof:"",
+			linkarticle:"",
+			linkhomepage:"/",
+			item:""
+		},
+		{
+		  id: 8,
+			title: "Контакти",
+			linkhome:"",
+			linkprof:"",
+			linkarticle:"",
+			linkhomepage:"/",
+			item:""
+		}
+	  
+	  ];
+	const Data = isLoggedIn ? questionsAnswersLog : questionsAnswers
+	const renderedQuestionsAnswers = Data.map((item, index) => {
 		const showDescription = index === activeIndex ? "show-description" : "";
 		const fontWeightBold = index === activeIndex ? "font-light " : "";
 		
@@ -131,7 +197,7 @@ const Nav = () => {
 		
 		);
 	  });
-	  const renderedQuestionsAnswersDesctop = questionsAnswers.map((item, index) => {
+	  const renderedQuestionsAnswersDesctop = Data.map((item, index) => {
 	
 		return (
 			

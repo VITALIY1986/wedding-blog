@@ -7,10 +7,25 @@ import Navigation from "../src/components/navigation-chantarelle";
 import profilePic from "../public/mccm.jpg"
 import Image from 'next/image'
 export default function Home (props) {
-
+  const { isLoggedIn } = useAuth();
     const { mccm,  heroCarousel} = props || {}; 
  
 	const questionsAnswers = [
+	
+        
+      
+        {
+          id: 4,
+            title: "СТАТТІ",
+            description: "ЧИТАТИ",
+            linkarticle:"/posts/mccm"
+           
+        },
+       
+       
+      
+      ];
+      const questionsAnswersLog = [
 	
         {
           id: 2,
@@ -32,6 +47,7 @@ export default function Home (props) {
       
       ];
 
+      const Data = isLoggedIn ? questionsAnswersLog : questionsAnswers
 	return (
 
 			<Layout>
@@ -47,7 +63,7 @@ export default function Home (props) {
                 <div className="md:mx-10 lg:mx-20   lg:my-20  my-0">
               	
 			
-                <Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
+                <Navigation profilePic={profilePic} questionsAnswers={Data}/>
                
                 </div>
 	        </Layout>

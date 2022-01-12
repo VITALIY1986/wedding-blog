@@ -2,16 +2,37 @@ import Layout from "../src/components/Layout";
 import client from '../src/components/ApolloClient';
 import PAGE_QUERY from "../src/queries/page";
 import HeroCarousel from "../src/components/home/hero-carousel";
-import { useAuth } from '../src/components/login-function/hooks';
+import { useAuth } from '../src/components/login-function/hooks'; 
 import Navigation from "../src/components/navigation-chantarelle";
 import profilePic from "../public/pattern_chant.png"
+
 import Image from 'next/image'
 export default function Home (props) {
-
+  const { isLoggedIn } = useAuth();
     const { chantarelle,  heroCarousel} = props || {};
 
   
 	const questionsAnswers = [
+	
+        
+        {
+          id: 3,
+            title: "ДОМАШНЯ КОСМЕТИКА",
+            description: "ДИВИТИСЯ КАТАЛОГ",
+            linkarticle:"/categori-chantarelle-home"
+        },
+        {
+          id: 4,
+            title: "СТАТТІ",
+            description: "ЧИТАТИ",
+            linkarticle:"/posts/chantarelle"
+           
+        },
+       
+       
+      
+      ];
+      const questionsAnswersLog = [
 	
         {
           id: 2,
@@ -37,6 +58,7 @@ export default function Home (props) {
        
       
       ];
+      const Data = isLoggedIn ? questionsAnswersLog : questionsAnswers
 	return (
 
 			<Layout>
@@ -53,7 +75,7 @@ export default function Home (props) {
                 <div className="md:mx-10 lg:mx-20   lg:my-20  my-0">
               	
 			
-                <Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
+                <Navigation profilePic={profilePic} questionsAnswers={Data}/>
                
                 </div>
 	        </Layout>
