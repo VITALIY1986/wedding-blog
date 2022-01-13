@@ -5,7 +5,34 @@ import StateSelection from "./StatesSelection";
 import InputField from "./form-elements/InputField";
 
 const Address = ({input,countries,  states, handleOnChange, isFetchingStates, isShipping}) => {
-    let countrieses = [{countryCode:"Кур'єрська доставка",countryName:"Кур'єрська доставка"},{countryCode:"Нова пошта від.№1",countryName:"Нова пошта від.№1"},{countryCode:" від.№2",countryName:" від.№2"},{countryCode:" від.№3",countryName:" від.№3"}];  
+    let countrieses = [{countryCode:"Кур'єрська доставка",countryName:"Кур'єрська доставка"},
+    {countryCode:"Нова пошта від.№1",countryName:"Нова пошта від.№1"},
+    {countryCode:" Нова пошта від.№2",countryName:"Нова пошта від.№2"},
+    {countryCode:" Нова пошта від.№3",countryName:"Нова пошта від.№3"},
+    {countryCode:"Нова пошта від.№4",countryName:"Нова пошта від.№4"},
+    {countryCode:" Нова пошта від.№5",countryName:"Нова пошта від.№5"},
+    {countryCode:" Нова пошта від.№6",countryName:"Нова пошта від.№6"},
+    {countryCode:"Нова пошта від.№7",countryName:"Нова пошта від.№7"},
+    {countryCode:" Нова пошта від.№8",countryName:"Нова пошта від.№8"},
+    {countryCode:" Нова пошта від.№9",countryName:"Нова пошта від.№9"},
+    {countryCode:"Нова пошта від.№10",countryName:"Нова пошта від.№10"},
+    {countryCode:" Нова пошта від.№11",countryName:"Нова пошта від.№11"},
+    {countryCode:" Нова пошта від.№12",countryName:"Нова пошта від.№12"},
+    {countryCode:"Нова пошта від.№13",countryName:"Нова пошта від.№13"},
+    {countryCode:" Нова пошта від.№14",countryName:"Нова пошта від.№14"},
+    {countryCode:" Нова пошта від.№15",countryName:"Нова пошта від.№15"},
+    {countryCode:"Нова пошта від.№16",countryName:"Нова пошта від.№16"},
+    {countryCode:" Нова пошта від.№17",countryName:"Нова пошта від.№17"},
+    {countryCode:" Нова пошта від.№18",countryName:"Нова пошта від.№18"},
+    {countryCode:"Нова пошта від.№19",countryName:"Нова пошта від.№19"},
+    {countryCode:" Нова пошта від.№20",countryName:"Нова пошта від.№20"},
+    {countryCode:" Нова пошта від.№21",countryName:"Нова пошта від.№21"},
+    {countryCode:"Нова пошта від.№22",countryName:"Нова пошта від.№22"},
+    {countryCode:" Нова пошта від.№23",countryName:"Нова пошта від.№23"},
+    {countryCode:" Нова пошта від.№24",countryName:"Нова пошта від.№24"},
+    {countryCode:"Нова пошта від.№25",countryName:"Нова пошта від.№25"}
+
+];  
     const {errors} = input || {};
 
     return (
