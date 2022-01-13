@@ -1,40 +1,24 @@
 import PropTypes from 'prop-types';
 import CountrySelection from "./CountrySelection";
-import Delivery from "./CountrySelection-copy";
+
 import StateSelection from "./StatesSelection";
 import InputField from "./form-elements/InputField";
-
+import Error from './Error';
+import {isEmpty, map} from "lodash";
+import Abbr from "./form-elements/Abbr";
+import ArrowDown from "../icons/ArrowDown";
 const Address = ({input,countries,  states, handleOnChange, isFetchingStates, isShipping}) => {
+    const {address2, errors} = input || {};
+console.log(address2)
+    const inputId = `address2-${isShipping ? 'shipping' : 'billing'}`;
     let countrieses = [{countryCode:"Кур'єрська доставка",countryName:"Кур'єрська доставка"},
-    {countryCode:"Нова пошта від.№1",countryName:"Нова пошта від.№1"},
-    {countryCode:" Нова пошта від.№2",countryName:"Нова пошта від.№2"},
-    {countryCode:" Нова пошта від.№3",countryName:"Нова пошта від.№3"},
-    {countryCode:"Нова пошта від.№4",countryName:"Нова пошта від.№4"},
-    {countryCode:" Нова пошта від.№5",countryName:"Нова пошта від.№5"},
-    {countryCode:" Нова пошта від.№6",countryName:"Нова пошта від.№6"},
-    {countryCode:"Нова пошта від.№7",countryName:"Нова пошта від.№7"},
-    {countryCode:" Нова пошта від.№8",countryName:"Нова пошта від.№8"},
-    {countryCode:" Нова пошта від.№9",countryName:"Нова пошта від.№9"},
-    {countryCode:"Нова пошта від.№10",countryName:"Нова пошта від.№10"},
-    {countryCode:" Нова пошта від.№11",countryName:"Нова пошта від.№11"},
-    {countryCode:" Нова пошта від.№12",countryName:"Нова пошта від.№12"},
-    {countryCode:"Нова пошта від.№13",countryName:"Нова пошта від.№13"},
-    {countryCode:" Нова пошта від.№14",countryName:"Нова пошта від.№14"},
-    {countryCode:" Нова пошта від.№15",countryName:"Нова пошта від.№15"},
-    {countryCode:"Нова пошта від.№16",countryName:"Нова пошта від.№16"},
-    {countryCode:" Нова пошта від.№17",countryName:"Нова пошта від.№17"},
-    {countryCode:" Нова пошта від.№18",countryName:"Нова пошта від.№18"},
-    {countryCode:"Нова пошта від.№19",countryName:"Нова пошта від.№19"},
-    {countryCode:" Нова пошта від.№20",countryName:"Нова пошта від.№20"},
-    {countryCode:" Нова пошта від.№21",countryName:"Нова пошта від.№21"},
-    {countryCode:"Нова пошта від.№22",countryName:"Нова пошта від.№22"},
-    {countryCode:" Нова пошта від.№23",countryName:"Нова пошта від.№23"},
-    {countryCode:" Нова пошта від.№24",countryName:"Нова пошта від.№24"},
-    {countryCode:"Нова пошта від.№25",countryName:"Нова пошта від.№25"}
+    {countryCode:"Вітділення Нової Пошти",countryName:"Вітділення Нової Пошти"},
+    
+]; 
 
-];  
-    const {errors} = input || {};
 
+const deliveriAdres = address2 === "Кур'єрська доставка" ? "Адреса вулиці" : "Номер вітділення";
+const deliveriplesholder = address2 === "Кур'єрська доставка" ? "Номер будинку та назва вулиці" : "Номер вітділення Нової пошти в Вашому місті";
     return (
         <>
             <div className="flex flex-wrap overflow-hidden sm:-mx-3">
@@ -79,17 +63,7 @@ const Address = ({input,countries,  states, handleOnChange, isFetchingStates, is
                 isShipping={isShipping}
                 containerClassNames="mb-4"
             />
-            <InputField
-                name="address1"
-                inputValue={input?.address1}
-                required
-                handleOnChange={handleOnChange}
-                label="Адреса вулиці"
-                placeholder="Номер будинку та назва вулиці"
-                errors={errors}
-                isShipping={isShipping}
-                containerClassNames="mb-4"
-            />
+        
            {/*} <InputField
                 name="address2"
                 inputValue={input?.address2}
@@ -107,11 +81,45 @@ const Address = ({input,countries,  states, handleOnChange, isFetchingStates, is
                 countries={countries}
                 isShipping={isShipping}
             />
-            <Delivery
-                input={input}
+             <div className="mb-3">
+            <label className="leading-7 text-sm text-gray-700" htmlFor={inputId}>
+                Спосіб доставки
+                <Abbr required/>
+            </label>
+            <div className="relative w-full border-none">
+                <select
+                    onChange={handleOnChange}
+                    value={address2}
+                    name="address2"
+                    className="bg-gray-100 bg-opacity-50 border border-gray-500 text-gray-500 appearance-none inline-block py-3 pl-3 pr-8 rounded leading-tight w-full"
+                    id={inputId}
+                >
+                    <option value="">Вибрати спосіб...</option>
+                    {!isEmpty(countrieses) &&
+                    map(countrieses, (address2) => (
+                        <option key={address2?.countryCode} data-countrycode={address2?.countryCode}
+                                value={address2?.countryCode}>
+                            {address2?.countryName}
+                        </option>
+                      
+                    ))}
+                </select>
+                <span className="absolute right-0 mr-1 text-gray-500" style={{top: '25%'}}>
+                    <ArrowDown width={24} height={24} className="fill-current"/>
+                </span>
+            </div>
+            <Error errors={errors} fieldName={'address2'}/>
+        </div>
+        <InputField
+                name="address1"
+                inputValue={input?.address1}
+                required
                 handleOnChange={handleOnChange}
-                countries={countrieses}
+                label={deliveriAdres}
+                placeholder={deliveriplesholder}
+                errors={errors}
                 isShipping={isShipping}
+                containerClassNames="mb-4"
             />
             {/* State */}
             <StateSelection
@@ -137,7 +145,7 @@ const Address = ({input,countries,  states, handleOnChange, isFetchingStates, is
                     inputValue={input?.phone}
                     required
                     handleOnChange={handleOnChange}
-                    label="Phone"
+                    label="Телефон"
                     errors={errors}
                     isShipping={isShipping}
                     containerClassNames="mb-4"

@@ -263,7 +263,7 @@ const CheckoutForm = ({countriesData}) => {
                                 <button
                                     disabled={isOrderProcessing}
                                     className={cx(
-                                        'bg-purple-600 text-white px-5 py-3 rounded-sm w-auto xl:w-full',
+                                        'bg-blue text-white px-5 py-3 rounded-sm w-auto xl:w-full',
                                         {'opacity-50': isOrderProcessing}
                                     )}
                                     type="submit"
