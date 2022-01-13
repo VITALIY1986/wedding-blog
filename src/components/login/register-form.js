@@ -41,7 +41,7 @@
      return (
          <form
              onSubmit={ onRegister }
-             className="register-form text-white w-1/5"
+             className="register-form text-white w-full  lg:w-1/5"
              autoComplete="on"
          >
              { ( error || passwordError ) && (

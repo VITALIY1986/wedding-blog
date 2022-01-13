@@ -95,7 +95,7 @@ export default function Home (props) {
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				{/*<a href="myfile.pdf"  download>Download</a>*/}
-				<div>33333333333</div>
+			
 				{/*Categories
 				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="mai-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
