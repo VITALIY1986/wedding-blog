@@ -13,6 +13,7 @@ import Login from "../src/components/login";
 import SignUp from '../src/components/signup/SignUp'
 import { useState } from 'react';
 import { useAuth } from '../src/components/login-function/hooks';
+
 import AliceCarousel from 'react-alice-carousel';
 import Navigation from "../src/components/navigation-chantarelle";
 import profilePic from "../public/pattern_chant.png"
@@ -164,12 +165,7 @@ export default function Home (props) {
 					<Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
 				</div>
 				</div>
-				<div type="button" class="email-bt">
-    <div class="text-call">
-        <i class="fa fa-envelope" aria-hidden="true">Позвонить</i>
-        <span>Обратная</span>
-    </div>
-</div>
+				
 			</Layout>
 		
 	)
