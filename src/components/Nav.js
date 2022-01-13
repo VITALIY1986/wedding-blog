@@ -204,7 +204,7 @@ const Nav = () => {
 			
 			<li className="nav-item relative   " key={item.id}>
 					<Link href={item.linkhomepage}>
-						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3 py-5">
+						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition  delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3 py-5">
 						{item.title	}  <span className="caret"></span>
 						</a>
 						</Link>

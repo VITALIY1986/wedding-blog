@@ -164,6 +164,12 @@ export default function Home (props) {
 					<Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
 				</div>
 				</div>
+				<div type="button" class="email-bt">
+    <div class="text-call">
+        <i class="fa fa-envelope" aria-hidden="true">Позвонить</i>
+        <span>Обратная</span>
+    </div>
+</div>
 			</Layout>
 		
 	)
