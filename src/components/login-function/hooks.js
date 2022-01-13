@@ -55,7 +55,7 @@
      const onError = useSafeDispatch( ( errors ) => {
          setError(
              errorCodes[ errors.message ] ||
-                 `${ stripHtml( decodeEntities( errors.message ) ).result }`
+                 `${ stripHtml( decodeEntities( "Ваша реєстрація не підтверджена дипломом, будь ласка надішліть копію диплома косметолога на пошту  або звяжіться з менеджером за телефоном ... " ) ).result }`
          );
          setStatus( 'resolved' );
      } );

@@ -5,7 +5,7 @@
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
  import PasswordStrengthBar from 'react-password-strength-bar';
- 
+ import Link from 'next/link';
  /**
   * Internal dependencies
   */
@@ -24,15 +24,15 @@
          e.preventDefault();
          setPasswordError( '' );
          if ( username.length === 0 ) {
-             setPasswordError( 'Please enter a username.' );
+             setPasswordError( "Будь ласка, введіть ім'я користувача." );
              return;
          }
          if ( email.length === 0 ) {
-             setPasswordError( 'Please enter your email address.' );
+             setPasswordError( 'Будь ласка, введіть свою електронну адресу.' );
              return;
          }
          if ( password.length === 0 ) {
-             setPasswordError( 'Please enter a password.' );
+             setPasswordError( 'Будь ласка, введіть пароль.' );
              return;
          }
          register( username, email, password );
@@ -41,48 +41,46 @@
      return (
          <form
              onSubmit={ onRegister }
-             className="register-form text-white"
+             className="register-form text-white w-1/5"
              autoComplete="on"
          >
              { ( error || passwordError ) && (
-                 <div className="error-notice">
-                     <FontAwesomeIcon
+                 <div className="error-notice bg-white rounded p-3 text-red-900">
+                  {/*  <FontAwesomeIco
                          icon={ faSkullCrossbones }
                          aria-hidden={ true }
-                     />
+                  />*/}
                      <p>{ passwordError || error }</p>
                  </div>
              ) }
              <Field
-                 label="Username"
+                 label="Ім'я користувача"
                  value={ username }
                  autoComplete="username"
                  onChange={ ( value ) => setUsername( value ) }
-                 placeholder="Enter a username"
+                 placeholder="Введіть ім'я користувача"
                  disabled={ status === 'resolving' }
-                 description={
-                     'Your username will be shown alongside any content you submit. It cannot be changed.'
-                 }
+              
              />
              <Field
-                 label="Email"
+                 label="Електронна пошта"
                  value={ email }
                  autoComplete="email"
                  onChange={ ( value ) => setEmail( value ) }
-                 placeholder="Enter your email address"
+                 placeholder="Введіть адресу вашої електронної пошти"
                  disabled={ status === 'resolving' }
              />
              <Field
-                 label="Password"
+                 label="Пароль"
                  type="password"
                  autoComplete="new-password"
                  value={ password }
-                 placeholder="Choose a password"
+                 placeholder="Виберіть пароль"
                  onChange={ ( value ) => setPassword( value ) }
                  disabled={ status === 'resolving' }
              />
              <PasswordStrengthBar
-       
+      
                  password={ password }
                  scoreWords={ [
                      'critical fail',
@@ -102,6 +100,7 @@
                      Create Account
                  </button>
              </p>
+             <div className="flex-none mt-6"><Link href="../../../registration/register">Увійти</Link></div>
          </form>
      );
  };
