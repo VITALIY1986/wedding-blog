@@ -13,7 +13,7 @@ import Login from "../src/components/login";
 import SignUp from '../src/components/signup/SignUp'
 import { useState } from 'react';
 import { useAuth } from '../src/components/login-function/hooks';
-
+import Head from "next/head"
 import AliceCarousel from 'react-alice-carousel';
 import Navigation from "../src/components/navigation-chantarelle";
 import profilePic from "../public/pattern_chant.png"
@@ -75,7 +75,7 @@ export default function Home (props) {
 	const responsive = {
 		0: { items: 1 },
 		568: { items: 2 },
-		1024: { items:5 },
+		1024: { items:4 },
 	};
 
 	
@@ -86,11 +86,15 @@ export default function Home (props) {
 	news.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
 
 	
-	
+	console.log(products.length)
 	 
 
 	return (
-
+		<>
+<Head>
+    <html lang="uk" />
+    
+  </Head>
 			<Layout>
 	<div className="main">
 				{/*Hero Carousel*/}
@@ -140,21 +144,21 @@ export default function Home (props) {
 				{/*Products*/ }
 				<div className="products container mx-auto my-10  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Новинки</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
+					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
 					{ featuredproducts.length ? (
 							featuredproducts.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
 						) : '' }
 					</div>
 				</div>
 				{/*Prodduts*/ }
-				<div className="products container mx-auto my-10  ">
+		{		<div className={`${ products.length === 0 ? 'hidden' : 'block products container mx-auto my-10  '}`}>
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акції</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
+					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
 						{ products.length ? (
 							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
 						) : '' }
 					</div>
-				</div>
+				</div>}
 			
 				</div>
 				</div>
@@ -167,7 +171,7 @@ export default function Home (props) {
 				</div>
 				
 			</Layout>
-		
+		</>
 	)
 };
 

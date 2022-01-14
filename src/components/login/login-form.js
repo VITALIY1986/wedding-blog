@@ -25,12 +25,12 @@
        
          <form onSubmit={ onLogin } className="login-form px-3 text-white" autoComplete="on">
              { error && (
-                 <div className="error-notice mb-6">
+                 <div className="error-notice bg-white rounded p-3 text-red-900">
                  {/*}    <FontAwesomeIcon
                          icon={ faSkullCrossbones }
                          aria-hidden={ true }
              />*/}
-                     <p className='text-pink'>{ error }</p>
+                     <p className=''>{ error }</p>
                  </div>
              ) }
              <Field
