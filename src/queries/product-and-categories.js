@@ -149,7 +149,7 @@ mccm:  category(id: "dGVybTozMjg0") {
       content
     }
   }
-  featuredproducts:  products(where: {featured: true}, first: 4) {
+  featuredproducts:  products(where: {featured: true}, first: 5) {
     nodes {
       id
       productId: databaseId
@@ -203,7 +203,7 @@ mccm:  category(id: "dGVybTozMjg0") {
   }
 
 
-  products(where: { onSale: true}, first: 4) {
+  products(where: { onSale: true}, first: 5) {
     nodes {
       id
       productId: databaseId
