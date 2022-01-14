@@ -90,11 +90,7 @@ export default function Home (props) {
 	 
 
 	return (
-		<>
-<Head>
-    <html lang="uk" />
-    
-  </Head>
+
 			<Layout>
 	<div className="main">
 				{/*Hero Carousel*/}
@@ -171,7 +167,7 @@ export default function Home (props) {
 				</div>
 				
 			</Layout>
-		</>
+	
 	)
 };
 

@@ -41,7 +41,7 @@ function SignUpAPI(props) {
                     if (response.status == '200') {
                         props.setIsLoggedIn(true)
                         props.setUsername(props.APIDetailsSignUp.user)
-                        window.location.replace('http://localhost:3000/#/')
+                        window.location.replace('https://www.4prof.com.ua/#/')
                     }
                     else {
                         console.log('error')
