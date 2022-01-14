@@ -45,6 +45,7 @@
                              stripHtml( decodeEntities( errors.message ) ).result
                          }`
                  );
+                 
                  setStatus( 'resolved' );
              } );
      };
