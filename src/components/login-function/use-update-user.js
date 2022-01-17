@@ -8,8 +8,7 @@
  /**
   * Internal dependencies
   */
- import { useRegisterMutation } from '../../mutations/use-register-mutation';
- import { useAuthContext } from './auth-context';
+ import { useUpdateUserMutation } from '../../mutations/use-logout-mutation';
  
  const errorCodes = {
      invalid_username:
@@ -21,47 +20,31 @@
      empty_password: 'Please provide your password.',
  };
  
- /**
-  * Hook which registers a new user.
-  */
- export const useRegistration = () => {
+ export const useUpdateUser = ( userId ) => {
      const [ error, setError ] = useState( null );
      const [ status, setStatus ] = useState( 'idle' );
-     const { registerMutation } = useRegisterMutation();
-     const { setIsLoggedIn } = useAuthContext();
+     const { updateUserMutation } = useUpdateUserMutation();
  
-     const register = ( username, email, password ) => {
-        
+     const updateUser = ( email, password ) => {
          setError( null );
          setStatus( 'resolving' );
-         return registerMutation( username, email, password )
+         return updateUserMutation( userId, email, password )
              .then( () => {
-                
-                 setIsLoggedIn( true );
                  setStatus( 'resolved' );
-                
              } )
              .catch( ( errors ) => {
-                const responseData = '/registration/register';
-	           
-                 errors.message === "Failed to fetch" ?
                  setError(
-                    window.location.href = responseData 
-                    
-                 ):
-                 setError(
-
-                    errorCodes[ errors.message ] ||
-                        `${
-                            stripHtml( decodeEntities( errors.message ) ).result
-                        }`
-                )
+                     errorCodes[ errors.message ] ||
+                         `${
+                             stripHtml( decodeEntities( errors.message ) ).result
+                         }`
+                 );
                  setStatus( 'resolved' );
              } );
      };
  
      return {
-         register,
+         updateUser,
          error,
          status,
      };

@@ -10,7 +10,7 @@ function SignUpAPI(props) {
             formData.append('email', props.APIDetailsSignUp.email)
             formData.append('pass', props.APIDetailsSignUp.pass)
 
-            const url = 'http://www.arkana.com.ua/AAreg.php'
+            const url = 'https://www.4prof.com.ua/AAreg.php'
             fetch(url, {
                 method: 'POST',
                 body: formData
@@ -19,7 +19,7 @@ function SignUpAPI(props) {
                 .then((data) => {
                     if (data['success']===true){
                         localStorage.setItem('jwt', data['data']['jwt'])
-                        setUrlToLogin(`http://www.arkana.com.ua/?rest_route=/simple-jwt-login/v1/autologin&jwt=${data['data']['jwt']}`)
+                        setUrlToLogin(`https://www.4prof.com.ua/?rest_route=/simple-jwt-login/v1/autologin&jwt=${data['data']['jwt']}`)
                         console.log(data)
                         console.log(data['data']['jwt'])
                     }

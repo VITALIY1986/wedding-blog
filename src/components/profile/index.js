@@ -5,7 +5,7 @@
  import {useState} from  'react'
  import { useAuth } from '../login-function/hooks';
  import Link from 'next/link';
- import Product from "../../components/ProductHomePage";
+ import Product from "./profile-form";
  
  export const Profile = ({ children }) => {
 	

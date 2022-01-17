@@ -5,6 +5,7 @@
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
  import PasswordStrengthBar from 'react-password-strength-bar';
+
  import Link from 'next/link';
  /**
   * Internal dependencies
@@ -45,7 +46,7 @@
              autoComplete="on"
          >
              { ( error || passwordError ) && (
-                 <div className="error-notice bg-white rounded p-3 text-red-900">
+                 <div className={`${  error === "/registration/register" ? 'hidden' : 'error-notice bg-white rounded p-3 text-red-900'}`}>
                   {/*  <FontAwesomeIco
                          icon={ faSkullCrossbones }
                          aria-hidden={ true }
@@ -101,6 +102,7 @@
                  </button>
              </p>
              <div className="flex-none mt-6"><Link href="../../../registration/register">Увійти</Link></div>
+            
          </form>
      );
  };

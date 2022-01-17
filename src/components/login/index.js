@@ -11,6 +11,7 @@ import Profile from '../profile';
      return (
         <>
         <ViewComponent/>
+       
             
      </>
      );
