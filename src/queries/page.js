@@ -43,6 +43,13 @@ const PAGE_QUERY = gql`query {
     content
   }
 
+  contacts : page(id: "cG9zdDoxMTcxMg==") {
+    id
+    slug
+    title
+    content
+  }
+
   mccm:page(id: "cG9zdDoxMTIyMw==") {
     id
     slug

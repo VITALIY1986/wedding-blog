@@ -57,9 +57,9 @@ const Nav = () => {
 		  title: "Sittara",
 		  linkhome:"",
 		  linkprof:"",
-		  linkarticle:"",
-		  linkhomepage:"/",
-		  item:""
+		  linkarticle:"/posts/sittara",
+		  linkhomepage:"/sittara",
+		
 	  },
 	  {
 		id: 8,
@@ -67,7 +67,7 @@ const Nav = () => {
 		  linkhome:"",
 		  linkprof:"",
 		  linkarticle:"",
-		  linkhomepage:"/",
+		  linkhomepage:"/contacts",
 		  item:""
 	  }
 	
@@ -120,9 +120,9 @@ const Nav = () => {
 			title: "Sittara",
 			linkhome:"",
 			linkprof:"",
-			linkarticle:"",
+			linkarticle:"/posts/sittara",
 			linkhomepage:"/",
-			item:""
+		
 		},
 		{
 		  id: 8,
@@ -130,7 +130,7 @@ const Nav = () => {
 			linkhome:"",
 			linkprof:"",
 			linkarticle:"",
-			linkhomepage:"/",
+			linkhomepage:"/contacts",
 			item:""
 		}
 	  
@@ -205,7 +205,7 @@ const Nav = () => {
 			<li className="nav-item relative   " key={item.id}>
 					<Link href={item.linkhomepage}>
 						<a className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-blue hover:transition  delay-150 duration-300 ease-in-out ... hover:text-white transition-all cursor-pointer lead_hover px-3 py-5">
-						{item.title	}  <span className="caret"></span>
+						{item.title	} <span className="caret"></span>
 						</a>
 						</Link>
 						<ul className={`${ item.item === "" ? 'hidden' : 'dropdown-menus py-5 px-6 bg-blue mt-10  '}`}>
