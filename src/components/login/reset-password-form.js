@@ -30,7 +30,7 @@
      const [ passwordError, setPasswordError ] = useState( '' );
      const { resetUserPassword, error, status } = useResetPassword();
  
-     const onReset = ( e ) => {
+     const onReset = ( e) => {
          e.preventDefault();
          setPasswordError( '' );
          if ( password.length === 0 ) {
@@ -98,7 +98,7 @@
              />
              <button
                  className="button button--inline button--large"
-                 onClick={() => {setKey(reset[0]);setLogin(reset[1]);onReset();}}
+                 onClick={() => {setKey(reset[0]);setLogin(reset[1]);onReset;}}
                  disabled={ status === 'resolving' }
              >
                  Set New Password
