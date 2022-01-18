@@ -1,5 +1,5 @@
 /**
- * External dependencies
+ * External dependencie
  */
  import { gql, useMutation, useApolloClient } from '@apollo/client';
 
