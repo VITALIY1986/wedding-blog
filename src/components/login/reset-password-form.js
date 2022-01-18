@@ -34,15 +34,15 @@
          e.preventDefault();
          setPasswordError( '' );
          if ( password.length === 0 ) {
-             setPasswordError( 'You must enter a new password.' );
+             setPasswordError( 'Ви повинні ввести новий пароль.' );
              return;
          }
          if ( password2.length === 0 ) {
-             setPasswordError( 'You must re-enter your new password.' );
+             setPasswordError( 'Ви повинні повторно ввести свій новий пароль.' );
              return;
          }
          if ( password !== password2 ) {
-             setPasswordError( 'Passwords do not match!' );
+             setPasswordError( 'Паролі не співпадають!' );
              return;
          }
          resetUserPassword( resetKey, resetLogin, password );
@@ -52,9 +52,10 @@
          return (
             <Success> 
                  <p>
-                     Your password has been reset. You can now{ ' ' }
+                     
+                        Ваш пароль скинуто. Ви можете { ' ' }
                      <Link href="/" className="link-button">
-                         Login
+                         Ввійти
                      </Link>
                      .
                  </p>
@@ -66,20 +67,21 @@
          <form onSubmit={ onReset } className="reset-form">
              { ( error || passwordError ) && (
                  <div className="error-notice">
-                     <FontAwesomeIcon
+                {/*    <FontAwesomeIcon
                          icon={ faSkullCrossbones }
                          aria-hidden={ true }
-                     />
+                />*/}
                      <p>{ passwordError || error }</p>
                  </div>
              ) }
              <Field
-                 label="New password"
+                 label="Новий пароль"
                  type="password"
                  value={ password }
                  onChange={ setPassword }
              />
              <PasswordStrengthBar
+             className='text-white'
                  password={ password }
                  scoreWords={ [
                      'critical fail',
@@ -91,17 +93,17 @@
                  shortScoreWord={ 'critical fail' }
              />
              <Field
-                 label="Re-enter your new password"
+                 label="Повторно введіть новий пароль"
                  type="password"
                  value={ password2 }
                  onChange={ setPassword2 }
              />
              <button
-                 className="button button--inline button--large"
+                 className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded"
                  onClick={() => {setKey(reset[0]);setLogin(reset[1]);onReset;}}
                  disabled={ status === 'resolving' }
              >
-                 Set New Password
+                 Встановити новий пароль
              </button>
            
              <div>

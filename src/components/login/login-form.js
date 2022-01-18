@@ -60,7 +60,10 @@
                      Увійти
                  </button>
              </p>
-             <div className="flex-none mt-6"><Link href="../../../registration/register-users">Реєстрація</Link></div>
+             <div className='flex'>
+             <Link href="../../../registration/register-users"><a className='py-6 mr-6'>Реєстрація</a></Link>
+            <Link href="../../../registration/reset"><a className='py-6'>Забули пароль?</a></Link>
+             </div>
          </form>
          
      );

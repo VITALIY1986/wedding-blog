@@ -24,7 +24,7 @@
      if ( status === 'resolved' && ! error ) {
          return (
             <Success>
-                 <p>Instructions have been emailed to you. Check your inbox.</p>
+                 <p className='text-white'>Інструкції надіслано вам електронною поштою. Перевірити свою поштову скриньку.</p>
                  </Success>
          );
      }
@@ -41,18 +41,18 @@
                  </div>
              ) }
              <Field
-                 label="Username or Email Address"
+                 label="Ім'я користувача або адреса електронної пошти"
                  value={ username }
                  onChange={ ( value ) => setUsername( value ) }
                  disabled={ status === 'resolving' }
              />
              <p>
                  <button
-                     className="button button--inline button--large"
+                     className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded "
                      onClick={ onReset }
                      disabled={ status === 'resolving' }
                  >
-                     Reset Password
+                     Скинути пароль
                  </button>
              </p>{ ' ' }
          </form>

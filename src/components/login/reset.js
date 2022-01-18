@@ -6,16 +6,15 @@
  
  export const ResetPasswordEmail = () => {
      return (
-         <div className="section login">
-             <hgroup>
-                 <h2>Reset Password</h2>
+         <div className="section login text-white">
+           
+                 <h2 className='text-xl'>Скинути пароль</h2>
                  <div>
                      <p>
-                         Enter your username or email address to reset your
-                         password.
+                     Введіть своє ім’я користувача або адресу електронної пошти, щоб скинути налаштування
                      </p>
                  </div>
-             </hgroup>
+          
              <ResetForm />
          </div>
      );
