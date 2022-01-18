@@ -5,7 +5,7 @@ function App() {
 
 	return (
 		<Layout>	
-			<div class="relative h-screen overflow-x-hidden bg-blue ">
+			<div class="relative h-screen overflow-x-hidden bg-blue px-6 ">
 				<div class="h-screen flex justify-center items-center">
 					<Reset/>
 				</div>
@@ -14,7 +14,3 @@ function App() {
 	);
 }
 export default App;
-
-
-
-	

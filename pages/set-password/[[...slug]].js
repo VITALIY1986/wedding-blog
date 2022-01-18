@@ -6,7 +6,7 @@ function App(props) {
     const { slug  } = router.query
 	return (
 		<Layout>
-	    	<div class="relative h-screen overflow-x-hidden bg-blue ">
+	    	<div class="relative h-screen overflow-x-hidden bg-blue px-6 ">
 				<div class="h-screen flex justify-center items-center">
 					<div className='text-white'>
 						<h2>Скинути пароль</h2>
