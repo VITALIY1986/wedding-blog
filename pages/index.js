@@ -90,6 +90,7 @@ export default function Home (props) {
 	 
 
 	return (
+	
 
 			<Layout>
 	<div className="main">
@@ -169,7 +170,7 @@ export default function Home (props) {
 				</div>
 				
 			</Layout>
-	
+		
 	)
 };
 

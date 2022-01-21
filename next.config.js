@@ -5,7 +5,11 @@ const path = require("path");
 const allowedImageWordPressDomain = new URL(process.env.NEXT_PUBLIC_WORDPRESS_URL).hostname
 
 module.exports =   {
-
+        i18n: {
+          locales: ["uk"],
+          defaultLocale: "uk",
+        },
+     
     trailingSlash: true,
     webpackDevMiddleware: (config) => {
         config.watchOptions = {
