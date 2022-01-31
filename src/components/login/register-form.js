@@ -40,12 +40,13 @@
      };
  
      return (
+        
          <form
              onSubmit={ onRegister }
              className="register-form text-white w-full  lg:w-1/5"
-             autoComplete="on"
+             autoComplete="off"
          >
-             { ( error || passwordError ) && (
+              { ( error || passwordError ) && (
                  <div className={`${  error === "/registration/register" ? 'hidden' : 'error-notice bg-white rounded p-3 text-red-900'}`}>
                   {/*  <FontAwesomeIco
                          icon={ faSkullCrossbones }
