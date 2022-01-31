@@ -63,10 +63,11 @@
                  disabled={ status === 'resolving' }
               
              />
+             {/* autoComplete="email"*/}
              <Field
                  label="Електронна пошта"
                  value={ email }
-                 autoComplete="email"
+                
                  onChange={ ( value ) => setEmail( value ) }
                  placeholder="Введіть адресу вашої електронної пошти"
                  disabled={ status === 'resolving' }
