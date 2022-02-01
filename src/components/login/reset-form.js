@@ -52,7 +52,7 @@
                      onClick={ onReset }
                      disabled={ status === 'resolving' }
                  >
-                     Скинути пароль
+                     Створити пароль
                  </button>
              </p>{ ' ' }
          </form>

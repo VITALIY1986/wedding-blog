@@ -8,7 +8,7 @@
      return (
          <div className="section login text-white">
            
-                 <h2 className='text-xl'>Скинути пароль</h2>
+                 <h2 className='text-xl'>Створити пароль</h2>
                  <div>
                      <p>
                      Введіть своє ім’я користувача або адресу електронної пошти, щоб скинути налаштування

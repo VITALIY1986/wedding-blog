@@ -53,7 +53,7 @@
             <Success> 
                  <p>
                      
-                        Ваш пароль скинуто. Ви можете { ' ' }
+                        Ваш пароль створено. Ви можете { ' ' }
                      <Link href="/" className="link-button bg-white text-black">
                          Ввійти
                      </Link>
