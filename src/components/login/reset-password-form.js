@@ -54,8 +54,8 @@
                  <p>
                      
                         Ваш пароль створено. Ви можете { ' ' }
-                     <Link href="/" className="link-button bg-white text-black">
-                         Ввійти
+                     <Link href="/" className="link-button ">
+                       <a className="link-button bg-white text-black block" >  Ввійти</a>
                      </Link>
                      .
                  </p>
