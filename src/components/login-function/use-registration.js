@@ -44,17 +44,13 @@
              .catch( ( errors ) => {
                 const responseData = '/registration/register';
 	           
-                 errors.message === "Failed to fetch" ?
+            
+                  
+                    
+              
                  setError(
                     window.location.href = responseData 
-                    
-                 ):
-                 setError(
-
-                    errorCodes[ errors.message ] ||
-                        `${
-                            stripHtml( decodeEntities( errors.message ) ).result
-                        }`
+                   
                 )
                  setStatus( 'resolved' );
              } );

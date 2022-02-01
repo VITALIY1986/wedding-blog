@@ -32,15 +32,12 @@
              setPasswordError( 'Будь ласка, введіть свою електронну адресу.' );
              return;
          }
-         if ( password.length === 0 ) {
-             setPasswordError( 'Будь ласка, введіть пароль.' );
-             return;
-         }
+        
          register( username, email, password );
      };
  
      return (
-        
+
          <form
              onSubmit={ onRegister }
              className="register-form text-white w-full  lg:w-1/5"
@@ -56,44 +53,24 @@
                  </div>
              ) }
              <Field
-                 label="Ім'я користувача"
+                 label="Електронна пошта"
                  value={ username }
                  autoComplete="username"
                  onChange={ ( value ) => setUsername( value ) }
-                 placeholder="Введіть ім'я користувача"
+                 placeholder="Введіть адресу вашої електронної пошти"
                  disabled={ status === 'resolving' }
               
              />
              {/* autoComplete="email"*/}
              <Field
-                 label="Електронна пошта"
+                 label="Підтвердити Електронну пошту"
                  value={ email }
                 
                  onChange={ ( value ) => setEmail( value ) }
-                 placeholder="Введіть адресу вашої електронної пошти"
+                 placeholder="Введіть адресу вашої електронної пошти повторно"
                  disabled={ status === 'resolving' }
              />
-             <Field
-                 label="Пароль"
-                 type="password"
-                 autoComplete="new-password"
-                 value={ password }
-                 placeholder="Виберіть пароль"
-                 onChange={ ( value ) => setPassword( value ) }
-                 disabled={ status === 'resolving' }
-             />
-             <PasswordStrengthBar
-      
-                 password={ password }
-                 scoreWords={ [
-                     'critical fail',
-                     'okay',
-                     'good',
-                     'strong',
-                     'critical roll!',
-                 ] }
-                 shortScoreWord={ 'critical fail' }
-             />
+            
              <p>
                  <button
                      className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded"
@@ -106,6 +83,7 @@
              <div className="flex-none mt-6"><Link href="../../../registration/register">Увійти</Link></div>
             
          </form>
+       
      );
  };
  

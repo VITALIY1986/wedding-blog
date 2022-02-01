@@ -54,7 +54,7 @@
                  <p>
                      
                         Ваш пароль скинуто. Ви можете { ' ' }
-                     <Link href="/" className="link-button">
+                     <Link href="/" className="link-button bg-white text-black">
                          Ввійти
                      </Link>
                      .

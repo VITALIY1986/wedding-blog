@@ -62,7 +62,7 @@
              </p>
              <div className='flex'>
              <Link href="../../../registration/register-users"><a className='py-6 mr-6'>Реєстрація</a></Link>
-            <Link href="../../../registration/reset"><a className='py-6'>Забули пароль?</a></Link>
+            <Link href="../../../registration/reset"><a className='py-6'>Створити пароль?</a></Link>
              </div>
          </form>
          

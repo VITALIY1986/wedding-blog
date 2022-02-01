@@ -12,7 +12,8 @@ function App() {
 	<div class="relative h-screen overflow-x-hidden bg-blue px-3">
 		<div class="h-screen flex justify-center items-center flex-col">
 		<h3 className="text-white mb-6 text-xl"> Дякуємо за реєстрацію!</h3>
-		<div className="text-white mb-6"> Ваш запис буде активовано після отримання нами копії диплому косметолога на електронну пошту info@4prof.com.ua</div>
+		<div className="text-white mb-1"> Ваш запис буде активовано після отримання нами копії диплому косметолога на електронну пошту info@4prof.com.ua</div>
+		<div className=" mb-6 bg-white rounded p-3 text-red-900"> 		Після підтвердження диплому косметолога створіть свій пароль та ввійдіть в свій аккаунт</div>
 	<Login></Login>
 	</div>
 		{/*<div class="absolute -bottom-40 lg:-bottom-0 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8 z-0"></div>

@@ -19,7 +19,7 @@
          'Invalid username or email address. Please check it and try again.',
      invalid_email: 'Invalid email address. Please check it and try again.',
      incorrect_password:
-         'Incorrect password. Please try again, or reset your password.',
+         'Створіть свій пароль',
      empty_username: 'Please provide your username.',
      empty_password: 'Please provide your  password.',
  };
