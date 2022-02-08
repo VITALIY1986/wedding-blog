@@ -27,7 +27,7 @@ import CLEAR_CART_MUTATION from "../../mutations/clear-cart";
 address2: '',
   	city: '',
  	
-	
+     
   	phone: '',
   
  	errors: null
@@ -39,7 +39,7 @@ address2: '',
  // address1: '',
  // address2: '',
   // city: '',
-  // country: '',
+  // 
   //  state: '',
   //  postcode: '',
   //  email: '',

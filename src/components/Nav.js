@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import CartIcon from "./cart/CartIcon";
+import CartIconmob from "./cart/CartIconmob";
 import { useState } from 'react';
 import profilePic from '../../public/logo.png'
 import Image from 'next/image'
@@ -267,7 +268,9 @@ const Nav = () => {
 						<svg xmlns="http://www.w3.org/2000/svg" className=" lg:block m-auto" fill="none" viewBox="0 0 24 24" width="18" height="auto" stroke="gray"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
 							
 						</a></div>*/}
+						<CartIconmob/>	
 				<div className="block py-3 lg:hidden">
+					
 				<input id="hamburger" className="hamburger" type="checkbox"/>
 				<label className=" hamburger" for="hamburger">
 		  <i></i>

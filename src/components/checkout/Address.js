@@ -7,7 +7,7 @@ import Error from './Error';
 import {isEmpty, map} from "lodash";
 import Abbr from "./form-elements/Abbr";
 import ArrowDown from "../icons/ArrowDown";
-const Address = ({input,countries,  states, handleOnChange, isFetchingStates, isShipping}) => {
+const Address = ({input,  states, handleOnChange, isFetchingStates, isShipping}) => {
     const {address2, errors} = input || {};
 console.log(address2)
     const inputId = `address2-${isShipping ? 'shipping' : 'billing'}`;
@@ -75,12 +75,7 @@ const deliveriplesholder = address2 === "Кур'єрська доставка" ?
                 containerClassNames="mb-4"
     />*/}
            
-             <CountrySelection
-                input={input}
-                handleOnChange={handleOnChange}
-                countries={countries}
-                isShipping={isShipping}
-            />
+           
              <div className="mb-3">
             <label className="leading-7 text-sm text-gray-700" htmlFor={inputId}>
                 Спосіб доставки

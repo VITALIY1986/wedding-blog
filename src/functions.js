@@ -311,7 +311,7 @@ export const createCheckoutData = ( order ) => {
 			address1: order?.shipping?.address1,
 			address2: order?.shipping?.address2,
 			city: order?.shipping?.city,
-			country: order?.shipping?.country,
+		
 		
 			phone: order?.shipping?.phone,
 		
@@ -322,7 +322,7 @@ export const createCheckoutData = ( order ) => {
 			address1: billingData?.address1,
 			address2: billingData?.address2,
 			city: billingData?.city,
-			country: billingData?.country,
+		
 			
 			phone: billingData?.phone,
 		
