@@ -52,10 +52,11 @@
                      <p>{ passwordError || error }</p>
                  </div>
              ) }
+              {/*  autoComplete="username"*/}
              <Field
                  label="Електронна пошта"
                  value={ username }
-                 autoComplete="username"
+                
                  onChange={ ( value ) => setUsername( value ) }
                  placeholder="Введіть адресу вашої електронної пошти"
                  disabled={ status === 'resolving' }
