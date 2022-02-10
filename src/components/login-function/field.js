@@ -49,7 +49,7 @@ const Field = ( {
 				) : (
 				
 					<input
-					className="pl-2 py-2 outline-none border-none rounded w-full "
+					className="pl-2 py-2 outline-none border-none rounded w-full bg-gray-100"
 						type="text"
 						{ ...inputProps }
 						onChange={ ( event ) => onChange( event.target.value ) }

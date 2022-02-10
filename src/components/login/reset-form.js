@@ -24,13 +24,13 @@
      if ( status === 'resolved' && ! error ) {
          return (
             <Success>
-                 <p className='text-white'>Інструкції надіслано вам електронною поштою. Перевірити свою поштову скриньку.</p>
+                 <p className='mb-3'>Інструкції надіслано вам електронною поштою. Перевірити свою поштову скриньку.</p>
                  </Success>
          );
      }
  
      return (
-         <form onSubmit={ onReset } className="reset-form">
+         <form onSubmit={ onReset } className="reset-form bg-white p-6">
              { error && (
                  <div className="error-notice">
                      <FontAwesomeIcon
@@ -40,15 +40,17 @@
                      <p>{ error }</p>
                  </div>
              ) }
+             <div>   <h2 className='text-xl mb-6'>Створити пароль</h2></div>
              <Field
                  label="Ім'я користувача або адреса електронної пошти"
                  value={ username }
                  onChange={ ( value ) => setUsername( value ) }
                  disabled={ status === 'resolving' }
+              
              />
              <p>
                  <button
-                     className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded "
+                     className="button button--inline button--large p-3 bg-blue mt-4 text-white w-full rounded "
                      onClick={ onReset }
                      disabled={ status === 'resolving' }
                  >

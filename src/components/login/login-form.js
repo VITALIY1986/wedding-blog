@@ -23,7 +23,7 @@
  
      return (
        
-         <form onSubmit={ onLogin } className="login-form px-3 text-white" autoComplete="on">
+         <form onSubmit={ onLogin } className="login-form px-3  bg-white p-6" autoComplete="on">
              { error && (
                  <div className="error-notice bg-white rounded p-3 text-red-900">
                  {/*}    <FontAwesomeIcon
@@ -33,6 +33,7 @@
                      <p className=''>{ error }</p>
                  </div>
              ) }
+               <div>   <h2 className='text-xl mb-6'>Вхід</h2></div>
              <Field
                  label="Ім'я користувача або адреса електронної пошти"
                  value={ username }
@@ -53,7 +54,7 @@
              />
              <p>
                  <button
-                     className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded"
+                     className="button button--inline button--large p-3 bg-blue mt-4 text-white w-full rounded"
                      onClick={ onLogin }
                      disabled={ status === 'resolving' }
                  >

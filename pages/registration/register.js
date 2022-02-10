@@ -9,7 +9,7 @@ function App() {
 				
 	
 	
-	<div class="relative h-screen overflow-x-hidden bg-blue ">
+	<div class="relative h-screen overflow-x-hidden bg-gray-100 px-3 ">
 	
 		<div class="h-screen flex justify-center items-center">
 		

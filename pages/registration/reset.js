@@ -5,7 +5,7 @@ function App() {
 
 	return (
 		<Layout>	
-			<div class="relative h-screen overflow-x-hidden bg-blue px-6 ">
+			<div class="relative h-screen overflow-x-hidden bg-gray-100 px-6 ">
 				<div class="h-screen flex justify-center items-center">
 					<Reset/>
 				</div>

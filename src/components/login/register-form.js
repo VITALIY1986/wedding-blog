@@ -40,7 +40,7 @@
 
          <form
              onSubmit={ onRegister }
-             className="register-form text-white w-full  lg:w-1/5"
+             className="register-form  w-full  lg:w-1/5 bg-white p-6"
              autoComplete="off"
          >
               { ( error || passwordError ) && (
@@ -53,12 +53,13 @@
                  </div>
              ) }
               {/*  autoComplete="username"*/}
+              <div>   <h2 className='text-xl mb-6'>Реєстрація!</h2></div>
              <Field
                  label="Електронна пошта"
                  value={ username }
                 
                  onChange={ ( value ) => setUsername( value ) }
-                 placeholder="Введіть адресу вашої електронної пошти"
+               
                  disabled={ status === 'resolving' }
               
              />
@@ -74,7 +75,7 @@
             
              <p>
                  <button
-                     className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded"
+                     className="button button--inline button--large p-3 bg-blue mt-4 text-white w-full rounded"
                      onClick={ onRegister }
                      disabled={ status === 'resolving' }
                  >
