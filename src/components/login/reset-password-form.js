@@ -55,7 +55,7 @@
                      
                         Ваш пароль створено. Ви можете { ' ' }
                      <Link href="/registration/register" className="link-button ">
-                       <a className="link-button bg-white text-black block" >  Ввійти</a>
+                       <a className="link-button bg-white text-black block p-3" >  Ввійти</a>
                      </Link>
                      .
                  </p>
@@ -64,7 +64,7 @@
      }
  
      return (
-         <form onSubmit={ onReset } className="reset-form">
+         <form onSubmit={ onReset } className="reset-form bg-white p-6">
              { ( error || passwordError ) && (
                  <div className="error-notice">
                 {/*    <FontAwesomeIcon
@@ -74,6 +74,7 @@
                      <p>{ passwordError || error }</p>
                  </div>
              ) }
+                <div>   <h2 className='text-xl mb-6'>Створити пароль</h2></div>
              <Field
                  label="Новий пароль"
                  type="password"
@@ -99,7 +100,7 @@
                  onChange={ setPassword2 }
              />
              <button
-                 className="button button--inline button--large p-3 bg-gray-400 mt-4 text-white w-full rounded"
+                 className="button button--inline button--large p-3 bg-blue mt-4 text-white w-full rounded"
                  onClick={() => {setKey(reset[0]);setLogin(reset[1]);onReset;}}
                  disabled={ status === 'resolving' }
              >

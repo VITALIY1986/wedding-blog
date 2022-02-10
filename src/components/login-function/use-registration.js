@@ -31,27 +31,24 @@
      const { setIsLoggedIn } = useAuthContext();
  
      const register = ( username, email, password ) => {
-        
          setError( null );
          setStatus( 'resolving' );
          return registerMutation( username, email, password )
              .then( () => {
-                
                  setIsLoggedIn( true );
                  setStatus( 'resolved' );
-                
+               
              } )
              .catch( ( errors ) => {
                 const responseData = '/registration/register';
-	           
-            
-                  
-                    
-              
                  setError(
+                    errors.message ==="Failed to fetch" ?
                     window.location.href = responseData 
-                   
-                )
+                   :  errorCodes[ errors.message ] ||
+                         `${
+                             stripHtml( decodeEntities( errors.message ) ).result
+                         }`
+                 );
                  setStatus( 'resolved' );
              } );
      };
@@ -62,3 +59,6 @@
          status,
      };
  };
+ 
+ 
+ 

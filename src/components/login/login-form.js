@@ -5,6 +5,7 @@
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
  import Link from 'next/link';
+
  /**
   * Internal dependencies
   */
@@ -20,10 +21,11 @@
          e.preventDefault();
          login( username, password );
      };
- 
+  
      return (
        
-         <form onSubmit={ onLogin } className="login-form px-3  bg-white p-6" autoComplete="on">
+         <form onSubmit={ onLogin } className="login-form px-3  bg-white p-6 " autoComplete="on">
+            
              { error && (
                  <div className="error-notice bg-white rounded p-3 text-red-900">
                  {/*}    <FontAwesomeIcon

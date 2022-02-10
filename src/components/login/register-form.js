@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
- import { useState } from 'react';
+ import { useState,useEffect } from 'react';
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
  import PasswordStrengthBar from 'react-password-strength-bar';
@@ -20,14 +20,14 @@
      const { register, error, status } = useRegistration();
      const [ passwordError, setPasswordError ] = useState( '' );
      const { isLoggedIn } = useAuth();
-   
+     useEffect(() => {
+     setUsername(email);
+    });
      const onRegister = ( e ) => {
+       
          e.preventDefault();
          setPasswordError( '' );
-         if ( username.length === 0 ) {
-             setPasswordError( "Будь ласка, введіть ім'я користувача." );
-             return;
-         }
+         
          if ( email.length === 0 ) {
              setPasswordError( 'Будь ласка, введіть свою електронну адресу.' );
              return;
@@ -35,7 +35,7 @@
         
          register( username, email, password );
      };
- 
+     
      return (
 
          <form
@@ -54,22 +54,14 @@
              ) }
               {/*  autoComplete="username"*/}
               <div>   <h2 className='text-xl mb-6'>Реєстрація!</h2></div>
-             <Field
-                 label="Електронна пошта"
-                 value={ username }
-                
-                 onChange={ ( value ) => setUsername( value ) }
-               
-                 disabled={ status === 'resolving' }
-              
-             />
+           
              {/* autoComplete="email"*/}
              <Field
-                 label="Підтвердити Електронну пошту"
+                 label="Введіть адресу вашої електронної пошти"
                  value={ email }
                 
                  onChange={ ( value ) => setEmail( value ) }
-                 placeholder="Введіть адресу вашої електронної пошти повторно"
+                
                  disabled={ status === 'resolving' }
              />
             

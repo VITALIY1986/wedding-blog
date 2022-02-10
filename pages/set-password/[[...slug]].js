@@ -6,11 +6,10 @@ function App(props) {
     const { slug  } = router.query
 	return (
 		<Layout>
-	    	<div class="relative h-screen overflow-x-hidden bg-blue px-6 ">
+	    	<div class="relative h-screen overflow-x-hidden bg-gray-100 px-6 ">
 				<div class="h-screen flex justify-center items-center">
-					<div className='text-white'>
-						<h2>Скинути пароль</h2>
-             			<p className='mb-3'>Введіть новий пароль для свого облікового запису нижче.</p>
+					<div className=''>
+						
 						<Login reset={slug}/>
 					</div>
 				</div>
