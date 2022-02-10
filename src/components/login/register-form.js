@@ -71,7 +71,7 @@
                      onClick={ onRegister }
                      disabled={ status === 'resolving' }
                  >
-                     Create Account
+                     Зареєструватися
                  </button>
              </p>
              <div className="flex-none mt-6"><Link href="../../../registration/register">Увійти</Link></div>
