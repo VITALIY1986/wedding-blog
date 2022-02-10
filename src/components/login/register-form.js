@@ -40,11 +40,11 @@
 
          <form
              onSubmit={ onRegister }
-             className="register-form  w-full  lg:w-1/5 bg-white p-6"
+             className="register-form  w-full  lg:w-1/5 bg-white p-6 drop-shadow-xl "
              autoComplete="off"
          >
               { ( error || passwordError ) && (
-                 <div className={`${  error === "/registration/register" ? 'hidden' : 'error-notice bg-white rounded p-3 text-red-900'}`}>
+                 <div className={`${  error === "/registration/resetsenks" ? 'hidden' : 'error-notice bg-white rounded p-3 text-red-900'}`}>
                   {/*  <FontAwesomeIco
                          icon={ faSkullCrossbones }
                          aria-hidden={ true }

@@ -6,9 +6,9 @@ function App(props) {
     const { slug  } = router.query
 	return (
 		<Layout>
-	    	<div class="relative h-screen overflow-x-hidden bg-gray-100 px-6 ">
+	    	<div class="relative h-screen overflow-x-hidden bg-gray-100 px-1 ">
 				<div class="h-screen flex justify-center items-center">
-					<div className=''>
+					<div className='lg:w-2/4'>
 						
 						<Login reset={slug}/>
 					</div>

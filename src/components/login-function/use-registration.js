@@ -40,7 +40,7 @@
                
              } )
              .catch( ( errors ) => {
-                const responseData = '/registration/register';
+                const responseData = '/registration/resetsenks';
                  setError(
                     errors.message ==="Failed to fetch" ?
                     window.location.href = responseData 

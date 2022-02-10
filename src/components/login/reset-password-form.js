@@ -64,7 +64,7 @@
      }
  
      return (
-         <form onSubmit={ onReset } className="reset-form bg-white p-6">
+         <form onSubmit={ onReset } className="reset-form bg-white p-6 ">
              { ( error || passwordError ) && (
                  <div className="error-notice">
                 {/*    <FontAwesomeIcon
