@@ -2,7 +2,7 @@ import { useState, createContext, useContext, useEffect } from 'react';
 import Fuse from 'fuse.js';
 
 
-import { getSearchData } from './search';
+import { getSearchData} from './searchhome';
 const SEARCH_KEYS = ['slug', 'name',"sku"];
 
 export const SEARCH_STATE_LOADING = 'LOADING';

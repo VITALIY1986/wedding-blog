@@ -40,7 +40,7 @@
 
          <form
              onSubmit={ onRegister }
-             className="register-form  w-full  lg:w-1/5 bg-white p-6 drop-shadow-xl "
+             className="register-form  w-full  lg:w-1/5 bg-white p-6  "
              autoComplete="off"
          >
               { ( error || passwordError ) && (
