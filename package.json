@@ -23,7 +23,7 @@
     "lodash": "^4.17.21",
     "micro": "^9.3.4",
     "next": "^11.0.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
     "radium": "^0.26.1",
