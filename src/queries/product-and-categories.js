@@ -151,7 +151,7 @@ mccm:  category(id: "dGVybTozMjg0") {
       content
     }
   }
-  featuredproducts:  products(where: {featured: true}, first: 5) {
+  featuredproducts:  products(where: {featured: true}, first: 8) {
     nodes {
       id
       productId: databaseId
