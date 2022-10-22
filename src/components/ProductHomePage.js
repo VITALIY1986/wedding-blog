@@ -45,7 +45,7 @@ const result = amount/interest;
 					</a>
 					
 				</Link>
-				<div className="text-center text-white  bg-black opacity-30">{product.sku}</div>
+				<div className="text-center  ">{product.sku}</div>
 				<div className="product-info text-center p-2 md:p-5">
 					<h3 className="product-title mt-3 font-medium text-gray-800 overflow-hidden ">
 						{ product.name ? product.name : '' }
@@ -53,7 +53,7 @@ const result = amount/interest;
 				
 					{/*{product?.regularPrice }/////{product?.salePrice }/////{product?.price}*/}
                  {/*}   {product?.salePrice ?  <div className="">  <strike className="mr-1 text-red-200">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="">₴{par.toFixed(2)}</div>}*/}
-		  {product?.salePrice   ?  <div className="{`${ isLoggedIn ? 'hidden' : 'block ' }`}">  <strike className="mr-1 text-red-200">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="">{isLoggedIn ? login : `₴ ${par.toFixed(2)}`}</div>}
+		  {product?.salePrice   ?  <div className="{`${ isLoggedIn ? 'hidden' : 'block ' }`}">  <strike className="mr-1 text-red-200">₴{par.toFixed(2)}</strike>₴{product?.price}</div> :   <div className="mt-3 mb-3 text-xl font-bold">{isLoggedIn ? login : `₴ ${par.toFixed(2)}`}</div>}
 				{/*	{product?.salePrice  ?  <div className={`${ isLoggedIn ? 'block' : 'hidden ' }`}> ₴{par.toFixed(4)}</div> :   ''}*/}
 				{/*	<div className="product-description text-sm text-gray-700 " dangerouslySetInnerHTML={{ __html: (product?.description)}}/>*/}
 			{/*	<Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>*/}
