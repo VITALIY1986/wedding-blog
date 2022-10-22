@@ -98,11 +98,17 @@ const GET_CATEGORI_QUERY = gql`query {
         id
         name
         slug
+        image {
+          sourceUrl
+        }
         children(first: 20)  {
           nodes {
             name
             id
             slug
+            image {
+              sourceUrl
+            }
           }
         }
       }
