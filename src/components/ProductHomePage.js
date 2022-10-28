@@ -30,7 +30,7 @@ const result = amount/interest;
 			<div className="product mb-5  hover:shadow relative">
 
 { product.featured  ? <div className="bg-blue rounded absolute right-2 top-2 z-10 text-white p-2">NEW</div>: ''}
-{ product?.salePrice  ? <div className={`${ isLoggedIn ? 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' : 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' }`}>{ result.toFixed(0)}%OFF</div> : ''}
+{/* product?.salePrice  ? <div className={`${ isLoggedIn ? 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' : 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' }`}>{ result.toFixed(0)}%OFF</div> : ''*/}
 				<Link href={ `/product/${ product?.slug }`} >
 					<a>
 						<Image

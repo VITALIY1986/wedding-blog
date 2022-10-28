@@ -45,7 +45,7 @@ const result = amount/interest;
 					<div className="grid md:grid-cols-2 gap-4">
 						<div className="product-images relative">
                         { product.featured  ? <div className="bg-blue rounded absolute right-2 top-2 z-10 text-white p-2">NEW</div>: ''}
-{ product?.salePrice  ? <div className={`${ isLoggedIn ? 'hidden' : 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' }`}>{ result.toFixed(0)}%OFF</div> : ''}
+{/* product?.salePrice  ? <div className={`${ isLoggedIn ? 'hidden' : 'block bg-red-200 rounded absolute left-2 top-2 z-10 text-white p-2' }`}>{ result.toFixed(0)}%OFF</div> : ''*/}
 							{ !isEmpty( product?.galleryImages?.nodes ) ? (
                                 <GalleryCarousel gallery={product?.galleryImages?.nodes}/>
 							) : !isEmpty( product.image ) ? (
