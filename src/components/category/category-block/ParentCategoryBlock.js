@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import Image from "../../../image";
 import {DEFAULT_CATEGORY_IMG_URL} from "../../../constants/urls";
+import { isEmpty } from 'lodash';
 
 const ParentCategoryBlock = ( props ) => {
 
 	const { category } = props;
-
-	return (
+	if (category?.image ===  null) {
+        return (<div className='hidden'></div>)
+    }
+	else {
+ return (
 		<div className="product mb-5">
 			<Link href={`/category/${category?.slug}`}>
 				<a>
@@ -25,7 +29,7 @@ const ParentCategoryBlock = ( props ) => {
 				</a>
 			</Link>
 		</div>
-	);
+	);}
 }
 
 export default ParentCategoryBlock;
