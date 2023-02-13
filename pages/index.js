@@ -106,7 +106,7 @@ export default function Home (props) {
 					<ParentCategoriesBlock productCategories={ productCategories }/>
 </div>*/ }
 			
-				{/*<div>	<Login/></div>*/}
+			
 			
 			<div className="px-4">
 				<div className="products container mx-auto mt-32  ">
