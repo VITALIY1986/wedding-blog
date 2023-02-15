@@ -93,82 +93,18 @@ export default function Home (props) {
 	
 
 			<Layout>
-	<div className="main">
-				{/*Hero Carousel*/}
-				{/*<div class="marquee text-sm text-3 text-s lg:text-3xl font-thin"><span>Сайт в процесі розробки, можливі помилки в інформації та роботі. Приносимо вибачення за тимчасові незручності! </span></div>*/}
-				<HeroCarousel heroCarousel={heroCarousel}/>
+	{/*   <img src="https://www.bellebridalmagazine.com/wp-content/uploads/2021/12/Screenshot-2023-02-07-at-08.03.09.png"></img>
+					<h1>wedding show</h1>
+					<button className="bg-black p-3 ">book ticckets now</button>   */}
 			
-				{/*<a href="myfile.pdf"  download>Download</a>*/}
-			
-				{/*Categories
-				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
-					<h2 className="mai-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
-					<ParentCategoriesBlock productCategories={ productCategories }/>
-</div>*/ }
-			
-			
-			
-			<div className="px-4">
-				<div className="products container mx-auto mt-32  ">
-				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">НОВИНИ</span></h2>
-				
-				
-			
-			
-				 <AliceCarousel
-        
-        items={items}
-        responsive={responsive}
-		disableDotsControls={true}
-		disableButtonsControls={true}
-	
-    />
-							
-			
+		  <img src="https://www.bellebridalmagazine.com/wp-content/uploads/2021/12/Screenshot-2023-02-07-at-08.03.09.png"></img>
+		           <h1>wedding show</h1>
+				   <button className="bg-black p-3">book ticckets now</button>
 		
-			</div>
-					{/*Post
-					<div className="products container mx-auto my-32 px-4 ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
-					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-						{ posts.length ? (
-							posts.map( post => <Post key={ post.id } post={ post }/> )
-						) : '' }
-					</div>
-				</div>*/ }
-					{/*Star*/ }
 			
-				
-					
-				{/*Products*/ }
-				<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Новинки</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-					{ featuredproducts.length ? (
-							featuredproducts.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
-						) : '' }
-					</div>
-				</div>
-				{/*Prodduts*/ }
-		{		<div className={`${ products.length === 0 ? 'hidden' : 'block products container mx-auto my-10  '}`}>
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акції</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
-						{ products.length ? (
-							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
-						) : '' }
-					</div>
-				</div>}
 			
-				</div>
-				</div>
-				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наші Марки</span></h2>
-			<div className="w-full lg:mb-20">
-				<div className="products container mx-auto ">
 			
-					<Navigation profilePic={profilePic} questionsAnswers={questionsAnswers}/>
-				</div>
-				</div>
-				
+			
 			</Layout>
 		
 	)
