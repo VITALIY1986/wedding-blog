@@ -96,8 +96,7 @@ export default function Home (props) {
 	{/*   <img src="https://www.bellebridalmagazine.com/wp-content/uploads/2021/12/Screenshot-2023-02-07-at-08.03.09.png"></img>
 					<h1>wedding show</h1>
 					<button className="bg-black p-3 ">book ticckets now</button>   */}
-			
-		  <img src="https://www.bellebridalmagazine.com/wp-content/uploads/2021/12/Screenshot-2023-02-07-at-08.03.09.png"></img>
+		
 		           <h1>wedding show</h1>
 				   <button className="bg-black p-3">book ticckets now</button>
 		
